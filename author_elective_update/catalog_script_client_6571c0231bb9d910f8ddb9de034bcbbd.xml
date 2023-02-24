@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="cd01c8a91b6bf410f8ddb9de034bcbd5" table="catalog_script_client">
+    <catalog_script_client action="DELETE">
+        <active>true</active>
+        <applies_catalog>true</applies_catalog>
+        <applies_extended>false</applies_extended>
+        <applies_req_item>true</applies_req_item>
+        <applies_sc_task>false</applies_sc_task>
+        <applies_target_record>false</applies_target_record>
+        <applies_to>set</applies_to>
+        <cat_item/>
+        <cat_variable/>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>morph_ot_4_1444</name>
+        <order/>
+        <script><![CDATA[function onLoad() { g_form.setVisible('ot_4_1444', false);}]]></script>
+        <sys_class_name>catalog_script_client</sys_class_name>
+        <sys_created_by>acme</sys_created_by>
+        <sys_created_on>2022-09-13 12:49:14</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>cd01c8a91b6bf410f8ddb9de034bcbd5</sys_domain>
+        <sys_domain_path>!!!/!!#/</sys_domain_path>
+        <sys_id>6571c0231bb9d910f8ddb9de034bcbbd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>morph_ot_4_1444</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>catalog_script_client_6571c0231bb9d910f8ddb9de034bcbbd</sys_update_name>
+        <sys_updated_by>acme</sys_updated_by>
+        <sys_updated_on>2022-09-13 12:49:14</sys_updated_on>
+        <table/>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <variable_set/>
+        <view/>
+    </catalog_script_client>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</application>
+        <file_path/>
+        <instance_id>091b4f91dbd1db044c1ff70fbf961907</instance_id>
+        <instance_name>dev55235</instance_name>
+        <name>catalog_script_client_6571c0231bb9d910f8ddb9de034bcbbd</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="cd01c8a91b6bf410f8ddb9de034bcbd5" table="catalog_script_client"&gt;
+    &lt;catalog_script_client action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;applies_catalog&gt;true&lt;/applies_catalog&gt;
+        &lt;applies_extended&gt;false&lt;/applies_extended&gt;
+        &lt;applies_req_item&gt;true&lt;/applies_req_item&gt;
+        &lt;applies_sc_task&gt;false&lt;/applies_sc_task&gt;
+        &lt;applies_target_record&gt;false&lt;/applies_target_record&gt;
+        &lt;applies_to&gt;set&lt;/applies_to&gt;
+        &lt;cat_item/&gt;
+        &lt;cat_variable/&gt;
+        &lt;condition/&gt;
+        &lt;description/&gt;
+        &lt;field/&gt;
+        &lt;global&gt;true&lt;/global&gt;
+        &lt;isolate_script&gt;false&lt;/isolate_script&gt;
+        &lt;messages/&gt;
+        &lt;name&gt;morph_ot_4_1444&lt;/name&gt;
+        &lt;order/&gt;
+        &lt;script&gt;&lt;![CDATA[function onLoad() { g_form.setVisible('ot_4_1444', false);}]]&gt;&lt;/script&gt;
+        &lt;sys_class_name&gt;catalog_script_client&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;acme&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2022-09-13 12:49:14&lt;/sys_created_on&gt;
+        &lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;
+        &lt;sys_domain&gt;cd01c8a91b6bf410f8ddb9de034bcbd5&lt;/sys_domain&gt;
+        &lt;sys_domain_path&gt;!!!/!!#/&lt;/sys_domain_path&gt;
+        &lt;sys_id&gt;6571c0231bb9d910f8ddb9de034bcbbd&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;morph_ot_4_1444&lt;/sys_name&gt;
+        &lt;sys_overrides/&gt;
+        &lt;sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca"&gt;8d8b6bbf0ff07e009c84306be1050e67&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;
+        &lt;sys_scope display_value="Morpheus Catalog"&gt;8d8b6bbf0ff07e009c84306be1050e67&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;catalog_script_client_6571c0231bb9d910f8ddb9de034bcbbd&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;acme&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2022-09-13 12:49:14&lt;/sys_updated_on&gt;
+        &lt;table/&gt;
+        &lt;type&gt;onLoad&lt;/type&gt;
+        &lt;ui_type&gt;0&lt;/ui_type&gt;
+        &lt;variable_set/&gt;
+        &lt;view/&gt;
+    &lt;/catalog_script_client&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>1285770033</payload_hash>
+        <record_name>morph_ot_4_1444</record_name>
+        <reverted_from/>
+        <source>916e17fb2f321110b4b656f62799b6bc</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-03 16:36:20</sys_created_on>
+        <sys_id>ad8e9bfb2f321110b4b656f62799b6a9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1843e59c2630000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-03 16:36:20</sys_updated_on>
+        <type>Catalog Client Scripts</type>
+        <update_guid>6d8e9bfb4a3211101cc4607f10c8b0a9</update_guid>
+        <update_guid_history>6d8e9bfb4a3211101cc4607f10c8b0a9:1285770033</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">45876b772f721110b4b656f62799b68d</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-11-03 17:15:37</sys_created_on>
+        <sys_db_object display_value="" name="catalog_script_client">catalog_script_client</sys_db_object>
+        <sys_id>5047049eb28842e2a5ac4a5576db0da4</sys_id>
+        <sys_metadata>6571c0231bb9d910f8ddb9de034bcbbd</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>morph_ot_4_1444</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_scope_delete/>
+        <sys_update_name>catalog_script_client_6571c0231bb9d910f8ddb9de034bcbbd</sys_update_name>
+        <sys_update_version display_value="catalog_script_client_6571c0231bb9d910f8ddb9de034bcbbd">ad8e9bfb2f321110b4b656f62799b6a9</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-11-03 17:15:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

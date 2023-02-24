@@ -48,17 +48,15 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-07-14 17:44:47</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>f6fa99be879e7450d6b164283cbb351c</sys_id>
+        <sys_id>964b6c9c47556110409982c2e36d4397</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Domain</sys_name>
         <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
         <sys_update_name>sys_dictionary_x_moda_morpheus_ca_provision_type_sys_domain</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2021-10-29 22:09:08</sys_updated_on>
+        <sys_updated_on>2023-02-24 13:12:13</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

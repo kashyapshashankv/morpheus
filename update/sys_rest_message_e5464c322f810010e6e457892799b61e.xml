@@ -13,13 +13,11 @@
         <sys_class_name>sys_rest_message</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2019-11-14 17:32:32</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>e5464c322f810010e6e457892799b61e</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Morpheus Blueprint</sys_name>
         <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
         <sys_update_name>sys_rest_message_e5464c322f810010e6e457892799b61e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>

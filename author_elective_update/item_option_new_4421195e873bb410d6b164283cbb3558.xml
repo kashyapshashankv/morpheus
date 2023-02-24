@@ -151,11 +151,10 @@
         <update_guid_history>5933993aaf34c5503d7917e0c5ce1235:-1984740753</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Record deleted 2022-01-05 13:40:53">5a1419ba8734c550d6b164283cbb3503</sys_audit_delete>
+        <sys_audit_delete display_value="">5a1419ba8734c550d6b164283cbb3503</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>acme</sys_created_by>
         <sys_created_on>2022-01-05 21:40:53</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_db_object display_value="" name="item_option_new">item_option_new</sys_db_object>
         <sys_id>348c5dcb2a66417c9092fd2fd1538279</sys_id>
         <sys_metadata>4421195e873bb410d6b164283cbb3558</sys_metadata>
@@ -164,7 +163,6 @@
         <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
         <sys_parent/>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
         <sys_scope_delete display_value="">2f9ab1287243421ea393ac200543b884</sys_scope_delete>
         <sys_update_name>item_option_new_4421195e873bb410d6b164283cbb3558</sys_update_name>

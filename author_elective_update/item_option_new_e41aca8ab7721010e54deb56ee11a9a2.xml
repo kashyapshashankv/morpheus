@@ -160,16 +160,14 @@
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-04-13 16:03:10</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_db_object display_value="" name="item_option_new">item_option_new</sys_db_object>
         <sys_id>05cd8d05de2f4472821e8494b512f4a4</sys_id>
         <sys_metadata>e41aca8ab7721010e54deb56ee11a9a2</sys_metadata>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Name</sys_name>
-        <sys_package display_value="Service Catalog Builder" source="com.glideapp.servicecatalog.catalog_builder">8ecc6d791b320110f8ddb9de034bcbd5</sys_package>
+        <sys_package display_value="Service Catalog Builder" source="com.glideapp.servicecatalog.catalog_builder">f9dc84b121160110a866589604c20d06</sys_package>
         <sys_parent display_value="Catalog Variable Creation">79c99042b7321010e54deb56ee11a907</sys_parent>
         <sys_policy>protected</sys_policy>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
         <sys_scope_delete display_value="">2f9ab1287243421ea393ac200543b884</sys_scope_delete>
         <sys_update_name>item_option_new_e41aca8ab7721010e54deb56ee11a9a2</sys_update_name>

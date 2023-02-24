@@ -2,7 +2,6 @@
     <sysauto_script action="INSERT_OR_UPDATE">
         <active>true</active>
         <business_calendar/>
-        <can_iterate>true</can_iterate>
         <condition/>
         <conditional>false</conditional>
         <entered_time>1970-01-01 00:00:00</entered_time>
@@ -24,18 +23,14 @@ var now = new GlideDateTime();
 var gr = new GlideRecord('x_moda_morpheus_ca_options');
 gr.addQuery('expires', '<', now);
 gr.deleteMultiple();]]></script>
-        <source_filter/>
-        <source_table>x_moda_morpheus_ca_credentials</source_table>
         <sys_class_name>sysauto_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-28 20:08:31</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>c587bdcb1b48601072bbfcc8cc4bcb9b</sys_id>
         <sys_mod_count>17</sys_mod_count>
         <sys_name>Delete Expired Options</sys_name>
         <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
         <sys_update_name>sysauto_script_c587bdcb1b48601072bbfcc8cc4bcb9b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>

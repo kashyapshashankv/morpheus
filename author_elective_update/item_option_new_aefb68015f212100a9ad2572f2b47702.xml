@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new">
+    <item_option_new action="DELETE">
+        <active>true</active>
+        <attributes/>
+        <cat_item display_value="Service Category Request">3a25637b47701100ba13a5554ee490a0</cat_item>
+        <category/>
+        <choice_direction>down</choice_direction>
+        <choice_field/>
+        <choice_table/>
+        <create_roles/>
+        <default_html_value/>
+        <default_value/>
+        <delete_roles/>
+        <delivery_plan/>
+        <description/>
+        <display_title>false</display_title>
+        <do_not_select_first>false</do_not_select_first>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <enable_also_request_for>false</enable_also_request_for>
+        <example_text/>
+        <field>group</field>
+        <global>false</global>
+        <help_tag>More information</help_tag>
+        <help_text/>
+        <hidden>false</hidden>
+        <include_none>false</include_none>
+        <instructions/>
+        <layout>normal</layout>
+        <list_table/>
+        <lookup_label/>
+        <lookup_price/>
+        <lookup_table>x_moda_morpheus_ca_group</lookup_table>
+        <lookup_unique>false</lookup_unique>
+        <lookup_value>name</lookup_value>
+        <macro/>
+        <macroponent/>
+        <mandatory>true</mandatory>
+        <map_to_field>true</map_to_field>
+        <mask_use_confirmation>false</mask_use_confirmation>
+        <mask_use_encryption>false</mask_use_encryption>
+        <name>group</name>
+        <order>50</order>
+        <price_if_checked>0</price_if_checked>
+        <pricing_implications>false</pricing_implications>
+        <published_ref/>
+        <question_text>Group</question_text>
+        <read_only>false</read_only>
+        <read_roles/>
+        <read_script/>
+        <rec_lookup_price/>
+        <rec_price_if_checked>0</rec_price_if_checked>
+        <record/>
+        <record_producer_table>catalog_category_request</record_producer_table>
+        <reference>x_moda_morpheus_ca_group</reference>
+        <reference_qual>javascript: new x_moda_morpheus_ca.LookUpUtils().getGroupsForProvisionType(current.variables.provision_type, 1);</reference_qual>
+        <reference_qual_condition/>
+        <rich_text/>
+        <roles_to_use_also_request_for/>
+        <save_script/>
+        <scale_max>5</scale_max>
+        <scale_min>0</scale_min>
+        <show_help>false</show_help>
+        <show_help_on_load>false</show_help_on_load>
+        <sp_widget/>
+        <summary_macro/>
+        <sys_class_name>item_option_new</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2014-06-24 20:27:10</sys_created_on>
+        <sys_id>aefb68015f212100a9ad2572f2b47702</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Group</sys_name>
+        <sys_package display_value="Service Creator" source="com.glide.service_creator">a0594c3921920110a866589604c20d68</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="HCM Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>item_option_new_aefb68015f212100a9ad2572f2b47702</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-03-18 04:00:12</sys_updated_on>
+        <table/>
+        <tooltip/>
+        <type>8</type>
+        <ui_page/>
+        <unique>false</unique>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>advanced</use_reference_qualifier>
+        <validate_regex/>
+        <variable_name/>
+        <variable_set display_value="Morpheus Common">db2a37c047916110409982c2e36d43df</variable_set>
+        <variable_width/>
+        <visibility>1</visibility>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <visible_summary>true</visible_summary>
+        <write_roles/>
+    </item_option_new>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</application>
+        <file_path/>
+        <instance_id>7543cebcdb32d1502f68c597059619ad</instance_id>
+        <instance_name>dev142514</instance_name>
+        <name>item_option_new_aefb68015f212100a9ad2572f2b47702</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new"><item_option_new action="INSERT_OR_UPDATE"><active>true</active><attributes/><cat_item display_value="Service Category Request">3a25637b47701100ba13a5554ee490a0</cat_item><category/><choice_direction>down</choice_direction><choice_field/><choice_table/><create_roles/><default_html_value/><default_value/><delete_roles/><delivery_plan/><description/><display_title>false</display_title><do_not_select_first>false</do_not_select_first><dynamic_default_value/><dynamic_ref_qual/><enable_also_request_for>false</enable_also_request_for><example_text/><field>group</field><global>false</global><help_tag>More information</help_tag><help_text/><hidden>false</hidden><include_none>false</include_none><instructions/><layout>normal</layout><list_table/><lookup_label/><lookup_price/><lookup_table>x_moda_morpheus_ca_group</lookup_table><lookup_unique>false</lookup_unique><lookup_value>name</lookup_value><macro/><macroponent/><mandatory>true</mandatory><map_to_field>true</map_to_field><mask_use_confirmation>false</mask_use_confirmation><mask_use_encryption>false</mask_use_encryption><name>group</name><order>50</order><price_if_checked>0</price_if_checked><pricing_implications>false</pricing_implications><published_ref/><question_text>Group</question_text><read_only>false</read_only><read_roles/><read_script/><rec_lookup_price/><rec_price_if_checked>0</rec_price_if_checked><record/><record_producer_table>catalog_category_request</record_producer_table><reference>x_moda_morpheus_ca_group</reference><reference_qual>javascript: new x_moda_morpheus_ca.LookUpUtils().getGroupsForProvisionType(current.variables.provision_type, 1);</reference_qual><reference_qual_condition/><rich_text/><roles_to_use_also_request_for/><save_script/><scale_max>5</scale_max><scale_min>0</scale_min><show_help>false</show_help><show_help_on_load>false</show_help_on_load><sp_widget/><summary_macro/><sys_class_name>item_option_new</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2014-06-24 20:27:10</sys_created_on><sys_id>aefb68015f212100a9ad2572f2b47702</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Group</sys_name><sys_package display_value="Service Creator" source="com.glide.service_creator">a0594c3921920110a866589604c20d68</sys_package><sys_policy/><sys_scope display_value="HCM Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope><sys_update_name>item_option_new_aefb68015f212100a9ad2572f2b47702</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2022-03-18 04:00:12</sys_updated_on><table/><tooltip/><type>8</type><ui_page/><unique>false</unique><use_dynamic_default>false</use_dynamic_default><use_reference_qualifier>advanced</use_reference_qualifier><validate_regex/><variable_name/><variable_set display_value="Morpheus Common">db2a37c047916110409982c2e36d43df</variable_set><variable_width/><visibility>1</visibility><visible_bundle>true</visible_bundle><visible_guide>true</visible_guide><visible_standalone>true</visible_standalone><visible_summary>true</visible_summary><write_roles/></item_option_new></record_update>]]></payload>
+        <payload_hash>-1382795743</payload_hash>
+        <record_name>Group</record_name>
+        <reverted_from/>
+        <source>943a393247012110409982c2e36d4324</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2023-02-20 03:05:19</sys_created_on>
+        <sys_id>cafa6c5c47556110409982c2e36d430b</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>1866cc869980000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>Variable</type>
+        <update_guid>8afa6c5c685561105bb2c9eac827690b</update_guid>
+        <update_guid_history>8afa6c5c685561105bb2c9eac827690b:-1382795743</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Group">4efa6c5c47556110409982c2e36d4352</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-24 13:10:04</sys_created_on>
+        <sys_db_object display_value="" name="item_option_new">item_option_new</sys_db_object>
+        <sys_id>00a0f86a9d9944059c2a5831fc063259</sys_id>
+        <sys_metadata>aefb68015f212100a9ad2572f2b47702</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Group</sys_name>
+        <sys_package display_value="Service Creator" source="com.glide.service_creator">a0594c3921920110a866589604c20d68</sys_package>
+        <sys_parent display_value="Service Category Request">3a25637b47701100ba13a5554ee490a0</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_scope_delete/>
+        <sys_update_name>item_option_new_aefb68015f212100a9ad2572f2b47702</sys_update_name>
+        <sys_update_version display_value="item_option_new_aefb68015f212100a9ad2572f2b47702">cafa6c5c47556110409982c2e36d430b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-24 13:10:04</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

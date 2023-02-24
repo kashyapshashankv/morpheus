@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item">
+    <io_set_item action="DELETE">
+        <order>410</order>
+        <sc_cat_item display_value="Create AD user">d0c133301b299550f8ddb9de034bcb55</sc_cat_item>
+        <sys_class_name>io_set_item</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-08-24 07:00:05</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a4c133301b299550f8ddb9de034bcb7b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>opt-cat-item-type-4.Create AD user</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>io_set_item_a4c133301b299550f8ddb9de034bcb7b</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-08-24 07:00:05</sys_updated_on>
+        <variable_set display_value="">28c133301b299550f8ddb9de034bcb79</variable_set>
+    </io_set_item>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</application>
+        <file_path/>
+        <instance_id>9b5b3d876fa64640869e7b2f5d3ee407</instance_id>
+        <instance_name>ven01434</instance_name>
+        <name>io_set_item_a4c133301b299550f8ddb9de034bcb7b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item"><io_set_item action="INSERT_OR_UPDATE"><order>410</order><sc_cat_item display_value="Create AD user">d0c133301b299550f8ddb9de034bcb55</sc_cat_item><sys_class_name>io_set_item</sys_class_name><sys_created_by>system</sys_created_by><sys_created_on>2022-08-24 07:00:05</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>a4c133301b299550f8ddb9de034bcb7b</sys_id><sys_mod_count>0</sys_mod_count><sys_name>opt-cat-item-type-4.Create AD user</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope><sys_update_name>io_set_item_a4c133301b299550f8ddb9de034bcb7b</sys_update_name><sys_updated_by>system</sys_updated_by><sys_updated_on>2022-08-24 07:00:05</sys_updated_on><variable_set display_value="">28c133301b299550f8ddb9de034bcb79</variable_set></io_set_item></record_update>]]></payload>
+        <payload_hash>717272477</payload_hash>
+        <record_name>opt-cat-item-type-4.Create AD user</record_name>
+        <reverted_from/>
+        <source>c9edc4331b011110f8ddb9de034bcb44</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-08 01:34:54</sys_created_on>
+        <sys_id>631ece461bed9950f8ddb9de034bcb2a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1827b1732300000000</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 12:43:02</sys_updated_on>
+        <type>Catalog Variable Set</type>
+        <update_guid>231ece46deed99506c80d246ec7b6c2a</update_guid>
+        <update_guid_history>231ece46deed99506c80d246ec7b6c2a:717272477</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">6f1ece461bed9950f8ddb9de034bcb28</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-27 20:57:10</sys_created_on>
+        <sys_db_object display_value="" name="io_set_item">io_set_item</sys_db_object>
+        <sys_id>8b897470246141fd8157a4fbf1f72e81</sys_id>
+        <sys_metadata>a4c133301b299550f8ddb9de034bcb7b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>opt-cat-item-type-4.Create AD user</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_scope_delete/>
+        <sys_update_name>io_set_item_a4c133301b299550f8ddb9de034bcb7b</sys_update_name>
+        <sys_update_version display_value="io_set_item_a4c133301b299550f8ddb9de034bcb7b">631ece461bed9950f8ddb9de034bcb2a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-27 20:57:10</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

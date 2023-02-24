@@ -41,23 +41,22 @@
         <source>a89080321b100110f8ddb9de034bcbfd</source>
         <source_table>sys_upgrade_history</source_table>
         <state>previous</state>
-        <sys_created_by/>
+        <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-12-11 19:04:33</sys_created_on>
         <sys_id>9a33d93a8734c550d6b164283cbb35c8</sys_id>
-        <sys_mod_count/>
+        <sys_mod_count>0</sys_mod_count>
         <sys_recorded_at>17daae1ede80000000</sys_recorded_at>
-        <sys_updated_by/>
-        <sys_updated_on/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-24 13:15:17</sys_updated_on>
         <type>Variable Set</type>
         <update_guid>5a33d93a4034c5506f971acbf00787c8</update_guid>
         <update_guid_history>5a33d93a4034c5506f971acbf00787c8:-237074791</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Record deleted 2022-01-05 13:37:03">9e33d93a8734c550d6b164283cbb35eb</sys_audit_delete>
+        <sys_audit_delete display_value="">9e33d93a8734c550d6b164283cbb35eb</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-01-05 21:37:03</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_db_object display_value="" name="item_option_new_set">item_option_new_set</sys_db_object>
         <sys_id>c43d3557dbea44888b0b2a224f4d5d04</sys_id>
         <sys_metadata>e121995e873bb410d6b164283cbb3567</sys_metadata>
@@ -66,7 +65,6 @@
         <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
         <sys_parent/>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
         <sys_scope_delete display_value="">2f9ab1287243421ea393ac200543b884</sys_scope_delete>
         <sys_update_name>item_option_new_set_e121995e873bb410d6b164283cbb3567</sys_update_name>

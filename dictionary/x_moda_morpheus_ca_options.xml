@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Options" max_length="40" name="x_moda_morpheus_ca_options" sizeclass="0" type="collection">
+    <element label="Options" max_length="40" name="x_moda_morpheus_ca_options" type="collection">
         <element default="0" label="Display Order" max_length="40" name="display_order" type="integer"/>
         <element label="Expires" max_length="40" name="expires" type="glide_date_time"/>
         <element display="true" label="Name" max_length="255" name="name" type="string"/>

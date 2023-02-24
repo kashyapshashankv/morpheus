@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Group" max_length="40" name="x_moda_morpheus_ca_group" sizeclass="0" type="collection">
+    <element label="Group" max_length="40" name="x_moda_morpheus_ca_group" type="collection">
         <element label="External ID" max_length="40" name="external_id" type="string"/>
         <element label="Name" max_length="255" name="name" type="string"/>
         <element label="Domain" max_length="32" name="sys_domain" type="domain_id"/>
         <element label="Domain Path" max_length="255" name="sys_domain_path" type="domain_path"/>
         <element label="TenantScope" max_length="255" name="tenantscope" type="longint"/>
         <index name="index">
-            <element name="sys_domain_path"/>
+            <element name="sys_domain"/>
         </index>
         <index name="index2">
-            <element name="sys_domain"/>
+            <element name="sys_domain_path"/>
         </index>
     </element>
 </database>

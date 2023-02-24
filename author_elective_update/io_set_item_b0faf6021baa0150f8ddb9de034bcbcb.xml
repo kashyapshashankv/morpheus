@@ -32,23 +32,22 @@
         <source>e1aa93021b020110f8ddb9de034bcbcc</source>
         <source_table>sys_upgrade_history</source_table>
         <state>previous</state>
-        <sys_created_by/>
+        <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-03-07 02:51:48</sys_created_on>
         <sys_id>b7ace6251bf6c950f8ddb9de034bcbbe</sys_id>
-        <sys_mod_count/>
+        <sys_mod_count>0</sys_mod_count>
         <sys_recorded_at>17f624a41a00000000</sys_recorded_at>
-        <sys_updated_by/>
-        <sys_updated_on/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-24 13:13:18</sys_updated_on>
         <type>Catalog Variable Set</type>
         <update_guid>77ace625a9f6c950b48f9b8805a5e8be</update_guid>
         <update_guid_history>77ace625a9f6c950b48f9b8805a5e8be:1054295224</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Record deleted 2022-04-11 10:01:06">7face6251bf6c950f8ddb9de034bcbbc</sys_audit_delete>
+        <sys_audit_delete display_value="">7face6251bf6c950f8ddb9de034bcbbc</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-04-11 17:01:06</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_db_object display_value="" name="io_set_item">io_set_item</sys_db_object>
         <sys_id>0884dc3daeb347a49e081e59f973f310</sys_id>
         <sys_metadata>b0faf6021baa0150f8ddb9de034bcbcb</sys_metadata>
@@ -57,7 +56,6 @@
         <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
         <sys_parent/>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
         <sys_scope_delete display_value="">2f9ab1287243421ea393ac200543b884</sys_scope_delete>
         <sys_update_name>io_set_item_b0faf6021baa0150f8ddb9de034bcbcb</sys_update_name>

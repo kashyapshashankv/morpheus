@@ -110,11 +110,10 @@
         <update_guid_history>3772afc74b6f3c1010cfc36fdea6ac8a:0,d291a787b66f3c10a5495010bfeaeb7e:-572042870,5691a787936f3c100d5dc78777617d78:426902365</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Record deleted 2021-11-05 16:24:36">32d22f0b1b6f3c10f8ddb9de034bcb9f</sys_audit_delete>
+        <sys_audit_delete display_value="">32d22f0b1b6f3c10f8ddb9de034bcb9f</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-11-05 23:24:36</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_db_object display_value="" name="catalog_script_client">catalog_script_client</sys_db_object>
         <sys_id>184b5794eb8a4a8a82bcf49a881316c4</sys_id>
         <sys_metadata>a806e71587233810d6b164283cbb353c</sys_metadata>
@@ -123,7 +122,6 @@
         <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
         <sys_parent/>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
         <sys_scope_delete display_value="">2f9ab1287243421ea393ac200543b884</sys_scope_delete>
         <sys_update_name>catalog_script_client_a806e71587233810d6b164283cbb353c</sys_update_name>

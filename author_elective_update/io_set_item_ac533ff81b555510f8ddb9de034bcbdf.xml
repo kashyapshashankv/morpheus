@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item">
+    <io_set_item action="DELETE">
+        <order>410</order>
+        <sc_cat_item display_value="CentOS 8">a0533ff81b555510f8ddb9de034bcbd2</sc_cat_item>
+        <sys_class_name>io_set_item</sys_class_name>
+        <sys_created_by>acme</sys_created_by>
+        <sys_created_on>2022-08-11 20:51:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ac533ff81b555510f8ddb9de034bcbdf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>opt-cat-item-type-24.CentOS 8</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>io_set_item_ac533ff81b555510f8ddb9de034bcbdf</sys_update_name>
+        <sys_updated_by>acme</sys_updated_by>
+        <sys_updated_on>2022-08-11 20:51:13</sys_updated_on>
+        <variable_set display_value="">ac533ff81b555510f8ddb9de034bcbdd</variable_set>
+    </io_set_item>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</application>
+        <file_path/>
+        <instance_id>9b5b3d876fa64640869e7b2f5d3ee407</instance_id>
+        <instance_name>ven01434</instance_name>
+        <name>io_set_item_ac533ff81b555510f8ddb9de034bcbdf</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item"><io_set_item action="INSERT_OR_UPDATE"><order>410</order><sc_cat_item display_value="CentOS 8">a0533ff81b555510f8ddb9de034bcbd2</sc_cat_item><sys_class_name>io_set_item</sys_class_name><sys_created_by>acme</sys_created_by><sys_created_on>2022-08-11 20:51:13</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>ac533ff81b555510f8ddb9de034bcbdf</sys_id><sys_mod_count>0</sys_mod_count><sys_name>opt-cat-item-type-24.CentOS 8</sys_name><sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope><sys_update_name>io_set_item_ac533ff81b555510f8ddb9de034bcbdf</sys_update_name><sys_updated_by>acme</sys_updated_by><sys_updated_on>2022-08-11 20:51:13</sys_updated_on><variable_set display_value="">ac533ff81b555510f8ddb9de034bcbdd</variable_set></io_set_item></record_update>]]></payload>
+        <payload_hash>1712974778</payload_hash>
+        <record_name>opt-cat-item-type-24.CentOS 8</record_name>
+        <reverted_from/>
+        <source>c9edc4331b011110f8ddb9de034bcb44</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-08 01:34:54</sys_created_on>
+        <sys_id>b8f5b4921b51d910f8ddb9de034bcb6e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1827b1732300000000</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 12:43:02</sys_updated_on>
+        <type>Catalog Variable Set</type>
+        <update_guid>78f5b492ab51d910768a1eb5f7355c6e</update_guid>
+        <update_guid_history>78f5b492ab51d910768a1eb5f7355c6e:1712974778</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">b4f5b4921b51d910f8ddb9de034bcb6d</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-15 22:54:45</sys_created_on>
+        <sys_db_object display_value="" name="io_set_item">io_set_item</sys_db_object>
+        <sys_id>06ace510b06841cc82105f087a9301b9</sys_id>
+        <sys_metadata>ac533ff81b555510f8ddb9de034bcbdf</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>opt-cat-item-type-24.CentOS 8</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_scope_delete/>
+        <sys_update_name>io_set_item_ac533ff81b555510f8ddb9de034bcbdf</sys_update_name>
+        <sys_update_version display_value="io_set_item_ac533ff81b555510f8ddb9de034bcbdf">b8f5b4921b51d910f8ddb9de034bcb6e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-15 22:54:45</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

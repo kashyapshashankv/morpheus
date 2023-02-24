@@ -55,23 +55,22 @@
         <source>a89080321b100110f8ddb9de034bcbfd</source>
         <source_table>sys_upgrade_history</source_table>
         <state>previous</state>
-        <sys_created_by/>
+        <sys_created_by>admin</sys_created_by>
         <sys_created_on>2021-12-11 19:04:33</sys_created_on>
         <sys_id>f53259b68734c550d6b164283cbb35d0</sys_id>
-        <sys_mod_count/>
+        <sys_mod_count>0</sys_mod_count>
         <sys_recorded_at>17daae1ede80000000</sys_recorded_at>
-        <sys_updated_by/>
-        <sys_updated_on/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-24 13:12:58</sys_updated_on>
         <type>Catalog Client Scripts</type>
         <update_guid>b53259b6d434c55024412d2c179676d0</update_guid>
         <update_guid_history>b53259b6d434c55024412d2c179676d0:-63703646</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="Record deleted 2022-01-05 13:32:39">fd3259b68734c550d6b164283cbb35d3</sys_audit_delete>
+        <sys_audit_delete display_value="">fd3259b68734c550d6b164283cbb35d3</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>acme</sys_created_by>
         <sys_created_on>2022-01-05 21:32:39</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_db_object display_value="" name="catalog_script_client">catalog_script_client</sys_db_object>
         <sys_id>3d09a8d89acd423084e7f1eb1cf19040</sys_id>
         <sys_metadata>3021595e873bb410d6b164283cbb3554</sys_metadata>
@@ -80,7 +79,6 @@
         <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
         <sys_parent/>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
         <sys_scope_delete display_value="">2f9ab1287243421ea393ac200543b884</sys_scope_delete>
         <sys_update_name>catalog_script_client_3021595e873bb410d6b164283cbb3554</sys_update_name>

@@ -141,7 +141,6 @@
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-27 23:19:40</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_db_object display_value="" name="sc_cat_item">sc_cat_item</sys_db_object>
         <sys_id>2ad30d3199434e488d27cee9fc31b769</sys_id>
         <sys_metadata>5fed09ba1b8c201072bbfcc8cc4bcb4e</sys_metadata>
@@ -150,7 +149,6 @@
         <sys_package display_value="Global" source="global">global</sys_package>
         <sys_parent display_value="Morpheus">e54a855d0f223200d6844cace1050e30</sys_parent>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
         <sys_scope_delete display_value="">2f9ab1287243421ea393ac200543b884</sys_scope_delete>
         <sys_update_name>sc_cat_item_5fed09ba1b8c201072bbfcc8cc4bcb4e</sys_update_name>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Datastore" max_length="40" name="x_moda_morpheus_ca_datastore" sizeclass="0" type="collection">
+    <element label="Datastore" max_length="40" name="x_moda_morpheus_ca_datastore" type="collection">
         <element label="Cloud" max_length="32" name="cloud" reference="x_moda_morpheus_ca_clouds" type="reference"/>
         <element label="External ID" max_length="255" name="external_id" type="string"/>
         <element label="Name" max_length="255" name="name" type="string"/>
@@ -14,10 +14,10 @@
             <element name="provision_type"/>
         </index>
         <index name="index3">
-            <element name="sys_domain_path"/>
+            <element name="sys_domain"/>
         </index>
         <index name="index4">
-            <element name="sys_domain"/>
+            <element name="sys_domain_path"/>
         </index>
     </element>
 </database>

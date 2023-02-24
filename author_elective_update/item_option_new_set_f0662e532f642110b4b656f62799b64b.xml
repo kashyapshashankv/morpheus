@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new_set">
+    <item_option_new_set action="DELETE">
+        <create_roles/>
+        <description>Option Type - Option Types for VMware Datastore Fail</description>
+        <display_title>false</display_title>
+        <internal_name>u_opt_cat_item_type_23</internal_name>
+        <layout>normal</layout>
+        <name>opt-cat-item-type-23</name>
+        <order>400</order>
+        <read_roles/>
+        <set_attributes/>
+        <sys_class_name>item_option_new_set</sys_class_name>
+        <sys_created_by>morph_service_now</sys_created_by>
+        <sys_created_on>2023-01-27 23:03:59</sys_created_on>
+        <sys_id>f0662e532f642110b4b656f62799b64b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>opt-cat-item-type-23</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>item_option_new_set_f0662e532f642110b4b656f62799b64b</sys_update_name>
+        <sys_updated_by>morph_service_now</sys_updated_by>
+        <sys_updated_on>2023-01-27 23:03:59</sys_updated_on>
+        <title>opt-cat-item-type-23</title>
+        <type>one_to_one</type>
+        <write_roles/>
+    </item_option_new_set>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</application>
+        <file_path/>
+        <instance_id>091b4f91dbd1db044c1ff70fbf961907</instance_id>
+        <instance_name>dev55235</instance_name>
+        <name>item_option_new_set_f0662e532f642110b4b656f62799b64b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new_set"><item_option_new_set action="INSERT_OR_UPDATE"><create_roles/><description>Option Type - Option Types for VMware Datastore Fail</description><display_title>false</display_title><internal_name>u_opt_cat_item_type_23</internal_name><layout>normal</layout><name>opt-cat-item-type-23</name><order>400</order><read_roles/><set_attributes/><sys_class_name>item_option_new_set</sys_class_name><sys_created_by>morph_service_now</sys_created_by><sys_created_on>2023-01-27 23:03:59</sys_created_on><sys_id>f0662e532f642110b4b656f62799b64b</sys_id><sys_mod_count>0</sys_mod_count><sys_name>opt-cat-item-type-23</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope><sys_update_name>item_option_new_set_f0662e532f642110b4b656f62799b64b</sys_update_name><sys_updated_by>morph_service_now</sys_updated_by><sys_updated_on>2023-01-27 23:03:59</sys_updated_on><title>opt-cat-item-type-23</title><type>one_to_one</type><write_roles/></item_option_new_set></record_update>]]></payload>
+        <payload_hash>327970407</payload_hash>
+        <record_name>opt-cat-item-type-23</record_name>
+        <reverted_from/>
+        <source>a875c7d12f321110b4b656f62799b6a1</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-10-26 20:21:56</sys_created_on>
+        <sys_id>328068a92f056110b4b656f62799b66b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18415f56aa00000000</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 12:45:27</sys_updated_on>
+        <type>Variable Set</type>
+        <update_guid>fe8068a9a5056110c035171be99c1e6a</update_guid>
+        <update_guid_history>fe8068a9a5056110c035171be99c1e6a:327970407</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">fa8068a92f056110b4b656f62799b669</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-02-15 23:21:15</sys_created_on>
+        <sys_db_object display_value="" name="item_option_new_set">item_option_new_set</sys_db_object>
+        <sys_id>0d6f3c16ec50466c89146e3d92c7a444</sys_id>
+        <sys_metadata>f0662e532f642110b4b656f62799b64b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>opt-cat-item-type-23</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_scope_delete/>
+        <sys_update_name>item_option_new_set_f0662e532f642110b4b656f62799b64b</sys_update_name>
+        <sys_update_version display_value="item_option_new_set_f0662e532f642110b4b656f62799b64b">328068a92f056110b4b656f62799b66b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-15 23:21:15</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new_set">
+    <item_option_new_set action="DELETE">
+        <create_roles/>
+        <description>Option Type - Option Types for Create AD user</description>
+        <display_title>false</display_title>
+        <internal_name>u_opt_cat_item_type_4</internal_name>
+        <layout>normal</layout>
+        <name>opt-cat-item-type-4</name>
+        <order>400</order>
+        <read_roles/>
+        <set_attributes/>
+        <sys_class_name>item_option_new_set</sys_class_name>
+        <sys_created_by>acme</sys_created_by>
+        <sys_created_on>2022-08-11 20:51:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>0c533ff81b555510f8ddb9de034bcba4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>opt-cat-item-type-4</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>item_option_new_set_0c533ff81b555510f8ddb9de034bcba4</sys_update_name>
+        <sys_updated_by>acme</sys_updated_by>
+        <sys_updated_on>2022-08-11 20:51:12</sys_updated_on>
+        <title>opt-cat-item-type-4</title>
+        <type>one_to_one</type>
+        <write_roles/>
+    </item_option_new_set>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</application>
+        <file_path/>
+        <instance_id>9b5b3d876fa64640869e7b2f5d3ee407</instance_id>
+        <instance_name>ven01434</instance_name>
+        <name>item_option_new_set_0c533ff81b555510f8ddb9de034bcba4</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new_set"><item_option_new_set action="INSERT_OR_UPDATE"><create_roles/><description>Option Type - Option Types for Create AD user</description><display_title>false</display_title><internal_name>u_opt_cat_item_type_4</internal_name><layout>normal</layout><name>opt-cat-item-type-4</name><order>400</order><read_roles/><set_attributes/><sys_class_name>item_option_new_set</sys_class_name><sys_created_by>acme</sys_created_by><sys_created_on>2022-08-11 20:51:12</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>0c533ff81b555510f8ddb9de034bcba4</sys_id><sys_mod_count>0</sys_mod_count><sys_name>opt-cat-item-type-4</sys_name><sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope><sys_update_name>item_option_new_set_0c533ff81b555510f8ddb9de034bcba4</sys_update_name><sys_updated_by>acme</sys_updated_by><sys_updated_on>2022-08-11 20:51:12</sys_updated_on><title>opt-cat-item-type-4</title><type>one_to_one</type><write_roles/></item_option_new_set></record_update>]]></payload>
+        <payload_hash>-1886548720</payload_hash>
+        <record_name>opt-cat-item-type-4</record_name>
+        <reverted_from/>
+        <source>c9edc4331b011110f8ddb9de034bcb44</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-08 01:34:54</sys_created_on>
+        <sys_id>1be5b0521b51d910f8ddb9de034bcbc0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1827b1732300000000</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-23 12:45:16</sys_updated_on>
+        <type>Variable Set</type>
+        <update_guid>d7e5b0520351d910540550b515955fc0</update_guid>
+        <update_guid_history>d7e5b0520351d910540550b515955fc0:-1886548720</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">dfe5b0521b51d910f8ddb9de034bcbbe</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-15 22:54:42</sys_created_on>
+        <sys_db_object display_value="" name="item_option_new_set">item_option_new_set</sys_db_object>
+        <sys_id>20e78253ac044a389152b3f7a62d8d10</sys_id>
+        <sys_metadata>0c533ff81b555510f8ddb9de034bcba4</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>opt-cat-item-type-4</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_scope_delete/>
+        <sys_update_name>item_option_new_set_0c533ff81b555510f8ddb9de034bcba4</sys_update_name>
+        <sys_update_version display_value="item_option_new_set_0c533ff81b555510f8ddb9de034bcba4">1be5b0521b51d910f8ddb9de034bcbc0</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-15 22:54:42</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

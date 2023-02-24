@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Service Plans" max_length="40" name="x_moda_morpheus_ca_service_plans" sizeclass="0" type="collection">
+    <element label="Service Plans" max_length="40" name="x_moda_morpheus_ca_service_plans" type="collection">
         <element label="External ID" max_length="255" name="external_id" type="string"/>
         <element label="Max Storage" max_length="40" name="max_storage" type="longint"/>
         <element label="Name" max_length="255" name="name" type="string"/>

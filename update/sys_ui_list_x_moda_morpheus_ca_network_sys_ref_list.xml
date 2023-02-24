@@ -3,7 +3,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>name</element>
-            <list_id display_value="x_moda_morpheus_ca_network" element="NULL" name="x_moda_morpheus_ca_network" parent="NULL" relationship="NULL" sys_domain="global" view="8e5f35030f2202009c84306be1050e30">3f5dd3af0f7df2009c84306be1050e83</list_id>
+            <list_id display_value="x_moda_morpheus_ca_network" element="NULL" name="x_moda_morpheus_ca_network" parent="NULL" relationship="NULL" sys_domain="global" view="d2a5c07121120110a866589604c20d22">3f5dd3af0f7df2009c84306be1050e83</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
@@ -28,7 +28,6 @@
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2017-04-04 18:58:29</sys_created_on>
-            <sys_customer_update>false</sys_customer_update>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>3f5dd3af0f7df2009c84306be1050e83</sys_id>
@@ -36,13 +35,12 @@
             <sys_name>x_moda_morpheus_ca_network</sys_name>
             <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
             <sys_policy/>
-            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
             <sys_update_name>sys_ui_list_x_moda_morpheus_ca_network_sys_ref_list</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2017-04-04 18:58:29</sys_updated_on>
             <sys_user/>
-            <view display_value="Reference List" name="sys_ref_list">8e5f35030f2202009c84306be1050e30</view>
+            <view display_value="Reference List" name="sys_ref_list">d2a5c07121120110a866589604c20d22</view>
             <view_name/>
         </sys_ui_list>
     </sys_ui_list>
