@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item">
+    <io_set_item action="DELETE">
+        <order>410</order>
+        <sc_cat_item display_value="listwithnull">82aff28c2f31201029b02d5df699b66f</sc_cat_item>
+        <sys_class_name>io_set_item</sys_class_name>
+        <sys_created_by>morpheus</sys_created_by>
+        <sys_created_on>2021-01-14 17:08:00</sys_created_on>
+        <sys_id>82aff28c2f31201029b02d5df699b677</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>opt-cat-item-type-14.listwithnull</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>io_set_item_82aff28c2f31201029b02d5df699b677</sys_update_name>
+        <sys_updated_by>morpheus</sys_updated_by>
+        <sys_updated_on>2021-01-14 17:08:00</sys_updated_on>
+        <variable_set display_value="opt-cat-item-type-14">4aaff28c2f31201029b02d5df699b676</variable_set>
+    </io_set_item>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</application>
+        <file_path/>
+        <instance_id>9b5b3d876fa64640869e7b2f5d3ee407</instance_id>
+        <instance_name>ven01434</instance_name>
+        <name>io_set_item_82aff28c2f31201029b02d5df699b677</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item">
+    <io_set_item action="INSERT_OR_UPDATE">
+        <order>410</order>
+        <sc_cat_item display_value="listwithnull">82aff28c2f31201029b02d5df699b66f</sc_cat_item>
+        <sys_class_name>io_set_item</sys_class_name>
+        <sys_created_by>morpheus</sys_created_by>
+        <sys_created_on>2021-01-14 17:08:00</sys_created_on>
+        <sys_id>82aff28c2f31201029b02d5df699b677</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>opt-cat-item-type-14.listwithnull</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>io_set_item_82aff28c2f31201029b02d5df699b677</sys_update_name>
+        <sys_updated_by>morpheus</sys_updated_by>
+        <sys_updated_on>2021-01-14 17:08:00</sys_updated_on>
+        <variable_set display_value="opt-cat-item-type-14">4aaff28c2f31201029b02d5df699b676</variable_set>
+    </io_set_item>
+</record_update>]]></payload>
+        <payload_hash>-1221089177</payload_hash>
+        <record_name>opt-cat-item-type-14.listwithnull</record_name>
+        <reverted_from/>
+        <source>16afce3ddbf5a010f18484d868961997</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-20 00:10:13</sys_created_on>
+        <sys_id>7b309ebddbf5a010f18484d868961921</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1771d20a17c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-20 00:10:13</sys_updated_on>
+        <type>Catalog Variable Set</type>
+        <update_guid>b7309ebd16f5a0104b692c69160d9721</update_guid>
+        <update_guid_history>b7309ebd16f5a0104b692c69160d9721:0,1110de7d03f5a010fd9a6cc94d7845d7:-118748423,703dd05cceb12490d6fc64f750fe25b3:-1221089177</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 2021-01-19 16:12:30">15c01a71db39a010f18484d868961900</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-20 00:12:30</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="io_set_item">io_set_item</sys_db_object>
+        <sys_id>28206a6b2db44e02a1185c5af9f4d2e9</sys_id>
+        <sys_metadata>82aff28c2f31201029b02d5df699b677</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>opt-cat-item-type-14.listwithnull</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_scope_delete display_value="">2f9ab1287243421ea393ac200543b884</sys_scope_delete>
+        <sys_update_name>io_set_item_82aff28c2f31201029b02d5df699b677</sys_update_name>
+        <sys_update_version display_value="io_set_item_82aff28c2f31201029b02d5df699b677">7b309ebddbf5a010f18484d868961921</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-20 00:12:30</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

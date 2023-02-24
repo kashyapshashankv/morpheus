@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <condition/>
+        <description/>
+        <name>catalog_ui_policy</name>
+        <operation display_value="create">create</operation>
+        <script/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-27 19:43:52</sys_created_on>
+        <sys_id>a0ad6cfe1b0c201072bbfcc8cc4bcbf3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>catalog_ui_policy</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>sys_security_acl_a0ad6cfe1b0c201072bbfcc8cc4bcbf3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-27 19:43:52</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</application>
+        <file_path/>
+        <instance_id>bc766decdbbbb3800ae3ac44d4961921</instance_id>
+        <instance_name>dev93300</instance_name>
+        <name>sys_security_acl_a0ad6cfe1b0c201072bbfcc8cc4bcbf3</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><advanced>false</advanced><condition/><description/><name>catalog_ui_policy</name><operation display_value="create">create</operation><script/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-10-27 19:43:52</sys_created_on><sys_id>a0ad6cfe1b0c201072bbfcc8cc4bcbf3</sys_id><sys_mod_count>0</sys_mod_count><sys_name>catalog_ui_policy</sys_name><sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package><sys_policy/><sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope><sys_update_name>sys_security_acl_a0ad6cfe1b0c201072bbfcc8cc4bcbf3</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-10-27 19:43:52</sys_updated_on><type display_value="record">record</type></sys_security_acl></record_update>]]></payload>
+        <payload_hash>-1880330497</payload_hash>
+        <record_name>catalog_ui_policy</record_name>
+        <reverted_from/>
+        <source>9d6a9bae1b48201072bbfcc8cc4bcb1f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-27 19:43:52</sys_created_on>
+        <sys_id>fabd6c721b4c201072bbfcc8cc4bcbfa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1756b9696640000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-27 19:43:52</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>7ebd2c72e94c201063dfbecd79960f5f</update_guid>
+        <update_guid_history>7ebd2c72e94c201063dfbecd79960f5f:-1880330497</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-27 23:22:38</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>12ae57b31d7d46fb9bb453b37ff05079</sys_id>
+        <sys_metadata>a0ad6cfe1b0c201072bbfcc8cc4bcbf3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>catalog_ui_policy</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_parent display_value="">0811c4fc1bd3101072bbfcc8cc4bcb51</sys_parent>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_scope_delete display_value="">2f9ab1287243421ea393ac200543b884</sys_scope_delete>
+        <sys_update_name>sys_security_acl_a0ad6cfe1b0c201072bbfcc8cc4bcbf3</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_a0ad6cfe1b0c201072bbfcc8cc4bcbf3">fabd6c721b4c201072bbfcc8cc4bcbfa</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-27 23:22:38</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

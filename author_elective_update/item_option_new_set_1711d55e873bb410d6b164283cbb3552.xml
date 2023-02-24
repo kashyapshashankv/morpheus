@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new_set">
+    <item_option_new_set action="DELETE">
+        <create_roles/>
+        <description>Option Type - Option Types for apache-amazon-2.4-single</description>
+        <display_title>false</display_title>
+        <internal_name>u_opt_apache_amazon_2_4_single</internal_name>
+        <layout>normal</layout>
+        <name>opt-apache-amazon-2.4-single</name>
+        <order>400</order>
+        <read_roles/>
+        <set_attributes/>
+        <sys_class_name>item_option_new_set</sys_class_name>
+        <sys_created_by>acme</sys_created_by>
+        <sys_created_on>2021-11-15 15:08:05</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>1711d55e873bb410d6b164283cbb3552</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>opt-apache-amazon-2.4-single</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>item_option_new_set_1711d55e873bb410d6b164283cbb3552</sys_update_name>
+        <sys_updated_by>acme</sys_updated_by>
+        <sys_updated_on>2021-11-15 15:08:05</sys_updated_on>
+        <title>opt-apache-amazon-2.4-single</title>
+        <type>one_to_one</type>
+        <write_roles/>
+    </item_option_new_set>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</application>
+        <file_path/>
+        <instance_id>9b5b3d876fa64640869e7b2f5d3ee407</instance_id>
+        <instance_name>ven01434</instance_name>
+        <name>item_option_new_set_1711d55e873bb410d6b164283cbb3552</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new_set"><item_option_new_set action="INSERT_OR_UPDATE"><create_roles/><description>Option Type - Option Types for apache-amazon-2.4-single</description><display_title>false</display_title><internal_name>u_opt_apache_amazon_2_4_single</internal_name><layout>normal</layout><name>opt-apache-amazon-2.4-single</name><order>400</order><read_roles/><set_attributes/><sys_class_name>item_option_new_set</sys_class_name><sys_created_by>acme</sys_created_by><sys_created_on>2021-11-15 15:08:05</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>1711d55e873bb410d6b164283cbb3552</sys_id><sys_mod_count>0</sys_mod_count><sys_name>opt-apache-amazon-2.4-single</sys_name><sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope><sys_update_name>item_option_new_set_1711d55e873bb410d6b164283cbb3552</sys_update_name><sys_updated_by>acme</sys_updated_by><sys_updated_on>2021-11-15 15:08:05</sys_updated_on><title>opt-apache-amazon-2.4-single</title><type>one_to_one</type><write_roles/></item_option_new_set></record_update>]]></payload>
+        <payload_hash>1758854682</payload_hash>
+        <record_name>opt-apache-amazon-2.4-single</record_name>
+        <reverted_from/>
+        <source>a89080321b100110f8ddb9de034bcbfd</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2021-12-11 19:04:33</sys_created_on>
+        <sys_id>0833d53a8734c550d6b164283cbb3518</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>17daae1ede80000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>Variable Set</type>
+        <update_guid>c433d53af734c5507f90ed11b6e90118</update_guid>
+        <update_guid_history>c433d53af734c5507f90ed11b6e90118:1758854682</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 2022-01-05 13:36:54">8c33d53a8734c550d6b164283cbb3543</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:36:54</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="item_option_new_set">item_option_new_set</sys_db_object>
+        <sys_id>226d13ed29d8434693d245a83d93e9e4</sys_id>
+        <sys_metadata>1711d55e873bb410d6b164283cbb3552</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>opt-apache-amazon-2.4-single</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_scope_delete display_value="">2f9ab1287243421ea393ac200543b884</sys_scope_delete>
+        <sys_update_name>item_option_new_set_1711d55e873bb410d6b164283cbb3552</sys_update_name>
+        <sys_update_version display_value="item_option_new_set_1711d55e873bb410d6b164283cbb3552">0833d53a8734c550d6b164283cbb3518</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:36:54</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

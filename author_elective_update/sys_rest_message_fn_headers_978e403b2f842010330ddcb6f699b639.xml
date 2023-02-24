@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_headers">
+    <sys_rest_message_fn_headers action="DELETE">
+        <name>Content-Type</name>
+        <rest_message_function display_value="GET">34614b290fb532009c84306be1050e98</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_headers</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-30 20:02:08</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>978e403b2f842010330ddcb6f699b639</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Content-Type</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>sys_rest_message_fn_headers_978e403b2f842010330ddcb6f699b639</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-30 20:02:08</sys_updated_on>
+        <value>application/x-www-form-urlencoded</value>
+    </sys_rest_message_fn_headers>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</application>
+        <file_path/>
+        <instance_id>b7bf278edba31f404c1ff70fbf9619a2</instance_id>
+        <instance_name>dev67710</instance_name>
+        <name>sys_rest_message_fn_headers_978e403b2f842010330ddcb6f699b639</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_headers">
+    <sys_rest_message_fn_headers action="INSERT_OR_UPDATE">
+        <name>Content-Type</name>
+        <rest_message_function display_value="GET">34614b290fb532009c84306be1050e98</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_headers</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-30 20:02:08</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>978e403b2f842010330ddcb6f699b639</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Content-Type</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>sys_rest_message_fn_headers_978e403b2f842010330ddcb6f699b639</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-30 20:02:08</sys_updated_on>
+        <value>application/x-www-form-urlencoded</value>
+    </sys_rest_message_fn_headers>
+</record_update>]]></payload>
+        <payload_hash>-655356386</payload_hash>
+        <record_name>Content-Type</record_name>
+        <reverted_from/>
+        <source>746100a1db206010b16dbd51399619bc</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-11-17 15:49:37</sys_created_on>
+        <sys_id>988188a1db206010b16dbd51399619d3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>175d6e5ab130000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-17 15:49:37</sys_updated_on>
+        <type>HTTP Headers</type>
+        <update_guid>188188a129206010b27f1b0f9efa4dd3</update_guid>
+        <update_guid_history>188188a129206010b27f1b0f9efa4dd3:0,03474c97a1502010598ebd0cb26d7304:1577437934</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-11-17 16:09:47</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_rest_message_fn_headers">sys_rest_message_fn_headers</sys_db_object>
+        <sys_id>47c6c9020b824fa1aaf9187f16858fb9</sys_id>
+        <sys_metadata>978e403b2f842010330ddcb6f699b639</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Content-Type</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_parent display_value="GET">34614b290fb532009c84306be1050e98</sys_parent>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_scope_delete display_value="">2f9ab1287243421ea393ac200543b884</sys_scope_delete>
+        <sys_update_name>sys_rest_message_fn_headers_978e403b2f842010330ddcb6f699b639</sys_update_name>
+        <sys_update_version display_value="sys_rest_message_fn_headers_978e403b2f842010330ddcb6f699b639">988188a1db206010b16dbd51399619d3</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-11-17 16:09:47</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

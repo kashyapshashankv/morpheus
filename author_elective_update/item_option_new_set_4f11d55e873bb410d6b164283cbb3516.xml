@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new_set">
+    <item_option_new_set action="DELETE">
+        <create_roles/>
+        <description>Option Type - Option Types for apache-azure-2.4-ubuntu-16.04-single</description>
+        <display_title>false</display_title>
+        <internal_name>u_opt_apache_azure_2_4_ubuntu_16_04_single</internal_name>
+        <layout>normal</layout>
+        <name>opt-apache-azure-2.4-ubuntu-16.04-single</name>
+        <order>400</order>
+        <read_roles/>
+        <set_attributes/>
+        <sys_class_name>item_option_new_set</sys_class_name>
+        <sys_created_by>acme</sys_created_by>
+        <sys_created_on>2021-11-15 15:08:05</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>4f11d55e873bb410d6b164283cbb3516</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>opt-apache-azure-2.4-ubuntu-16.04-single</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>item_option_new_set_4f11d55e873bb410d6b164283cbb3516</sys_update_name>
+        <sys_updated_by>acme</sys_updated_by>
+        <sys_updated_on>2021-11-15 15:08:05</sys_updated_on>
+        <title>opt-apache-azure-2.4-ubuntu-16.04-single</title>
+        <type>one_to_one</type>
+        <write_roles/>
+    </item_option_new_set>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</application>
+        <file_path/>
+        <instance_id>9b5b3d876fa64640869e7b2f5d3ee407</instance_id>
+        <instance_name>ven01434</instance_name>
+        <name>item_option_new_set_4f11d55e873bb410d6b164283cbb3516</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new_set"><item_option_new_set action="INSERT_OR_UPDATE"><create_roles/><description>Option Type - Option Types for apache-azure-2.4-ubuntu-16.04-single</description><display_title>false</display_title><internal_name>u_opt_apache_azure_2_4_ubuntu_16_04_single</internal_name><layout>normal</layout><name>opt-apache-azure-2.4-ubuntu-16.04-single</name><order>400</order><read_roles/><set_attributes/><sys_class_name>item_option_new_set</sys_class_name><sys_created_by>acme</sys_created_by><sys_created_on>2021-11-15 15:08:05</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>4f11d55e873bb410d6b164283cbb3516</sys_id><sys_mod_count>0</sys_mod_count><sys_name>opt-apache-azure-2.4-ubuntu-16.04-single</sys_name><sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope><sys_update_name>item_option_new_set_4f11d55e873bb410d6b164283cbb3516</sys_update_name><sys_updated_by>acme</sys_updated_by><sys_updated_on>2021-11-15 15:08:05</sys_updated_on><title>opt-apache-azure-2.4-ubuntu-16.04-single</title><type>one_to_one</type><write_roles/></item_option_new_set></record_update>]]></payload>
+        <payload_hash>1485864174</payload_hash>
+        <record_name>opt-apache-azure-2.4-ubuntu-16.04-single</record_name>
+        <reverted_from/>
+        <source>a89080321b100110f8ddb9de034bcbfd</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2021-12-11 19:04:33</sys_created_on>
+        <sys_id>2033193a8734c550d6b164283cbb350a</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>17daae1ede80000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>Variable Set</type>
+        <update_guid>ec33193a7c34c550e7bf8068351d5509</update_guid>
+        <update_guid_history>ec33193a7c34c550e7bf8068351d5509:1485864174</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 2022-01-05 13:36:56">2433193a8734c550d6b164283cbb351d</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:36:56</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="item_option_new_set">item_option_new_set</sys_db_object>
+        <sys_id>070802c08f0347f387f8a567c7325f99</sys_id>
+        <sys_metadata>4f11d55e873bb410d6b164283cbb3516</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>opt-apache-azure-2.4-ubuntu-16.04-single</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_scope_delete display_value="">2f9ab1287243421ea393ac200543b884</sys_scope_delete>
+        <sys_update_name>item_option_new_set_4f11d55e873bb410d6b164283cbb3516</sys_update_name>
+        <sys_update_version display_value="item_option_new_set_4f11d55e873bb410d6b164283cbb3516">2033193a8734c550d6b164283cbb350a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:36:56</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

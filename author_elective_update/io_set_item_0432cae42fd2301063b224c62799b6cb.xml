@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item">
+    <io_set_item action="DELETE">
+        <order>410</order>
+        <sc_cat_item display_value="Ubuntu-Amazon VM-20.04">bb22cae42fd2301063b224c62799b65c</sc_cat_item>
+        <sys_class_name>io_set_item</sys_class_name>
+        <sys_created_by>oceanic</sys_created_by>
+        <sys_created_on>2021-08-27 18:38:57</sys_created_on>
+        <sys_id>0432cae42fd2301063b224c62799b6cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>opt-ubuntu-amazon-20.04.Ubuntu-Amazon VM-20.04</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>io_set_item_0432cae42fd2301063b224c62799b6cb</sys_update_name>
+        <sys_updated_by>oceanic</sys_updated_by>
+        <sys_updated_on>2021-08-27 18:38:57</sys_updated_on>
+        <variable_set display_value="opt-ubuntu-amazon-20.04">cc32cae42fd2301063b224c62799b6c8</variable_set>
+    </io_set_item>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</application>
+        <file_path/>
+        <instance_id>30217cffdbf353446578f22ebf961984</instance_id>
+        <instance_name>dev70494</instance_name>
+        <name>io_set_item_0432cae42fd2301063b224c62799b6cb</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item">
+    <io_set_item action="INSERT_OR_UPDATE">
+        <order>410</order>
+        <sc_cat_item display_value="Ubuntu-Amazon VM-20.04">bb22cae42fd2301063b224c62799b65c</sc_cat_item>
+        <sys_class_name>io_set_item</sys_class_name>
+        <sys_created_by>oceanic</sys_created_by>
+        <sys_created_on>2021-08-27 18:38:57</sys_created_on>
+        <sys_id>0432cae42fd2301063b224c62799b6cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>opt-ubuntu-amazon-20.04.Ubuntu-Amazon VM-20.04</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>io_set_item_0432cae42fd2301063b224c62799b6cb</sys_update_name>
+        <sys_updated_by>oceanic</sys_updated_by>
+        <sys_updated_on>2021-08-27 18:38:57</sys_updated_on>
+        <variable_set display_value="opt-ubuntu-amazon-20.04">cc32cae42fd2301063b224c62799b6c8</variable_set>
+    </io_set_item>
+</record_update>]]></payload>
+        <payload_hash>-1236974017</payload_hash>
+        <record_name>opt-ubuntu-amazon-20.04.Ubuntu-Amazon VM-20.04</record_name>
+        <reverted_from/>
+        <source>7802efc287527010d2f164280cbb35d7</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-01 17:29:03</sys_created_on>
+        <sys_id>3c22a34687527010d2f164280cbb354a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17ba26834560000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-01 17:29:03</sys_updated_on>
+        <type>Catalog Variable Set</type>
+        <update_guid>f822a34657527010d7589434f6a6674a</update_guid>
+        <update_guid_history>f822a34657527010d7589434f6a6674a:-1236974017</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">c616a70e87527010d2f164280cbb35e7</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-01 17:46:20</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="io_set_item">io_set_item</sys_db_object>
+        <sys_id>108cb911cdd743948d06c1bf868346c4</sys_id>
+        <sys_metadata>0432cae42fd2301063b224c62799b6cb</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>opt-ubuntu-amazon-20.04.Ubuntu-Amazon VM-20.04</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_scope_delete display_value="">2f9ab1287243421ea393ac200543b884</sys_scope_delete>
+        <sys_update_name>io_set_item_0432cae42fd2301063b224c62799b6cb</sys_update_name>
+        <sys_update_version display_value="io_set_item_0432cae42fd2301063b224c62799b6cb">3c22a34687527010d2f164280cbb354a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-01 17:46:20</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

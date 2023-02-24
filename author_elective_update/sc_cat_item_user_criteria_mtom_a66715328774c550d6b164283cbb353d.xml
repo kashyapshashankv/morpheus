@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_user_criteria_mtom">
+    <sc_cat_item_user_criteria_mtom action="DELETE">
+        <sc_cat_item display_value="MySQL with Version Option">6a67d1328774c550d6b164283cbb35ff</sc_cat_item>
+        <sys_class_name>sc_cat_item_user_criteria_mtom</sys_class_name>
+        <sys_created_by>acme</sys_created_by>
+        <sys_created_on>2022-01-05 21:55:23</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a66715328774c550d6b164283cbb353d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>MySQL with Version Option.Morpheus - All ACME Corporation users</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>sc_cat_item_user_criteria_mtom_a66715328774c550d6b164283cbb353d</sys_update_name>
+        <sys_updated_by>acme</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:55:23</sys_updated_on>
+        <user_criteria display_value="Morpheus - All ACME Corporation users">8a6791328774c550d6b164283cbb35cf</user_criteria>
+    </sc_cat_item_user_criteria_mtom>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</application>
+        <file_path/>
+        <instance_id>9b5b3d876fa64640869e7b2f5d3ee407</instance_id>
+        <instance_name>ven01434</instance_name>
+        <name>sc_cat_item_user_criteria_mtom_a66715328774c550d6b164283cbb353d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_user_criteria_mtom"><sc_cat_item_user_criteria_mtom action="INSERT_OR_UPDATE"><sc_cat_item display_value="MySQL with Version Option">6a67d1328774c550d6b164283cbb35ff</sc_cat_item><sys_class_name>sc_cat_item_user_criteria_mtom</sys_class_name><sys_created_by>acme</sys_created_by><sys_created_on>2022-01-05 21:55:23</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>a66715328774c550d6b164283cbb353d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>MySQL with Version Option.Morpheus - All ACME Corporation users</sys_name><sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope><sys_update_name>sc_cat_item_user_criteria_mtom_a66715328774c550d6b164283cbb353d</sys_update_name><sys_updated_by>acme</sys_updated_by><sys_updated_on>2022-01-05 21:55:23</sys_updated_on><user_criteria display_value="Morpheus - All ACME Corporation users">8a6791328774c550d6b164283cbb35cf</user_criteria></sc_cat_item_user_criteria_mtom></record_update>]]></payload>
+        <payload_hash>1879787157</payload_hash>
+        <record_name>MySQL with Version Option.Morpheus - All ACME Corporation users</record_name>
+        <reverted_from/>
+        <source>27e651fe8734c550d6b164283cbb3575</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>acme</sys_created_by>
+        <sys_created_on>2022-01-05 21:55:23</sys_created_on>
+        <sys_id>ae6715328774c550d6b164283cbb353e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17e2c3d512f0000001</sys_recorded_at>
+        <sys_updated_by>acme</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:55:23</sys_updated_on>
+        <type>Catalog Item Available for</type>
+        <update_guid>e6671532a174c5502f7b473418c75f3e</update_guid>
+        <update_guid_history>e6671532a174c5502f7b473418c75f3e:1879787157</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 2022-01-05 13:59:38">05681db28774c550d6b164283cbb3527</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:59:38</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sc_cat_item_user_criteria_mtom">sc_cat_item_user_criteria_mtom</sys_db_object>
+        <sys_id>1a3ce23562d64e678d713fc5c2d85d41</sys_id>
+        <sys_metadata>a66715328774c550d6b164283cbb353d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>MySQL with Version Option.Morpheus - All ACME Corporation users</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_scope_delete display_value="">2f9ab1287243421ea393ac200543b884</sys_scope_delete>
+        <sys_update_name>sc_cat_item_user_criteria_mtom_a66715328774c550d6b164283cbb353d</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_user_criteria_mtom_a66715328774c550d6b164283cbb353d">ae6715328774c550d6b164283cbb353e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:59:38</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

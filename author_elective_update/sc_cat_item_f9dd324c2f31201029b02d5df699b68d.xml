@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item">
+    <sc_cat_item action="DELETE">
+        <active>true</active>
+        <availability>on_desktop</availability>
+        <billable>false</billable>
+        <category display_value="Morpheus">e54a855d0f223200d6844cace1050e30</category>
+        <cost>0</cost>
+        <custom_cart/>
+        <delivery_plan display_value="DEFAULT">523da512c611228900811a37c97c2014</delivery_plan>
+        <delivery_plan_script/>
+        <delivery_time>1970-01-03 00:00:00</delivery_time>
+        <description/>
+        <display_price_property>non_zero</display_price_property>
+        <entitlement_script/>
+        <flow_designer_flow/>
+        <group/>
+        <hide_sp>false</hide_sp>
+        <icon/>
+        <ignore_price>false</ignore_price>
+        <image/>
+        <list_price>0</list_price>
+        <location/>
+        <mandatory_attachment>false</mandatory_attachment>
+        <meta/>
+        <mobile_hide_price>false</mobile_hide_price>
+        <mobile_picture/>
+        <mobile_picture_type>use_desktop_picture</mobile_picture_type>
+        <model/>
+        <name>Amazon Options renamed</name>
+        <no_attachment_v2>false</no_attachment_v2>
+        <no_cart>false</no_cart>
+        <no_cart_v2>false</no_cart_v2>
+        <no_delivery_time_v2>false</no_delivery_time_v2>
+        <no_order>false</no_order>
+        <no_order_now>false</no_order_now>
+        <no_proceed_checkout>false</no_proceed_checkout>
+        <no_quantity>false</no_quantity>
+        <no_quantity_v2>false</no_quantity_v2>
+        <no_search>false</no_search>
+        <no_wishlist_v2>false</no_wishlist_v2>
+        <omit_price>false</omit_price>
+        <order>0</order>
+        <ordered_item_link/>
+        <picture/>
+        <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=f9dd324c2f31201029b02d5df699b68d&amp;sysparm_preview=true", "summary");</preview>
+        <price>0</price>
+        <recurring_frequency/>
+        <recurring_price>0</recurring_price>
+        <request_method/>
+        <roles/>
+        <sc_catalogs>e0d08b13c3330100c8b837659bba8fb4</sc_catalogs>
+        <sc_ic_item_staging/>
+        <sc_ic_version/>
+        <short_description>Amazon Options renamed</short_description>
+        <show_variable_help_on_load>false</show_variable_help_on_load>
+        <start_closed>false</start_closed>
+        <sys_class_name>sc_cat_item</sys_class_name>
+        <sys_created_by/>
+        <sys_created_on/>
+        <sys_id>f9dd324c2f31201029b02d5df699b68d</sys_id>
+        <sys_mod_count/>
+        <sys_name>Amazon Options renamed</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>sc_cat_item_f9dd324c2f31201029b02d5df699b68d</sys_update_name>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <template/>
+        <type>item</type>
+        <use_sc_layout>true</use_sc_layout>
+        <vendor/>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <workflow display_value="Morpheus (Internal) Catalog Item Provision Instance">2f8eff5e1b40201072bbfcc8cc4bcb78</workflow>
+    </sc_cat_item>
+    <sys_translated_text action="DELETE" query="documentkey=f9dd324c2f31201029b02d5df699b68d"/>
+    <fx_price action="DELETE" query="id=f9dd324c2f31201029b02d5df699b68d"/>
+    <fx_price action="DELETE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>price</field>
+        <id>f9dd324c2f31201029b02d5df699b68d</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>morpheus</sys_created_by>
+        <sys_created_on>2021-01-14 17:00:04</sys_created_on>
+        <sys_id>79dd324c2f31201029b02d5df699b68e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>morpheus</sys_updated_by>
+        <sys_updated_on>2021-01-14 17:00:04</sys_updated_on>
+        <table>sc_cat_item</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="DELETE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>recurring_price</field>
+        <id>f9dd324c2f31201029b02d5df699b68d</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>morpheus</sys_created_by>
+        <sys_created_on>2021-01-14 17:00:04</sys_created_on>
+        <sys_id>b1dd324c2f31201029b02d5df699b68f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>morpheus</sys_updated_by>
+        <sys_updated_on>2021-01-14 17:00:04</sys_updated_on>
+        <table>sc_cat_item</table>
+        <type>calculated</type>
+    </fx_price>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</application>
+        <file_path/>
+        <instance_id>9b5b3d876fa64640869e7b2f5d3ee407</instance_id>
+        <instance_name>ven01434</instance_name>
+        <name>sc_cat_item_f9dd324c2f31201029b02d5df699b68d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item">
+    <sc_cat_item action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <availability>on_desktop</availability>
+        <billable>false</billable>
+        <category display_value="Morpheus">e54a855d0f223200d6844cace1050e30</category>
+        <cost>0</cost>
+        <custom_cart/>
+        <delivery_plan display_value="DEFAULT">523da512c611228900811a37c97c2014</delivery_plan>
+        <delivery_plan_script/>
+        <delivery_time>1970-01-03 00:00:00</delivery_time>
+        <description/>
+        <display_price_property>non_zero</display_price_property>
+        <entitlement_script/>
+        <flow_designer_flow/>
+        <group/>
+        <hide_sp>false</hide_sp>
+        <icon/>
+        <ignore_price>false</ignore_price>
+        <image/>
+        <list_price>0</list_price>
+        <location/>
+        <mandatory_attachment>false</mandatory_attachment>
+        <meta/>
+        <mobile_hide_price>false</mobile_hide_price>
+        <mobile_picture/>
+        <mobile_picture_type>use_desktop_picture</mobile_picture_type>
+        <model/>
+        <name>Amazon Options renamed</name>
+        <no_attachment_v2>false</no_attachment_v2>
+        <no_cart>false</no_cart>
+        <no_cart_v2>false</no_cart_v2>
+        <no_delivery_time_v2>false</no_delivery_time_v2>
+        <no_order>false</no_order>
+        <no_order_now>false</no_order_now>
+        <no_proceed_checkout>false</no_proceed_checkout>
+        <no_quantity>false</no_quantity>
+        <no_quantity_v2>false</no_quantity_v2>
+        <no_search>false</no_search>
+        <no_wishlist_v2>false</no_wishlist_v2>
+        <omit_price>false</omit_price>
+        <order>0</order>
+        <ordered_item_link/>
+        <picture/>
+        <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=f9dd324c2f31201029b02d5df699b68d&amp;sysparm_preview=true", "summary");</preview>
+        <price>0</price>
+        <recurring_frequency/>
+        <recurring_price>0</recurring_price>
+        <request_method/>
+        <roles/>
+        <sc_catalogs>e0d08b13c3330100c8b837659bba8fb4</sc_catalogs>
+        <sc_ic_item_staging/>
+        <sc_ic_version/>
+        <short_description>Amazon Options renamed</short_description>
+        <show_variable_help_on_load>false</show_variable_help_on_load>
+        <start_closed>false</start_closed>
+        <sys_class_name>sc_cat_item</sys_class_name>
+        <sys_created_by/>
+        <sys_created_on/>
+        <sys_id>f9dd324c2f31201029b02d5df699b68d</sys_id>
+        <sys_mod_count/>
+        <sys_name>Amazon Options renamed</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>sc_cat_item_f9dd324c2f31201029b02d5df699b68d</sys_update_name>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <template/>
+        <type>item</type>
+        <use_sc_layout>true</use_sc_layout>
+        <vendor/>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <workflow display_value="Morpheus (Internal) Catalog Item Provision Instance">2f8eff5e1b40201072bbfcc8cc4bcb78</workflow>
+    </sc_cat_item>
+    <sys_translated_text action="delete_multiple" query="documentkey=f9dd324c2f31201029b02d5df699b68d"/>
+    <fx_price action="delete_multiple" query="id=f9dd324c2f31201029b02d5df699b68d"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>price</field>
+        <id>f9dd324c2f31201029b02d5df699b68d</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>morpheus</sys_created_by>
+        <sys_created_on>2021-01-14 17:00:04</sys_created_on>
+        <sys_id>79dd324c2f31201029b02d5df699b68e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>morpheus</sys_updated_by>
+        <sys_updated_on>2021-01-14 17:00:04</sys_updated_on>
+        <table>sc_cat_item</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>recurring_price</field>
+        <id>f9dd324c2f31201029b02d5df699b68d</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>morpheus</sys_created_by>
+        <sys_created_on>2021-01-14 17:00:04</sys_created_on>
+        <sys_id>b1dd324c2f31201029b02d5df699b68f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>morpheus</sys_updated_by>
+        <sys_updated_on>2021-01-14 17:00:04</sys_updated_on>
+        <table>sc_cat_item</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>]]></payload>
+        <payload_hash>227103309</payload_hash>
+        <record_name>Amazon Options renamed</record_name>
+        <reverted_from/>
+        <source>16afce3ddbf5a010f18484d868961997</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-20 00:10:17</sys_created_on>
+        <sys_id>a040debddbf5a010f18484d86896199e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1771d20b0a00000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-20 00:10:17</sys_updated_on>
+        <type>Catalog Item</type>
+        <update_guid>ec40debd8ff5a01034b18029ad6be49d</update_guid>
+        <update_guid_history>ec40debd8ff5a01034b18029ad6be49d:0,552056bda5f5a010dfbcb1d99809b1e8:1051605445,8d2056bda5f5a01075b2c3c9bc1db1ce:2108030447,840c0edc9b392490d12f992252efb146:1525489576,753d545c2cb124903e91d32beeed6d0f:227103309</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 2021-01-19 16:12:31">2dc01a71db39a010f18484d868961978</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-20 00:12:31</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sc_cat_item">sc_cat_item</sys_db_object>
+        <sys_id>47660fb39a744e3fb8acf2f8879adc61</sys_id>
+        <sys_metadata>f9dd324c2f31201029b02d5df699b68d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Amazon Options renamed</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_scope_delete display_value="">2f9ab1287243421ea393ac200543b884</sys_scope_delete>
+        <sys_update_name>sc_cat_item_f9dd324c2f31201029b02d5df699b68d</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_f9dd324c2f31201029b02d5df699b68d">a040debddbf5a010f18484d86896199e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-20 00:12:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

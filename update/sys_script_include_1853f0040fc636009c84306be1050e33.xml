@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_moda_morpheus_ca.Utils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>Utils</name>
+        <script><![CDATA[var Utils = Class.create();
+Utils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    type: 'Utils',
+    scopeId: '8d8b6bbf0ff07e009c84306be1050e67',
+
+    getScopeId: function() {
+        return this.scopeId;
+    },
+
+    getIsMultiTenant: function() {
+        return gs.getProperty('glide.sys.domain.partitioning') == 'true';
+    },
+
+    getApplicationVersion: function() {
+        var appVersion = '';
+
+        // First look in sys_store_app (for installations)
+        var gr = new GlideRecord('sys_store_app');
+        gr.get(this.getScopeId());
+        appVersion = gr.getValue('version');
+
+        if (appVersion == '' || appVersion == undefined) {
+            // Second.. look in sys_app (for development)
+            var gr = new GlideRecord('sys_app');
+
+            gr.get(this.getScopeId());
+            appVersion = gr.getValue('version');
+        }
+        return appVersion;
+    },
+
+
+    morpheusCategory: '',
+    getMorpheusCategory: function() {
+        if(this.morpheusCategory == '') {
+            var gr = new GlideRecord('sc_category');
+            gr.addQuery('sys_scope',this.getScopeId());
+            gr.addQuery('sc_catalog',this.getServiceCatalog());
+            gr.query();
+            gr.next();
+            this.morpheusCategory = gr.sys_id.toString();
+        }
+        return this.morpheusCategory;
+    },
+
+    serviceCatalog: '',
+    getServiceCatalog: function() {
+        if(this.serviceCatalog == '') {
+            var gr = new GlideRecord('sc_catalog');
+            var catalogName = gs.getProperty('x_moda_morpheus_ca.service_catalog_name');
+            gr.addQuery('sys_name', catalogName);
+            gr.query();
+            gr.next();
+            this.serviceCatalog = gr.sys_id.toString();
+        }
+        return this.serviceCatalog;
+    },
+
+    createCommonRecords: function(tenantId) {
+        this.log('info', "createCommonRecords: " + tenantId);
+        var dataUtils = new x_moda_morpheus_ca.DataUtils();
+
+        var scopeId = this.getScopeId();
+        // First need a common variable set
+        var varSetName = 'Morpheus Common';
+        var varSetNameUpdateMap = {
+            description: 'Common Morpheus Variables (shared across instances)',
+            sys_scope: scopeId,
+            order: 10
+        };
+        var varSet = dataUtils.getOrCreateRecord('item_option_new_set', varSetName, {name: varSetName}, varSetNameUpdateMap, tenantId);
+
+        // Name
+        var varName = 'name';
+        var varUpdateSet = {
+            sys_scope: scopeId,
+            variable_set: varSet.sys_id,
+            type: '6',
+            order: 1,
+            mandatory: true,
+            question_text: 'Name'
+        };
+        dataUtils.getOrCreateRecord('item_option_new', varName, {name: varName}, varUpdateSet, tenantId);
+
+        // Group
+        var varGroup = 'group';
+        var varGroupUpdateSet = {
+            sys_scope: scopeId,
+            variable_set: varSet.sys_id,
+            type: '8',
+            order: 50,
+            mandatory: true,
+            question_text: 'Group',
+            reference: 'x_moda_morpheus_ca_group',
+            lookup_table: 'x_moda_morpheus_ca_group',
+            lookup_value: 'name',
+            use_reference_qualifier: 'advanced',
+            reference_qual: "javascript: new x_moda_morpheus_ca.LookUpUtils().getGroupsForProvisionType(current.variables.provision_type, " + tenantId + ");",
+        };
+        dataUtils.getOrCreateRecord('item_option_new', varGroup, {name: varGroup}, varGroupUpdateSet, tenantId);
+
+        // Cloud
+        var varCloud = 'cloud';
+        var varCloudUpdateSet = {
+            sys_scope: scopeId,
+            variable_set: varSet.sys_id,
+            type: '8',
+            order: 100,
+            mandatory: true,
+            question_text: 'Cloud',
+            reference: 'x_moda_morpheus_ca_clouds',
+            lookup_table: 'x_moda_morpheus_ca_clouds',
+            lookup_value: 'name',
+            choice_table: 'x_moda_morpheus_ca_clouds',
+            use_reference_qualifier: 'advanced',
+            reference_qual: "javascript: new x_moda_morpheus_ca.LookUpUtils().getCloudsForGroups(current.variables.group, current.variables.provision_type, " + tenantId + ");",
+            lookup_unique: false
+        };
+        dataUtils.getOrCreateRecord('item_option_new', varCloud, {name: varCloud}, varCloudUpdateSet, tenantId);
+
+        // ServicePlan
+        var varPlan = 'serviceplan';
+        var varPlanUpdateSet = {
+            sys_scope: scopeId,
+            variable_set: varSet.sys_id,
+            type: '8',
+            order: 200,
+            mandatory: true,
+            question_text: 'Service Plan',
+            reference: 'x_moda_morpheus_ca_service_plans',
+            lookup_table: 'x_moda_morpheus_ca_service_plans',
+            lookup_value: 'name',
+            choice_table: 'x_moda_morpheus_ca_service_plans',
+            use_reference_qualifier: 'advanced',
+            reference_qual: "javascript: new x_moda_morpheus_ca.LookUpUtils().getServicePlans(current.variables.cloud, current.variables.provision_type, " + tenantId + ");",
+            lookup_unique: false
+        };
+        dataUtils.getOrCreateRecord('item_option_new', varPlan, {name: varPlan}, varPlanUpdateSet, tenantId);
+    },
+
+    setupModelForOptionTypes: function(scopeCode, provisionTypeCode, variableSet, optionArray, layoutId, tenantId) {
+        var scopeId = this.getScopeId();
+        var dataUtils = new x_moda_morpheus_ca.DataUtils();
+
+        var currentDisplayOrder = 100;
+
+        for (var i = 0; i < optionArray.length; i++) {
+            var data = optionArray[i];
+
+            var order = currentDisplayOrder;
+            if(data.type == 'hidden') {
+                order = 1000;
+            }
+
+            var varTmpName = 'optiontype_' + data.fieldName + '_' + scopeCode;
+
+            var hasHelpText = (data.helpBlock != '' && typeof(data.helpBlock) != 'undefined' && data.helpBlock != null)
+            var varTmpUpdateSet = {
+                sys_scope: scopeId,
+                variable_set: variableSet.sys_id,
+                order: order,
+                mandatory: data.required,
+                question_text: data.fieldLabel,
+                field: data.fieldContext,
+                default_value: ((data.defaultValue != '' && typeof(data.defaultValue) != 'undefined' && data.defaultValue != null) ? data.defaultValue : null),
+                help_tag: hasHelpText ? 'Help' : null,
+                show_help: hasHelpText ? true : false,
+                show_help_on_load: hasHelpText ? true : false,
+                help_text: hasHelpText ? data.helpBlock : null,
+                example_text: ((data.placeHolder != '' && typeof(data.placeHolder) != 'undefined' && data.placeHolder != null) ? data.placeHolder : null)
+            }
+
+
+
+            //gs.info("working on " + varTmpName + ": " + JSON.stringify(data));
+
+            switch (data.type) {
+                case 'select':
+                    varTmpUpdateSet.type = '8';
+                    varTmpUpdateSet.reference = 'x_moda_morpheus_ca_lookup_values_cloud';
+                    varTmpUpdateSet.use_reference_qualifier = 'advanced';
+                    varTmpUpdateSet.reference_qual = "javascript: new x_moda_morpheus_ca.LookUpUtils().getLookupValues(current.variables.cloud, '" + provisionTypeCode + "', '" + data.fieldName + "', " + tenantId + ");";
+                    varTmpUpdateSet.lookup_unique = false;
+
+                    // Special handling for layout option types
+                    if(typeof(layoutId) != 'undefined') {
+                        varTmpUpdateSet.reference = 'x_moda_morpheus_ca_lookup_values_layout';
+                        varTmpUpdateSet.reference_qual = "javascript: new x_moda_morpheus_ca.LookUpUtils().getLookupValuesLayout(" + layoutId.toString() + ", '" + data.fieldName + "', " + tenantId + ");";
+                    }
+                    dataUtils.getOrCreateRecord('item_option_new', varTmpName, {name: varTmpName}, varTmpUpdateSet, tenantId);
+                    break;
+                case 'password':
+                    varTmpUpdateSet.type = '25'
+                    dataUtils.getOrCreateRecord('item_option_new', varTmpName, {name: varTmpName}, varTmpUpdateSet, tenantId);
+                    break;
+                case 'checkbox':
+                    if(varTmpUpdateSet.default_value == 'on') {
+                        varTmpUpdateSet.default_value = true
+                    }
+                    varTmpUpdateSet.type = '7'
+                    dataUtils.getOrCreateRecord('item_option_new', varTmpName, {name: varTmpName}, varTmpUpdateSet, tenantId);
+                    break;
+                case 'number':
+                case 'text':
+                default:
+                    varTmpUpdateSet.type = '6'
+                    dataUtils.getOrCreateRecord('item_option_new', varTmpName, {name: varTmpName}, varTmpUpdateSet, tenantId);
+            }
+
+            if(data.type == 'hidden') {
+                // Add a catalog client script to hide the hidden variable
+                //Add a script to hide the internal variables
+                var scriptName = 'Morpheus CS ' + varTmpName;
+                var scriptBody = "function onLoad() { g_form.setVisible('" + varTmpName + "', false);}";
+                var scriptUpdateSet = {
+                    global: true,
+                    type: 'onLoad',
+                    variable_set: variableSet.sys_id,
+                    script: scriptBody,
+                    applies_catalog: true,
+                    applies_to: 'set',
+                    active: true
+                };
+                dataUtils.getOrCreateRecord('catalog_script_client', scriptName, {name: scriptName, active: true}, scriptUpdateSet, tenantId);
+            } else {
+                var sysIds = dataUtils.getRecordsSysIds('catalog_script_client', {name: 'Morpheus CS ' + varTmpName}, tenantId);
+                if(sysIds.length > 0) {
+                    dataUtils.deleteRecord('catalog_script_client', tenantId, sysIds);
+                }
+            }
+
+            currentDisplayOrder += 10;
+        }
+    },
+
+    syncZoneProvisionType: function (authConfig, tenantId, site, zoneBody, provisionTypeId) {
+        try {
+            var dataUtils = new x_moda_morpheus_ca.DataUtils();
+            var zone = zoneBody.zone;
+            var zoneId = zone.id;
+            this.log('info', 'Syncing provisiontype:' + provisionTypeId + ' for cloud:' + zoneId + ', in site:' + site);
+
+            // Group
+            var snGroup = dataUtils.getOrCreateRecord('x_moda_morpheus_ca_group', site.name, {external_id: site.id.toString()}, {
+                name: site.name,
+                external_id: site.id.toString()
+            }, tenantId);
+
+            // Handle the cloud record
+            var snCloud = dataUtils.getOrCreateRecord('x_moda_morpheus_ca_clouds', zone.name, {external_id: zone.id}, {
+                name: zone.name,
+                external_id: zone.id,
+                region_code: zone.regionCode,
+                enabled: zone.enabled
+            }, tenantId);
+
+            // Relate the group - cloud
+            this.log('info', "group and cloud: " + snGroup.sys_id + " " + snCloud.sys_id);
+            dataUtils.getOrCreateRecord('x_moda_morpheus_ca_m2m_clouds_groups', '', {
+                clouds: snCloud.sys_id,
+                group: snGroup.sys_id
+            }, {clouds: snCloud.sys_id, group: snGroup.sys_id}, tenantId);
+
+            // Provision Type
+            var provisionTypeBody = this.callMorpheus('x_moda_morpheus_ca.Morpheus Provision Type', authConfig, {id: provisionTypeId});
+            var provisionType = provisionTypeBody.provisionType;
+            // Find the 'first' root storage volume type
+            var rootstoragevolumetypeid, displayIdx;
+            for (var i = 0; i < provisionType.rootStorageTypes.length; i++) {
+                var rootStorageType = provisionType.rootStorageTypes[i];
+                if (typeof(displayIdx) == 'undefined' || parseInt(rootStorageType.displayOrder) < displayIdx) {
+                    displayIdx = parseInt(rootStorageType.displayOrder);
+                    rootstoragevolumetypeid = rootStorageType.id;
+                }
+            }
+            var haszonepools = provisionType.hasZonePools;
+            var snProvisionType = dataUtils.getOrCreateRecord('x_moda_morpheus_ca_provision_type', provisionType.name, {externalid: provisionType.code}, {
+                name: provisionType.name,
+                externalid: provisionType.code,
+                rootstoragevolumetypeid: (typeof(rootstoragevolumetypeid) != 'undefined' ? rootstoragevolumetypeid.toString() : ''),
+                haszonepools: haszonepools
+            }, tenantId);
+
+            // Relate the cloud - provision type
+            dataUtils.getOrCreateRecord('x_moda_morpheus_ca_m2m_provision_types_clouds', '', {
+                clouds: snCloud.sys_id,
+                provision_type: snProvisionType.sys_id
+            }, {clouds: snCloud.sys_id, provision_type: snProvisionType.sys_id}, tenantId);
+
+            // Sync the option types for the provision type
+            for (var i = 0; i < provisionType.optionTypes.length; i++) {
+                var data = provisionType.optionTypes[i];
+
+                switch (data.type) {
+                    case 'select':
+                        gs.debug('Syncing: ' + data.name + ' for cloud ' + zoneId);
+                        var optionsBody = this.callMorpheus('x_moda_morpheus_ca.Morpheus Option Source', authConfig, {
+                            optionSource: data.optionSource,
+                            includeNonScoped: true,
+                            zoneId: zoneId.toString()
+                        });
+                        if (optionsBody.success == true) {
+                            var masterExternalIds = [];
+
+                            // Perform all of the updates
+                            for (var j = 0; j < optionsBody.data.length; j++) {
+                                var optionData = optionsBody.data[j];
+                                var optionDataQuery = {
+                                    name: optionData.name,
+                                    cloud: snCloud.sys_id,
+                                    provision_type: snProvisionType.sys_id,
+                                    type: data.fieldName
+                                };
+                                var optionDataUpdate = {};
+                                for (var k in optionDataQuery) {
+                                    optionDataUpdate[k] = optionDataQuery[k];
+                                }
+                                optionDataUpdate.value = optionData.value != null ? optionData.value.toString() : '';
+
+                                masterExternalIds.push(optionDataQuery.name);
+                                dataUtils.getOrCreateRecord('x_moda_morpheus_ca_lookup_values_cloud', '', optionDataQuery, optionDataUpdate, tenantId);
+                            }
+
+                            // Clean up any items that need to be removed
+                            var grCloudValues = new GlideRecord('x_moda_morpheus_ca_lookup_values_cloud');
+                            grCloudValues.addQuery('cloud', snCloud.sys_id);
+                            grCloudValues.addQuery('provision_type', snProvisionType.sys_id);
+                            grCloudValues.addQuery('type', data.fieldName);
+                            grCloudValues.addQuery('name', 'NOT IN', masterExternalIds);
+                            if(this.getIsMultiTenant()) {
+                                grCloudValues.addQuery('tenantscope', tenantId);
+                            }
+                            grCloudValues.deleteMultiple();
+                        }
+                        break;
+                    default:
+                    // Do nothing
+                }
+            }
+
+            // Sync the networks
+            var supportsNetworkSelection = provisionType.code != 'azure';
+            if (provisionType.hasNetworks == true) {
+                var networksBody = this.callMorpheus('x_moda_morpheus_ca.Morpheus Zone Network', authConfig, {
+                    provisionTypeId: provisionTypeId,
+                    zoneId: zoneId.toString()
+                });
+                if (networksBody.success == true) {
+                    var masterExternalIds = [];
+
+                    // Perform all of the updates
+                    if(supportsNetworkSelection) {
+                        for (var i = 0; i < networksBody.data.networks.length; i++) {
+                            var networkData = networksBody.data.networks[i];
+                            if(networkData.id.toString().indexOf('network-') == 0) {
+                                var networkId = networkData.id.toString().substring(8);
+                                var networkQuery = {
+                                    externalid: networkId,
+                                    cloud: snCloud.sys_id,
+                                    provision_type: snProvisionType.sys_id
+                                };
+                                var networkUpdateQuery = {
+                                    name: networkData.name,
+                                    externalid: networkId,
+                                    cloud: snCloud.sys_id,
+                                    provision_type: snProvisionType.sys_id
+                                };
+                                masterExternalIds.push(networkId);
+                                dataUtils.getOrCreateRecord('x_moda_morpheus_ca_network', '', networkQuery, networkUpdateQuery, tenantId);
+                            }
+                        }
+                    } else {
+                        for (var i = 0; i < networksBody.data.networkSubnets.length; i++) {
+                            var subnetData = networksBody.data.networkSubnets[i];
+                            if(subnetData.id.toString().indexOf('subnet-') == 0) {
+                                var subnetId = subnetData.id.toString().substring(7);
+                                var subnetQuery = {
+                                    externalid: subnetId,
+                                    cloud: snCloud.sys_id,
+                                    provision_type: snProvisionType.sys_id
+                                };
+                                var subnetUpdateQuery = {
+                                    name: subnetData.name,
+                                    externalid: subnetId,
+                                    cloud: snCloud.sys_id,
+                                    provision_type: snProvisionType.sys_id
+                                };
+                                masterExternalIds.push(subnetId);
+                                dataUtils.getOrCreateRecord('x_moda_morpheus_ca_subnet', '', subnetQuery, subnetUpdateQuery, tenantId);
+                            }
+                        }
+                    }
+                    // Clean up any items that need to be removed
+                    var grNetwork;
+                    if(supportsNetworkSelection) {
+                        grNetwork = new GlideRecord('x_moda_morpheus_ca_network');
+                    } else {
+                        grNetwork = new GlideRecord('x_moda_morpheus_ca_subnet');
+                    }
+                    grNetwork.addQuery('cloud', snCloud.sys_id);
+                    grNetwork.addQuery('externalid', 'NOT IN', masterExternalIds);
+                    if(this.getIsMultiTenant()) {
+                        grNetwork.addQuery('tenantscope', tenantId);
+                    }
+                    grNetwork.deleteMultiple();
+                }
+            }
+
+            // Sync the resource pools for the cloud
+            if(haszonepools) {
+                var zonePoolsBody = this.callMorpheus('x_moda_morpheus_ca.Morpheus Option Source', authConfig, {
+                    optionSource: 'zonePools',
+                    includeInternalIfNoScoping: true,
+                    includeNonScoped: true,
+                    zoneId: zoneId.toString()
+                });
+                if (zonePoolsBody.success == true) {
+                    var masterExternalIds = [];
+
+                    // Perform all of the updates
+                    for (var j = 0; j < zonePoolsBody.data.length; j++) {
+                        var resourcePoolData = zonePoolsBody.data[j];
+                        var resourcePoolQuery = {
+                            external_id: resourcePoolData.id.toString(),
+                            cloud: snCloud.sys_id
+                        };
+                        var resourcePoolUpdate = {};
+                        for (var k in resourcePoolQuery) {
+                            resourcePoolUpdate[k] = resourcePoolQuery[k];
+                        }
+                        resourcePoolUpdate.name = resourcePoolData.name;
+                        resourcePoolUpdate.morpheus_external_id = resourcePoolData.value;
+
+                        masterExternalIds.push(resourcePoolQuery.external_id);
+                        dataUtils.getOrCreateRecord('x_moda_morpheus_ca_resource_pool', '', resourcePoolQuery, resourcePoolUpdate, tenantId);
+                    }
+
+                    // Clean up any items that need to be removed
+                    var grCloudValues = new GlideRecord('x_moda_morpheus_ca_resource_pool');
+                    grCloudValues.addQuery('cloud', snCloud.sys_id);
+                    if(this.getIsMultiTenant()) {
+                        grCloudValues.addQuery('tenantscope', tenantId);
+                    }
+                    grCloudValues.addQuery('external_id', 'NOT IN', masterExternalIds);
+                    grCloudValues.deleteMultiple();
+
+                    // Need to add the m2m relationship between resource pool and networks
+                    var grResourcePool = new GlideRecord('x_moda_morpheus_ca_resource_pool');
+                    grResourcePool.addQuery('cloud', snCloud.sys_id);
+                    if(this.getIsMultiTenant()) {
+                        grResourcePool.addQuery('tenantscope', tenantId);
+                    }
+                    grResourcePool.query();
+                    while(grResourcePool.next()) {
+
+                        var zonePoolId = grResourcePool.external_id;
+
+                        // Ask Morpheus to tell us the relationship
+                        var networksBody = this.callMorpheus('x_moda_morpheus_ca.Morpheus Option Source', authConfig, {
+                            optionSource: 'networks',
+                            zoneId:  zoneId.toString(),
+                            zonePoolId: zonePoolId.toString(),
+                            disableSubnets: supportsNetworkSelection
+                        });
+
+                        var masterExternalIds = [];
+                        for (var j = 0; j < networksBody.data.length; j++) {
+                            var networkData = networksBody.data[j];
+                            if(supportsNetworkSelection) {
+                                if(networkData.value && networkData.value.toString().indexOf('network-') == 0) {
+                                    var networkId = networkData.value.toString().substring(8);
+
+                                    // Get ALL of our cached networks (may be many in different provision types) and
+                                    // relate them ALL to this resource pool
+                                    var grNetworks = new GlideRecord('x_moda_morpheus_ca_network');
+                                    grNetworks.addQuery('externalid', networkId);
+                                    if(this.getIsMultiTenant()) {
+                                        grNetworks.addQuery('tenantscope', tenantId);
+                                    }
+                                    grNetworks.query();
+                                    while(grNetworks.next()) {
+                                        masterExternalIds.push(grNetworks.sys_id.toString());
+                                        var m2mRecordData = {network: grNetworks.sys_id, resource_pool: grResourcePool.sys_id};
+                                        dataUtils.getOrCreateRecord('x_moda_morpheus_ca_m2m_networks_resource_pools', '', m2mRecordData, m2mRecordData, tenantId);
+                                    }
+                                }
+                            } else {
+                                if(networkData.value && networkData.value.toString().indexOf('subnet-') == 0) {
+                                    var subnetId = networkData.value.toString().substring(7);
+
+                                    // Get ALL of our cached subnets (may be many in different provision types) and
+                                    // relate them ALL to this resource pool
+                                    var grSubnets = new GlideRecord('x_moda_morpheus_ca_subnet');
+                                    grSubnets.addQuery('externalid', subnetId);
+                                    if(this.getIsMultiTenant()) {
+                                        grSubnets.addQuery('tenantscope', tenantId);
+                                    }
+                                    grSubnets.query();
+                                    while(grSubnets.next()) {
+                                        masterExternalIds.push(grSubnets.sys_id.toString());
+                                        var m2mRecordData = {subnet: grSubnets.sys_id, resource_pool: grResourcePool.sys_id};
+                                        dataUtils.getOrCreateRecord('x_moda_morpheus_ca_m2m_subnets_resource_pools', '', m2mRecordData, m2mRecordData, tenantId);
+                                    }
+                                }
+                            }
+                        }
+
+                        // Delete any that no longer make sense
+                        if(supportsNetworkSelection) {
+                            var grNetworkResourcePools = new GlideRecord('x_moda_morpheus_ca_m2m_networks_resource_pools');
+                            grNetworkResourcePools.addQuery('resource_pool', grResourcePool.sys_id);
+                            if(this.getIsMultiTenant()) {
+                                grNetworkResourcePools.addQuery('tenantscope', tenantId);
+                            }
+                            grNetworkResourcePools.addQuery('network', 'NOT IN', masterExternalIds);
+                            grNetworkResourcePools.deleteMultiple();
+                        } else {
+                            var grSubnetResourcePools = new GlideRecord('x_moda_morpheus_ca_m2m_subnets_resource_pools');
+                            grSubnetResourcePools.addQuery('resource_pool', grResourcePool.sys_id);
+                            if(this.getIsMultiTenant()) {
+                                grSubnetResourcePools.addQuery('tenantscope', tenantId);
+                            }
+                            grSubnetResourcePools.addQuery('subnet', 'NOT IN', masterExternalIds);
+                            grSubnetResourcePools.deleteMultiple();
+                        }
+                    }
+                }
+            }
+
+            // Sync the datastores
+            if (provisionType.hasDatastore == true) {
+                var datastoresBody = this.callMorpheus('x_moda_morpheus_ca.Morpheus Zone Datastore', authConfig, {
+                    zoneId: zoneId.toString()
+                });
+                if (datastoresBody.success == true) {
+                    var masterExternalIds = [];
+
+                    // Perform all of the updates
+                    for (var i = 0; i < datastoresBody.data.length; i++) {
+                        var datastoreData = datastoresBody.data[i];
+                        var datastoreQuery = {
+                            external_id: datastoreData.id.toString(),
+                            cloud: snCloud.sys_id,
+                            provision_type: snProvisionType.sys_id
+                        };
+                        var datastoreUpdateQuery = {
+                            name: datastoreData.name,
+                            external_id: datastoreData.id.toString(),
+                            cloud: snCloud.sys_id,
+                            provision_type: snProvisionType.sys_id
+                        };
+                        masterExternalIds.push(datastoreData.id.toString());
+                        dataUtils.getOrCreateRecord('x_moda_morpheus_ca_datastore', '', datastoreQuery, datastoreUpdateQuery, tenantId);
+                    }
+                    // Clean up any items that need to be removed
+                    var grDatastore = new GlideRecord('x_moda_morpheus_ca_datastore');
+                    grDatastore.addQuery('cloud', snCloud.sys_id);
+                    if(this.getIsMultiTenant()) {
+                        grDatastore.addQuery('tenantscope', tenantId);
+                    }
+                    grDatastore.addQuery('external_id', 'NOT IN', masterExternalIds);
+                    grDatastore.deleteMultiple();
+                }
+            }
+
+
+            // Sync the service plans for the provision type
+            var masterServicePlanExternalIds = [];
+            var servicePlansBody = this.callMorpheus('x_moda_morpheus_ca.Morpheus Service Plans', authConfig, {provisionTypeId: provisionTypeId});
+            for (var i = 0; i < servicePlansBody.servicePlans.length; i++) {
+                var servicePlanData = servicePlansBody.servicePlans[i];
+                var servicePlanQuery = {external_id: servicePlanData.id.toString(), provision_type: snProvisionType.sys_id};
+
+                var servicePlanUpdate = {};
+                for (var j in servicePlanQuery) {
+                    servicePlanUpdate[j] = servicePlanQuery[j];
+                }
+
+                servicePlanUpdate.name = servicePlanData.name;
+                servicePlanUpdate.order = servicePlanData.id;
+                servicePlanUpdate.region_code = servicePlanData.regionCode;
+                servicePlanUpdate.max_storage = servicePlanData.maxStorage;
+
+                masterServicePlanExternalIds.push(servicePlanQuery.external_id);
+                dataUtils.getOrCreateRecord('x_moda_morpheus_ca_service_plans', servicePlanData.name, servicePlanQuery, servicePlanUpdate, tenantId);
+            }
+            // Clean up any service plans that need to be removed
+            var grDatastore = new GlideRecord('x_moda_morpheus_ca_service_plans');
+            grDatastore.addQuery('provision_type', snProvisionType.sys_id);
+            if(this.getIsMultiTenant()) {
+                grDatastore.addQuery('tenantscope', tenantId);
+            }
+            grDatastore.addQuery('external_id', 'NOT IN', masterServicePlanExternalIds);
+            grDatastore.deleteMultiple();
+        } catch(err) {
+            gs.error('Error in syncZoneProvisionType: ' + err.stack);
+        }
+    },
+
+    createUserCriteria: function(catItem, tenantId) {
+        this.log('info', 'createUserCriteria: ' + catItem.sys_id + ", tenandId: " + tenantId);
+        if(this.getIsMultiTenant()) {
+            var dataUtils = new x_moda_morpheus_ca.DataUtils();
+            var gr = dataUtils.getRecord('x_moda_morpheus_ca_credentials', {}, tenantId);
+            var company = gr.company;
+            var name = "Morpheus - All " + company.name + " users";
+            var userCriteria = dataUtils.getOrCreateRecord('user_criteria', name,
+                {name: name},
+                {name: name, active: true, sys_domain: 'global', companySysId: company.sys_id.toString()},
+                tenantId);
+
+            // Add the user criteria to the cat item (if in multi-tenant mode)
+            var scCatItem = new sn_sc.CatItem(catItem.sys_id);
+            if (this.getIsMultiTenant()) {
+                scCatItem.availableForUserCriteria("add", [userCriteria.sys_id.toString()]);
+            }
+        }
+    },
+
+    uniqueArray: function (arr) {
+        var n = {};
+        var r = [];
+        for (var i = 0; i < arr.length; i++) {
+            if (!n[arr[i]]) {
+                n[arr[i]] = true;
+                r.push(arr[i]);
+            }
+        }
+        return r;
+    },
+
+    /**
+     * Find all items that are in existingItems but not in masterItems
+     */
+    findMissing: function(masterItems, existingItems) {
+        var missingItems = [];
+        if(existingItems && existingItems.length > 0) {
+            for (var i = 0; i < existingItems.length; i++) {
+                var itemToCheck = existingItems[i];
+                if(masterItems && masterItems.length > 0) {
+                    if(masterItems.indexOf(itemToCheck) == -1) {
+                        missingItems.push(itemToCheck);
+                    }
+                }
+            }
+        }
+
+        return missingItems;
+    },
+
+    callMorpheus: function(message, authConfig, params, method, body, queryParams) {
+        if(typeof(method) == 'undefined' || method == '') {
+            method = 'get';
+        }
+        var r = new sn_ws.RESTMessageV2(message, method);
+
+        r.setStringParameterNoEscape('url', authConfig.url);
+        r.setStringParameterNoEscape('authToken', authConfig.access_token);
+        for (var key in params) {
+            r.setStringParameterNoEscape(key, params[key]);
+        }
+
+        if(typeof(queryParams) != 'undefined') {
+            for (var key in queryParams) {
+                r.setQueryParameter(key, queryParams[key]);
+            }
+        }
+
+        if(typeof(body) != 'undefined') {
+            r.setRequestBody(body);
+        }
+        if(authConfig.midServer) {
+            r.setMIDServer(authConfig.midServer);
+            r.setEccParameter("skip_sensor","true"); // prevent Discovery sensors running for the ECC input
+        }
+
+        var response = r.execute();
+        var responseBody = response.getBody();
+        var parser = new global.JSON();
+        var jsonBody = parser.decode(responseBody);
+        var httpStatus = response.getStatusCode();
+        if (httpStatus >= 400) {
+            this.log("error", 'Error calling ' + message + ', response: ' + httpStatus + ' with body: ' + responseBody);
+        }
+
+        return jsonBody;
+    },
+
+    log: function(loglevel, message) {
+        var logMessage = '[' + new Date().getTime() + '] ' + message;
+        logMessage = logMessage.replaceAll(/password":"(.[^\s]*?)"/ig, "***");
+        logMessage = logMessage.replaceAll(/password"="(.[^\s]*?)"/ig, "***");
+        switch(loglevel) {
+            case 'debug':
+                gs.debug(logMessage, 'morpheus');
+                break;
+            case 'info':
+                gs.info(logMessage, 'morpheus');
+                break;
+            case 'warn':
+                gs.warn(logMessage, 'morpheus');
+                break;
+            case 'error':
+                gs.error(logMessage, 'morpheus');
+                break;
+        }
+    },
+
+    validateMorpheusVersion: function(tenantId, authConfig) {
+        var rtn = {success: true};
+        // Verify the version too
+        var pingResultsBody = this.callMorpheus('x_moda_morpheus_ca.Morpheus Ping', authConfig, {});
+        if(pingResultsBody.success == false) {
+            rtn.success = false;
+            rtn.msg = "Tenant (" + tenantId + ") - Failed to ping Morpheus!  Verify credentials and route to appliance.";
+        } else {
+            var buildVersionString = pingResultsBody.buildVersion;
+            var versionParts = buildVersionString.split(".");
+            var minRequired = gs.getProperty('x_moda_morpheus_ca.morpheus_min_version');
+            var minVersionParts = minRequired.split(".");
+
+            var minorVerionSame = minVersionParts[2] == versionParts[2];
+            var segmentsToCheck = minorVerionSame ? 3 : 2;
+            for(var i=0; i < segmentsToCheck; i++) {
+                if(rtn.success == true) {
+                    var minVersion = minVersionParts[i];
+                    var version = versionParts[i];
+                    if (version < minVersion) {
+                        rtn.success = false;
+                        rtn.msg = "Tenant (" + tenantId + ") Morpheus version (" + buildVersionString + ") is less than minimum required version (" + minRequired + ")!";
+                    }
+                }
+            }
+        }
+        return rtn;
+    }
+});
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-04-05 19:53:21</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>1853f0040fc636009c84306be1050e33</sys_id>
+        <sys_mod_count>161</sys_mod_count>
+        <sys_name>Utils</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>sys_script_include_1853f0040fc636009c84306be1050e33</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-30 15:54:25</sys_updated_on>
+    </sys_script_include>
+</record_update>

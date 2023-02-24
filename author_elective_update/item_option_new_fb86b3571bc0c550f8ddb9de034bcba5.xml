@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new">
+    <item_option_new action="DELETE">
+        <active>true</active>
+        <attributes/>
+        <cat_item/>
+        <category/>
+        <choice_direction>down</choice_direction>
+        <choice_field/>
+        <choice_table/>
+        <create_roles/>
+        <default_html_value/>
+        <default_value/>
+        <delete_roles/>
+        <delivery_plan/>
+        <description/>
+        <display_title>false</display_title>
+        <do_not_select_first>false</do_not_select_first>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <enable_also_request_for>false</enable_also_request_for>
+        <example_text/>
+        <field/>
+        <global>false</global>
+        <help_tag>More information</help_tag>
+        <help_text/>
+        <include_none>false</include_none>
+        <instructions/>
+        <layout>normal</layout>
+        <list_table/>
+        <lookup_label/>
+        <lookup_price/>
+        <lookup_table/>
+        <lookup_unique>false</lookup_unique>
+        <lookup_value/>
+        <macro/>
+        <mandatory>true</mandatory>
+        <map_to_field>false</map_to_field>
+        <mask_use_confirmation>false</mask_use_confirmation>
+        <mask_use_encryption>false</mask_use_encryption>
+        <name>name</name>
+        <order>1</order>
+        <price_if_checked>0</price_if_checked>
+        <pricing_implications>false</pricing_implications>
+        <question_text>Name</question_text>
+        <read_roles/>
+        <rec_lookup_price/>
+        <rec_price_if_checked>0</rec_price_if_checked>
+        <record/>
+        <record_producer_table/>
+        <reference/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <rich_text/>
+        <roles_to_use_also_request_for/>
+        <scale_max>5</scale_max>
+        <scale_min>0</scale_min>
+        <show_help>false</show_help>
+        <show_help_on_load>false</show_help_on_load>
+        <sp_widget/>
+        <summary_macro/>
+        <sys_class_name>item_option_new</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-12-01 16:00:33</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>fb86b3571bc0c550f8ddb9de034bcba5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Name</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>item_option_new_fb86b3571bc0c550f8ddb9de034bcba5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-12-01 16:00:33</sys_updated_on>
+        <table/>
+        <tooltip/>
+        <type>6</type>
+        <ui_page/>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <validate_regex/>
+        <variable_name/>
+        <variable_set display_value="">undefined</variable_set>
+        <variable_width/>
+        <visibility>1</visibility>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <visible_summary>true</visible_summary>
+        <write_roles/>
+    </item_option_new>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</application>
+        <file_path/>
+        <instance_id>9b5b3d876fa64640869e7b2f5d3ee407</instance_id>
+        <instance_name>ven01434</instance_name>
+        <name>item_option_new_fb86b3571bc0c550f8ddb9de034bcba5</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new"><item_option_new action="INSERT_OR_UPDATE"><active>true</active><attributes/><cat_item/><category/><choice_direction>down</choice_direction><choice_field/><choice_table/><create_roles/><default_html_value/><default_value/><delete_roles/><delivery_plan/><description/><display_title>false</display_title><do_not_select_first>false</do_not_select_first><dynamic_default_value/><dynamic_ref_qual/><enable_also_request_for>false</enable_also_request_for><example_text/><field/><global>false</global><help_tag>More information</help_tag><help_text/><include_none>false</include_none><instructions/><layout>normal</layout><list_table/><lookup_label/><lookup_price/><lookup_table/><lookup_unique>false</lookup_unique><lookup_value/><macro/><mandatory>true</mandatory><map_to_field>false</map_to_field><mask_use_confirmation>false</mask_use_confirmation><mask_use_encryption>false</mask_use_encryption><name>name</name><order>1</order><price_if_checked>0</price_if_checked><pricing_implications>false</pricing_implications><question_text>Name</question_text><read_roles/><rec_lookup_price/><rec_price_if_checked>0</rec_price_if_checked><record/><record_producer_table/><reference/><reference_qual/><reference_qual_condition/><rich_text/><roles_to_use_also_request_for/><scale_max>5</scale_max><scale_min>0</scale_min><show_help>false</show_help><show_help_on_load>false</show_help_on_load><sp_widget/><summary_macro/><sys_class_name>item_option_new</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-12-01 16:00:33</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>fb86b3571bc0c550f8ddb9de034bcba5</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Name</sys_name><sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope><sys_update_name>item_option_new_fb86b3571bc0c550f8ddb9de034bcba5</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-12-01 16:00:33</sys_updated_on><table/><tooltip/><type>6</type><ui_page/><use_dynamic_default>false</use_dynamic_default><use_reference_qualifier>simple</use_reference_qualifier><validate_regex/><variable_name/><variable_set display_value="">undefined</variable_set><variable_width/><visibility>1</visibility><visible_bundle>true</visible_bundle><visible_guide>true</visible_guide><visible_standalone>true</visible_standalone><visible_summary>true</visible_summary><write_roles/></item_option_new></record_update>]]></payload>
+        <payload_hash>1881171261</payload_hash>
+        <record_name>Name</record_name>
+        <reverted_from/>
+        <source>a89080321b100110f8ddb9de034bcbfd</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2021-12-11 19:04:33</sys_created_on>
+        <sys_id>2c245dba8734c550d6b164283cbb35a4</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>17daae1ede80000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>Variable</type>
+        <update_guid>e8245dbae834c550721867c06dd007a4</update_guid>
+        <update_guid_history>e8245dbae834c550721867c06dd007a4:1881171261</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 2022-01-05 13:41:03">24245dba8734c550d6b164283cbb35aa</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>acme</sys_created_by>
+        <sys_created_on>2022-01-05 21:41:03</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="item_option_new">item_option_new</sys_db_object>
+        <sys_id>0167515d190f49f98006651f1a6bb7b1</sys_id>
+        <sys_metadata>fb86b3571bc0c550f8ddb9de034bcba5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Name</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_scope_delete display_value="">2f9ab1287243421ea393ac200543b884</sys_scope_delete>
+        <sys_update_name>item_option_new_fb86b3571bc0c550f8ddb9de034bcba5</sys_update_name>
+        <sys_update_version display_value="item_option_new_fb86b3571bc0c550f8ddb9de034bcba5">2c245dba8734c550d6b164283cbb35a4</sys_update_version>
+        <sys_updated_by>acme</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:41:03</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

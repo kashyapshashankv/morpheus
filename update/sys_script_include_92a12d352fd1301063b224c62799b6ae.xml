@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_moda_morpheus_ca.DataUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>DataUtils</name>
+        <script><![CDATA[var DataUtils = Class.create();
+DataUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    type: 'DataUtils',
+
+    INSTANCE_TYPE: 'instanceType',
+    BLUEPRINT_TYPE: 'appTemplate',
+    CATALOG_ITEM_TYPE: 'catalogItemType',
+
+    scopeId: '8d8b6bbf0ff07e009c84306be1050e67',
+
+    getScopeId: function() {
+        return this.scopeId;
+    },
+
+    getOrCreateRecord: function (type, name, keyValueQueries, updateValues, tenantId, morpheusType, morpheusCode) {
+        var utils = new x_moda_morpheus_ca.Utils();
+        utils.log('debug', 'getOrCreateRecord: ' + type + ', name: ' + name + ', tenantId: ' + tenantId);
+        if(type == 'sc_cat_item' || type == 'item_option_new' || type == 'item_option_new_set' || type == 'catalog_script_client' || type == 'io_set_item' || type == 'user_criteria') {
+            return this._getOrCreateRecordCatAPI(type, name, keyValueQueries, updateValues, tenantId, morpheusType, morpheusCode);
+        } else {
+            // Validate that any updates to non-morpheus tables are allowed via the system property
+            var tableUpdateAllowed = (type.indexOf('x_moda_morpheus_ca') == 0);
+            if(!tableUpdateAllowed) {
+                var allowedTables = gs.getProperty('x_moda_morpheus_ca.allowedOOBUpdates').split(',');
+                tableUpdateAllowed = allowedTables.indexOf(type) != -1;
+            }
+            if(tableUpdateAllowed) {
+                return this._internalGetOrCreateRecord(type, name, keyValueQueries, updateValues, tenantId, morpheusType, morpheusCode);
+            } else {
+                gs.error("Access to table " + type + " is not allowed!");
+            }
+        }
+    },
+
+    getRecord: function(type, keyValueQueries, tenantId, morpheusType, morpheusCode) {
+        var sysIds = this._internalGetRecordSysIds(type, keyValueQueries, tenantId, morpheusType, morpheusCode, 1);
+        var gr = new GlideRecord(type);
+        gr.addQuery('sys_id', 'IN', sysIds);
+        gr.query();
+        gr.next();
+        return gr;
+    },
+
+    getRecordsSysIds: function(type, keyValueQueries, tenantId, morpheusType, morpheusCode, complexKeyValues) {
+        return this._internalGetRecordSysIds(type, keyValueQueries, tenantId, morpheusType, morpheusCode, undefined, complexKeyValues);
+    },
+
+    disableAllCatItems: function(tenantId) {
+        var utils = new x_moda_morpheus_ca.Utils();
+        utils.log('info', "disableAllCatItems");
+        var sysIds = this.getRecordsSysIds('sc_cat_item', {'sys_scope': this.getScopeId()}, tenantId);
+        if(sysIds.length > 0) {
+            var allCatItems = new GlideRecord('sc_cat_item');
+            allCatItems.addQuery('sys_id', 'IN', sysIds);
+            allCatItems.query();
+            while (allCatItems.next()) {
+                this.getOrCreateRecord('sc_cat_item', allCatItems.name, {sys_id: allCatItems.sys_id}, {active: false}, tenantId);
+            }
+        }
+    },
+
+    disableSingleTenantCatItems: function() {
+        var utils = new x_moda_morpheus_ca.Utils();
+        utils.log('info', "disableSingleTenantCatItems");
+
+        // Might have some scoped non-mapped cat items around.. if so, disable them
+
+        // First.. gather all the mapped ones for all tenants
+        var allMappedCatItems = this.getRecordsSysIds('sc_cat_item', {'sys_scope': this.getScopeId()});
+
+        // Second.. find all other scoped cat items that are still active
+        var gr = new GlideRecord('sc_cat_item');
+        gr.addQuery('sys_scope', this.getScopeId());
+        gr.addQuery('active', true);
+        gr.addQuery('sys_id', 'NOT IN', allMappedCatItems);
+        gr.query();
+        while(gr.next()) {
+            utils.log('info', 'deactivating old single tenant cat item: ' + gr.sys_id + ', name:' + gr.name);
+
+            var tmpRecord = new sn_sc.CatItem(gr.sys_id);
+            tmpRecord.update({'active':false});
+        }
+    },
+
+    disableMultiTenantCatItems: function() {
+        var utils = new x_moda_morpheus_ca.Utils();
+        utils.log('info', "disableMultiTenantCatItems");
+
+        // Might have some mapping scoped cat items around... if so, disable ALL of them
+        var gr = new GlideRecord('x_moda_morpheus_ca_morpheusservicenowmapping');
+        gr.addQuery('servicenowtype', 'sc_cat_item');
+        gr.query();
+        while(gr.next()) {
+            utils.log('info', 'deactivating old multi-tenant cat item: ' + gr.servicenowsysid + ', name:' + gr.name);
+
+            var tmpRecord = new sn_sc.CatItem(gr.servicenowsysid);
+            tmpRecord.update({'active':false});
+
+            gr.deleteRecord();
+        }
+    },
+
+    /**
+     * Deletes the mapping records given the tenantId, sysIds, and type.
+     * Deletes the underlying serviceNow object.. if appropriate (or sets active = false)
+     * @param type
+     * @param tenantId
+     * @param sysIds
+     */
+    deleteRecord: function(type, tenantId, sysIds, morpheusType) {
+        var utils = new x_moda_morpheus_ca.Utils();
+        utils.log('info', "delete: " + tenantId + ", sysIds: " + sysIds + ", " + type);
+
+        var sys_domain = '';
+        var multiTenantMode = utils.getIsMultiTenant();
+
+        if(sysIds && sysIds.length > 0 ) {
+            // Delete the mapping records
+            if (multiTenantMode && this._getIsMappedTable(type)) {
+                sys_domain = this.getDomainSysId(tenantId);
+                var mappings = new GlideRecord('x_moda_morpheus_ca_morpheusservicenowmapping');
+                mappings.addQuery('tenantscope', tenantId);
+                mappings.addQuery('sys_domain', sys_domain);
+                mappings.addQuery('servicenowtype', type);
+                mappings.addQuery('servicenowsysid', 'IN', sysIds);
+                if (typeof (morpheusType) != 'undefined') {
+                    mappings.addQuery('morpheustype', morpheusType);
+                }
+                mappings.deleteMultiple();
+            }
+
+            // Delete the underlying ServiceNow object
+            if (type == 'sc_cat_item') {
+                // Deactivate any catalog items
+                utils.log('info', "About to deactive catalog items");
+                var tmpRecord = new GlideRecord(type);
+                tmpRecord.addQuery('sys_scope', utils.getScopeId());
+                tmpRecord.addQuery('sys_id', 'IN', sysIds);
+                tmpRecord.query();
+                while (tmpRecord.next()) {
+                    utils.log('info', "gonna deactivate: " + tenantId + ", tmpRecord.sys_id: " + tmpRecord.sys_id);
+                    var catItem = new GlideRecord('sc_cat_item');
+                    catItem.addQuery('sys_id', tmpRecord.sys_id);
+                    catItem.query();
+                    catItem.next();
+                    if (catItem.sys_id && catItem.active == true) {
+                        gs.debug("Found " + catItem.name + " catalog item type and it is still active... deactivating");
+                        catItem.active = false;
+                        catItem.update();
+                    }
+                }
+            } else if (type == 'catalog_script_client') {
+                for (var i = 0; i < sysIds.length; i++) {
+                    var tmpDeleteRecord = new sn_sc.CatalogClientScript();
+                    tmpDeleteRecord.deleteRecord(sysIds[i]);
+                }
+            } else {
+                var gr = new GlideRecord(type);
+                gr.addQuery('sys_id', 'IN', sysIds);
+                if(multiTenantMode && tenantId) {
+                    gr.addQuery('tenantscope', tenantId);
+                }
+                if(sys_domain) {
+                    gr.addQuery('sys_domain', sys_domain);
+                }
+                gr.deleteMultiple();
+            }
+        }
+    },
+
+    getDomainSysId: function(tenantId) {
+        var gr = new GlideRecord('x_moda_morpheus_ca_credentials');
+        gr.addQuery('morpheus_tenant', tenantId);
+        gr.setLimit(1);
+        gr.query();
+        gr.next();
+        return gr.sys_domain;
+    },
+
+    _getIsMappedTable: function(type) {
+        return type.indexOf('x_moda_morpheus') == -1;
+    },
+
+    _internalGetRecordSysIds: function(type, keyValueQueries, tenantId, morpheusType, morpheusCode, limit, complexKeyValues) {
+        var utils = new x_moda_morpheus_ca.Utils();
+        var multiTenantMode = utils.getIsMultiTenant();
+        // utils.log('info', '_internalGetRecordSysIds: ' + type);
+
+        var gr = new GlideRecord(type);
+        if (multiTenantMode && this._getIsMappedTable(type)) {
+            var sysIds = this._getMappedSysIds(tenantId, type, morpheusType, morpheusCode);
+            gr.addQuery('sys_id', 'IN', sysIds);
+        }
+        if(complexKeyValues && complexKeyValues.length > 0) {
+            for(var i = 0; i < complexKeyValues.length; i++) {
+                var obj = complexKeyValues[i];
+                gr.addQuery(obj.field, obj.condition, obj.value);
+            }
+        }
+
+        for (var key in keyValueQueries) {
+            // gs.info("adding key: " + key + ", value: " +keyValueQueries[key] );
+            gr.addQuery(key, keyValueQueries[key]);
+        }
+        if(typeof(limit) != 'undefined') {
+            gr.setLimit(limit);
+        }
+        gr.query();
+
+        var sysIds = [];
+        while(gr.next()) {
+            if(gr.sys_id) {
+                sysIds.push(gr.sys_id.toString());
+            }
+        }
+
+        return sysIds;
+    },
+
+    _getMappedSysId: function(tenantId, serviceNowType, morpheusType, morpheusCode) {
+        var utils = new x_moda_morpheus_ca.Utils();
+        // utils.log('info', "_getMappedSysId:" + tenantId + ", serviceNowType: " + serviceNowType);
+        var sysIds = this._getMappedSysIds(tenantId, serviceNowType, morpheusType, morpheusCode);
+        if(sysIds.length > 0) {
+            if(sysIds.length > 1) {
+                utils.log('info', "expected 1 for " + tenantId + ", serviceNowType: " + serviceNowType + ", morpheusType: " + morpheusType + ", morpheusCode: " + morpheusCode);
+            }
+            return sysIds[0];
+        }
+        return '';
+    },
+
+    _getMappedSysIds: function(tenantId, serviceNowType, morpheusType, morpheusCode) {
+        var utils = new x_moda_morpheus_ca.Utils();
+        // utils.log('info', "_getMappedSysIds:" + tenantId + ", serviceNowType: " + serviceNowType + ", morpheusType: " + morpheusType + ", morpheusCode: " + morpheusCode);
+        var sysIds = [];
+        var tmpRecord = new GlideRecord('x_moda_morpheus_ca_morpheusservicenowmapping');
+        if(tenantId) {
+            var sys_domain = this.getDomainSysId(tenantId);
+            tmpRecord.addQuery('tenantscope', tenantId);
+            tmpRecord.addQuery('sys_domain', sys_domain);
+        }
+        tmpRecord.addQuery('servicenowtype', serviceNowType);
+        if(typeof(morpheusType) != 'undefined' && morpheusType != '') {
+            tmpRecord.addQuery('morpheustype', morpheusType);
+        }
+        if(typeof(morpheusCode) != 'undefined' && morpheusCode != '') {
+            tmpRecord.addQuery('morpheuscode', morpheusCode);
+        }
+        tmpRecord.query();
+        while (tmpRecord.next()) {
+            sysIds.push(tmpRecord.servicenowsysid.toString());
+        }
+        return sysIds;
+    },
+
+    _internalGetOrCreateRecord: function (type, name, keyValueQueries, updateValues, tenantId, morpheusType, morpheusCode) {
+        var utils = new x_moda_morpheus_ca.Utils();
+        // utils.log('info', '_internalGetOrCreateRecord: begin ' + type + ', name: ' + name + ', tenantId: ' + tenantId + ', morpheusType: ' + morpheusType + ', morpheusCode: ' + morpheusCode);
+        var multiTenantMode = utils.getIsMultiTenant();
+
+        var tmpRecord = new GlideRecord(type);
+        var isMappedTable = this._getIsMappedTable(type);
+        var sys_domain;
+        if(multiTenantMode) {
+            if(isMappedTable) {
+                // Filter sys_ids we map
+                var sysIds = this._getMappedSysIds(tenantId, type, morpheusType, morpheusCode);
+                tmpRecord.addQuery('sys_id', 'IN', sysIds);
+                tmpRecord.addQuery('sys_scope', this.getScopeId());
+            } else {
+                // ALL morpheus objects must be scoped to a tenant
+                sys_domain = this.getDomainSysId(tenantId);
+                if (sys_domain) {
+                    tmpRecord.addQuery('sys_domain', sys_domain);
+                }
+                tmpRecord.addQuery('tenantscope', tenantId);
+            }
+        }
+        for (var key in keyValueQueries) {
+            tmpRecord.addQuery(key, keyValueQueries[key]);
+        }
+        tmpRecord.setLimit(1);
+        tmpRecord.query();
+        tmpRecord.next();
+
+        if (!tmpRecord.sys_id) {
+            utils.log('info', 'did NOT find ' + name);
+            tmpRecord.initialize();
+            tmpRecord.name = name;
+            if(multiTenantMode) {
+                if (isMappedTable) {
+                    tmpRecord.sys_scope = this.getScopeId();
+                } else {
+                    tmpRecord.tenantscope = tenantId;
+                    if (sys_domain) {
+                        tmpRecord.sys_domain = sys_domain;
+                    }
+                }
+            }
+            tmpRecord.insert();
+        }
+
+        if (typeof(updateValues) !== 'undefined') {
+            var updateRequired = false;
+            for (var key in updateValues) {
+                if (tmpRecord[key] != updateValues[key]) {
+                    gs.debug('Value ' + key + ' for record ' + type + ' needs to be updated to ' + updateValues[key] + ' from ' + tmpRecord[key]);
+                    updateRequired = true;
+                    tmpRecord[key] = updateValues[key];
+                }
+            }
+
+            if (updateRequired == true) {
+                tmpRecord.update();
+            }
+        }
+
+        // utils.log('info', '_internalGetOrCreateRecord: end');
+
+        return tmpRecord;
+
+    },
+
+    _getOrCreateRecordCatAPI: function (type, name, keyValueQueries, updateValues, tenantId, morpheusType, morpheusCode) {
+        var utils = new x_moda_morpheus_ca.Utils();
+
+        var existingRecord = this.getRecord(type, keyValueQueries, tenantId, morpheusType, morpheusCode, 1)
+        var newRecord = !existingRecord.sys_id;
+        // Create the sn_sc object with defining attributes
+        var tmpRecord;
+        switch(type) {
+            case 'sc_cat_item':
+                if(newRecord) {
+                    tmpRecord = new sn_sc.CatItem();
+                } else {
+                    tmpRecord = new sn_sc.CatItem(existingRecord.sys_id);
+                }
+                break;
+            case 'item_option_new':
+                if(newRecord) {
+                    tmpRecord = new sn_sc.CatalogItemVariable();
+                } else {
+                    tmpRecord = new sn_sc.CatalogItemVariable(existingRecord.sys_id);
+                }
+                break;
+            case 'item_option_new_set':
+                if(newRecord) {
+                    tmpRecord = new sn_sc.CatalogItemVariableSet();
+                } else {
+                    tmpRecord = new sn_sc.CatalogItemVariableSet(existingRecord.sys_id);
+                }
+                break;
+            case 'catalog_script_client':
+                if(newRecord) {
+                    tmpRecord = new sn_sc.CatalogClientScript();
+                } else {
+                    tmpRecord = existingRecord;
+                }
+                break;
+            case 'io_set_item':
+                if(newRecord) {
+                    tmpRecord = new sn_sc.CatalogItemVariableSetM2M();
+                } else {
+                    tmpRecord = new sn_sc.CatalogItemVariableSetM2M(existingRecord.sys_id);
+                }
+                break;
+            case 'user_criteria':
+                if(newRecord) {
+                    tmpRecord = new sn_uc.UserCriteria();
+                } else {
+                    tmpRecord = new sn_uc.UserCriteria(existingRecord.sys_id);
+                }
+                break;
+
+            default:
+                break;
+        }
+
+        updateValues['sys_scope'] = this.getScopeId();
+        updateValues['name'] = name;
+
+        // Determine if this is an update or a create
+        var recordSysId;
+        if(newRecord) {
+            // utils.log('info', "Did not find " + type + ", " + name + ", creating...");
+            if(type != 'user_criteria') {
+                tmpRecord.setAttributes(updateValues);
+            }
+            if(type == 'catalog_script_client' && updateValues['applies_catalog'] == true){
+                tmpRecord.appliesToCatalogItem(true);
+            }
+            if(type == 'catalog_script_client' && updateValues['applies_req_item'] == true){
+                tmpRecord.appliesToRequestedItem(true);
+            }
+            if(type != 'user_criteria') {
+                recordSysId = tmpRecord.create();
+            } else {
+                recordSysId = tmpRecord.create(updateValues);
+                if(updateValues.companySysId) {
+                    tmpRecord.setCompanies(updateValues.companySysId);
+                }
+                tmpRecord.update(updateValues, "update from morpheus sync");
+            }
+            this._createMapping(tenantId, type, recordSysId, morpheusType, morpheusCode);
+        } else {
+            recordSysId = existingRecord.sys_id;
+            if(type == 'catalog_script_client') {
+                // For some reason, catalog_script_client doesn't implement 'update'
+                // Special handling required.. see if any values have changed
+                // If so, delete and recreate
+                var anyUpdateRequired = false;
+                var propertyNames = Object.keys(updateValues);
+                for (var i = 0; i < propertyNames.length; i++) {
+                    var propertyName = propertyNames[i];
+                    if(!anyUpdateRequired) {
+                        anyUpdateRequired = (tmpRecord[propertyName] != updateValues[propertyName]);
+                    }
+                }
+
+                if(anyUpdateRequired) {
+                    this.deleteRecord(type, tenantId, [recordSysId]);
+
+                    tmpRecord = new sn_sc.CatalogClientScript();
+                    tmpRecord.setAttributes(updateValues);
+                    if(updateValues.applies_catalog == true) {
+                        tmpRecord.appliesToCatalogItem(true);
+                    }
+                    if(updateValues.applies_req_item == true) {
+                        tmpRecord.appliesToRequestedItem(true);
+                    }
+                    tmpRecord.create();
+                }
+            } else if(type == 'user_criteria') {
+                utils.log("debug", "gonna update user critera");
+                if(updateValues.companySysId) {
+                    tmpRecord.setCompanies(updateValues.companySysId);
+                }
+                tmpRecord.update(updateValues, "update from morpheus sync");
+            } else {
+                tmpRecord.update(updateValues, false);
+            }
+        }
+
+        return this.getRecord(type, {'sys_id': recordSysId}, tenantId);
+    },
+
+    _createMapping: function(tenantId, type, sys_id, morpheusType, morpheusCode) {
+        var utils = new x_moda_morpheus_ca.Utils();
+        var multiTenantMode = utils.getIsMultiTenant();
+        if(multiTenantMode) {
+            // utils.log('info', 'createMapping: ' + tenantId + ', type:' + type + ', sys_id:' + sys_id + ', morpheusType:' + morpheusType + ', morpheusCode:' + morpheusCode);
+            var newRecord = new GlideRecord('x_moda_morpheus_ca_morpheusservicenowmapping');
+            newRecord['tenantscope'] = tenantId;
+            newRecord['sys_domain'] = this.getDomainSysId(tenantId);
+            newRecord['servicenowtype'] = type;
+            newRecord['servicenowsysid'] = sys_id;
+            newRecord['morpheustype'] = morpheusType;
+            newRecord['morpheuscode'] = morpheusCode;
+            newRecord.update();
+        }
+    }
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-12 20:26:42</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>92a12d352fd1301063b224c62799b6ae</sys_id>
+        <sys_mod_count>71</sys_mod_count>
+        <sys_name>DataUtils</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>sys_script_include_92a12d352fd1301063b224c62799b6ae</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-12 21:06:16</sys_updated_on>
+    </sys_script_include>
+</record_update>

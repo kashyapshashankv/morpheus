@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new_set">
+    <item_option_new_set action="DELETE">
+        <create_roles/>
+        <description>Common Morpheus Variables (shared across instances)</description>
+        <display_title>false</display_title>
+        <internal_name>u_morpheus_common</internal_name>
+        <layout>normal</layout>
+        <name>Morpheus Common</name>
+        <order>10</order>
+        <read_roles/>
+        <set_attributes/>
+        <sys_class_name>item_option_new_set</sys_class_name>
+        <sys_created_by>morpheus</sys_created_by>
+        <sys_created_on>2021-01-14 16:59:58</sys_created_on>
+        <sys_id>68ddfe0c2f31201029b02d5df699b6bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Morpheus Common</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>item_option_new_set_68ddfe0c2f31201029b02d5df699b6bc</sys_update_name>
+        <sys_updated_by>morpheus</sys_updated_by>
+        <sys_updated_on>2021-01-14 16:59:58</sys_updated_on>
+        <title>Morpheus Common</title>
+        <type>one_to_one</type>
+        <write_roles/>
+    </item_option_new_set>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</application>
+        <file_path/>
+        <instance_id>9b5b3d876fa64640869e7b2f5d3ee407</instance_id>
+        <instance_name>ven01434</instance_name>
+        <name>item_option_new_set_68ddfe0c2f31201029b02d5df699b6bc</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new_set">
+    <item_option_new_set action="INSERT_OR_UPDATE">
+        <create_roles/>
+        <description>Common Morpheus Variables (shared across instances)</description>
+        <display_title>false</display_title>
+        <internal_name>u_morpheus_common</internal_name>
+        <layout>normal</layout>
+        <name>Morpheus Common</name>
+        <order>10</order>
+        <read_roles/>
+        <set_attributes/>
+        <sys_class_name>item_option_new_set</sys_class_name>
+        <sys_created_by>morpheus</sys_created_by>
+        <sys_created_on>2021-01-14 16:59:58</sys_created_on>
+        <sys_id>68ddfe0c2f31201029b02d5df699b6bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Morpheus Common</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>item_option_new_set_68ddfe0c2f31201029b02d5df699b6bc</sys_update_name>
+        <sys_updated_by>morpheus</sys_updated_by>
+        <sys_updated_on>2021-01-14 16:59:58</sys_updated_on>
+        <title>Morpheus Common</title>
+        <type>one_to_one</type>
+        <write_roles/>
+    </item_option_new_set>
+</record_update>]]></payload>
+        <payload_hash>1778847593</payload_hash>
+        <record_name>Morpheus Common</record_name>
+        <reverted_from/>
+        <source>189cdc98dbb12490f18484d8689619d1</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-14 23:56:45</sys_created_on>
+        <sys_id>a53d145cdbb12490f18484d8689619ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>177035481700000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-14 23:56:45</sys_updated_on>
+        <type>Variable Set</type>
+        <update_guid>653d145cc3b12490ac63462d517fd2ea</update_guid>
+        <update_guid_history>653d145cc3b12490ac63462d517fd2ea:1778847593</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 2021-01-19 16:13:31">84011e71db39a010f18484d8689619db</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-01-20 00:13:31</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="item_option_new_set">item_option_new_set</sys_db_object>
+        <sys_id>36657ee0d982490e9c791a3fc6be3844</sys_id>
+        <sys_metadata>68ddfe0c2f31201029b02d5df699b6bc</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Morpheus Common</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_scope_delete display_value="">2f9ab1287243421ea393ac200543b884</sys_scope_delete>
+        <sys_update_name>item_option_new_set_68ddfe0c2f31201029b02d5df699b6bc</sys_update_name>
+        <sys_update_version display_value="item_option_new_set_68ddfe0c2f31201029b02d5df699b6bc">a53d145cdbb12490f18484d8689619ea</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-01-20 00:13:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

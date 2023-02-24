@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Catalog Item Type" max_length="40" name="x_moda_morpheus_ca_catalog_item_type" sizeclass="42" type="collection">
+        <element label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Config" max_length="10000" name="config" type="string"/>
+        <element label="Description" max_length="255" name="description" type="string"/>
+        <element label="External ID" max_length="40" name="external_id" type="longint"/>
+        <element label="Name" max_length="1000" name="name" type="string"/>
+        <element label="Domain" max_length="32" name="sys_domain" type="domain_id"/>
+        <element label="Domain Path" max_length="255" name="sys_domain_path" type="domain_path"/>
+        <index name="index">
+            <element name="sys_domain_path"/>
+        </index>
+        <index name="index2">
+            <element name="sys_domain"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <can_iterate>true</can_iterate>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time>1970-01-01 00:00:00</entered_time>
+        <name>Delete Expired Options</name>
+        <offset/>
+        <offset_type/>
+        <run_as/>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period>1970-01-01 01:00:00</run_period>
+        <run_start>2020-10-28 07:00:00</run_start>
+        <run_time>1970-01-01 08:00:00</run_time>
+        <run_type>periodically</run_type>
+        <script><![CDATA[// Deletes any options that are past the expires date
+gs.info('Checking for expired option values');
+var now = new GlideDateTime();
+
+var gr = new GlideRecord('x_moda_morpheus_ca_options');
+gr.addQuery('expires', '<', now);
+gr.deleteMultiple();]]></script>
+        <source_filter/>
+        <source_table>x_moda_morpheus_ca_credentials</source_table>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-28 20:08:31</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c587bdcb1b48601072bbfcc8cc4bcb9b</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>Delete Expired Options</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>sysauto_script_c587bdcb1b48601072bbfcc8cc4bcb9b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-21 16:33:39</sys_updated_on>
+        <time_zone/>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

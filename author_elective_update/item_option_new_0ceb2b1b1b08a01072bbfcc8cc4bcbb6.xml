@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new">
+    <item_option_new action="DELETE">
+        <active>true</active>
+        <attributes/>
+        <cat_item/>
+        <category/>
+        <choice_direction>down</choice_direction>
+        <choice_field/>
+        <choice_table>x_moda_morpheus_ca_options</choice_table>
+        <create_roles/>
+        <default_html_value/>
+        <default_value/>
+        <delete_roles/>
+        <delivery_plan/>
+        <description/>
+        <display_title>false</display_title>
+        <do_not_select_first>false</do_not_select_first>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <enable_also_request_for>false</enable_also_request_for>
+        <example_text/>
+        <field>config.customOptions</field>
+        <global>false</global>
+        <help_tag>More information</help_tag>
+        <help_text/>
+        <include_none>false</include_none>
+        <instructions/>
+        <layout>normal</layout>
+        <list_table/>
+        <lookup_label/>
+        <lookup_price/>
+        <lookup_table>x_moda_morpheus_ca_options</lookup_table>
+        <lookup_unique>false</lookup_unique>
+        <lookup_value>name</lookup_value>
+        <macro/>
+        <mandatory>true</mandatory>
+        <map_to_field>false</map_to_field>
+        <mask_use_confirmation>false</mask_use_confirmation>
+        <mask_use_encryption>false</mask_use_encryption>
+        <name>ot_11_1709</name>
+        <order>260</order>
+        <price_if_checked>0</price_if_checked>
+        <pricing_implications>false</pricing_implications>
+        <question_text>Select 2</question_text>
+        <read_roles/>
+        <rec_lookup_price/>
+        <rec_price_if_checked>0</rec_price_if_checked>
+        <record/>
+        <record_producer_table/>
+        <reference>x_moda_morpheus_ca_options</reference>
+        <reference_qual>javascript: new x_moda_morpheus_ca.CatalogItemTypeUtils().getLookupValues(1709, 'select2');</reference_qual>
+        <reference_qual_condition/>
+        <rich_text/>
+        <roles_to_use_also_request_for/>
+        <scale_max>5</scale_max>
+        <scale_min>0</scale_min>
+        <show_help>false</show_help>
+        <show_help_on_load>false</show_help_on_load>
+        <sp_widget/>
+        <summary_macro/>
+        <sys_class_name>item_option_new</sys_class_name>
+        <sys_created_by>morpheus</sys_created_by>
+        <sys_created_on>2020-10-29 22:51:35</sys_created_on>
+        <sys_id>0ceb2b1b1b08a01072bbfcc8cc4bcbb6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Select 2</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>item_option_new_0ceb2b1b1b08a01072bbfcc8cc4bcbb6</sys_update_name>
+        <sys_updated_by>morpheus</sys_updated_by>
+        <sys_updated_on>2020-10-29 22:51:35</sys_updated_on>
+        <table/>
+        <tooltip/>
+        <type>8</type>
+        <ui_page/>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>advanced</use_reference_qualifier>
+        <validate_regex/>
+        <variable_name/>
+        <variable_set/>
+        <variable_width/>
+        <visibility>1</visibility>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <visible_summary>true</visible_summary>
+        <write_roles/>
+    </item_option_new>
+    <sys_translated_text action="DELETE" query="documentkey=0ceb2b1b1b08a01072bbfcc8cc4bcbb6"/>
+    <fx_price action="DELETE" query="id=0ceb2b1b1b08a01072bbfcc8cc4bcbb6"/>
+    <fx_price action="DELETE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>price_if_checked</field>
+        <id>0ceb2b1b1b08a01072bbfcc8cc4bcbb6</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>morpheus</sys_created_by>
+        <sys_created_on>2020-10-29 22:51:35</sys_created_on>
+        <sys_id>c8eb2b1b1b08a01072bbfcc8cc4bcbb8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>morpheus</sys_updated_by>
+        <sys_updated_on>2020-10-29 22:51:35</sys_updated_on>
+        <table>item_option_new</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="DELETE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>rec_price_if_checked</field>
+        <id>0ceb2b1b1b08a01072bbfcc8cc4bcbb6</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>morpheus</sys_created_by>
+        <sys_created_on>2020-10-29 22:51:35</sys_created_on>
+        <sys_id>80eb2b1b1b08a01072bbfcc8cc4bcbb8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>morpheus</sys_updated_by>
+        <sys_updated_on>2020-10-29 22:51:35</sys_updated_on>
+        <table>item_option_new</table>
+        <type>calculated</type>
+    </fx_price>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</application>
+        <file_path/>
+        <instance_id>6258e385dbd5b30491232f17d496198e</instance_id>
+        <instance_name>dev85647</instance_name>
+        <name>item_option_new_0ceb2b1b1b08a01072bbfcc8cc4bcbb6</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new"><item_option_new action="INSERT_OR_UPDATE"><active>true</active><attributes/><cat_item/><category/><choice_direction>down</choice_direction><choice_field/><choice_table>x_moda_morpheus_ca_options</choice_table><create_roles/><default_html_value/><default_value/><delete_roles/><delivery_plan/><description/><display_title>false</display_title><do_not_select_first>false</do_not_select_first><dynamic_default_value/><dynamic_ref_qual/><enable_also_request_for>false</enable_also_request_for><example_text/><field>config.customOptions</field><global>false</global><help_tag>More information</help_tag><help_text/><include_none>false</include_none><instructions/><layout>normal</layout><list_table/><lookup_label/><lookup_price/><lookup_table>x_moda_morpheus_ca_options</lookup_table><lookup_unique>false</lookup_unique><lookup_value>name</lookup_value><macro/><mandatory>true</mandatory><map_to_field>false</map_to_field><mask_use_confirmation>false</mask_use_confirmation><mask_use_encryption>false</mask_use_encryption><name>ot_11_1709</name><order>260</order><price_if_checked>0</price_if_checked><pricing_implications>false</pricing_implications><question_text>Select 2</question_text><read_roles/><rec_lookup_price/><rec_price_if_checked>0</rec_price_if_checked><record/><record_producer_table/><reference>x_moda_morpheus_ca_options</reference><reference_qual>javascript: new x_moda_morpheus_ca.CatalogItemTypeUtils().getLookupValues(1709, 'select2');</reference_qual><reference_qual_condition/><rich_text/><roles_to_use_also_request_for/><scale_max>5</scale_max><scale_min>0</scale_min><show_help>false</show_help><show_help_on_load>false</show_help_on_load><sp_widget/><summary_macro/><sys_class_name>item_option_new</sys_class_name><sys_created_by>morpheus</sys_created_by><sys_created_on>2020-10-29 22:51:35</sys_created_on><sys_id>0ceb2b1b1b08a01072bbfcc8cc4bcbb6</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Select 2</sys_name><sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package><sys_policy/><sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope><sys_update_name>item_option_new_0ceb2b1b1b08a01072bbfcc8cc4bcbb6</sys_update_name><sys_updated_by>morpheus</sys_updated_by><sys_updated_on>2020-10-29 22:51:35</sys_updated_on><table/><tooltip/><type>8</type><ui_page/><use_dynamic_default>false</use_dynamic_default><use_reference_qualifier>advanced</use_reference_qualifier><validate_regex/><variable_name/><variable_set/><variable_width/><visibility>1</visibility><visible_bundle>true</visible_bundle><visible_guide>true</visible_guide><visible_standalone>true</visible_standalone><visible_summary>true</visible_summary><write_roles/></item_option_new><sys_translated_text action="delete_multiple" query="documentkey=0ceb2b1b1b08a01072bbfcc8cc4bcbb6"/><fx_price action="delete_multiple" query="id=0ceb2b1b1b08a01072bbfcc8cc4bcbb6"/><fx_price action="INSERT_OR_UPDATE"><amount>0</amount><currency display_value="USD">USD</currency><field>price_if_checked</field><id>0ceb2b1b1b08a01072bbfcc8cc4bcbb6</id><parent/><reference_amount>0</reference_amount><reference_currency display_value="USD">USD</reference_currency><sys_created_by>morpheus</sys_created_by><sys_created_on>2020-10-29 22:51:35</sys_created_on><sys_id>c8eb2b1b1b08a01072bbfcc8cc4bcbb8</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>morpheus</sys_updated_by><sys_updated_on>2020-10-29 22:51:35</sys_updated_on><table>item_option_new</table><type>calculated</type></fx_price><fx_price action="INSERT_OR_UPDATE"><amount>0</amount><currency display_value="USD">USD</currency><field>rec_price_if_checked</field><id>0ceb2b1b1b08a01072bbfcc8cc4bcbb6</id><parent/><reference_amount>0</reference_amount><reference_currency display_value="USD">USD</reference_currency><sys_created_by>morpheus</sys_created_by><sys_created_on>2020-10-29 22:51:35</sys_created_on><sys_id>80eb2b1b1b08a01072bbfcc8cc4bcbb8</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>morpheus</sys_updated_by><sys_updated_on>2020-10-29 22:51:35</sys_updated_on><table>item_option_new</table><type>calculated</type></fx_price></record_update>]]></payload>
+        <payload_hash>-373645296</payload_hash>
+        <record_name>Select 2</record_name>
+        <reverted_from/>
+        <source>e65feb632f042010330ddcb6f699b6f3</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-30 19:10:42</sys_created_on>
+        <sys_id>e6e2c07f2f442010330ddcb6f699b681</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1757aeb4e0e0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-30 19:10:42</sys_updated_on>
+        <type>Variable</type>
+        <update_guid>66e2c07ff14420100a78bc4cb2f45281</update_guid>
+        <update_guid_history>66e2c07ff14420100a78bc4cb2f45281:0,5ea080bbc644201015eabe35b2680765:0,afe877630a4420103bb26d907a133337:-247394450,87e83763b34420108fd222d84d68e47b:0,8b583fef0d042010c03916e1a59b6e72:0,8ed337ebce04201066e4b768398c528c:456778930,aefeafa33d04201062fd594c8266d1dc:-280265539</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">c3e2047f2f442010330ddcb6f699b61b</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-30 19:10:45</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="item_option_new">item_option_new</sys_db_object>
+        <sys_id>83409eed952444ccaeeea3fc6853db44</sys_id>
+        <sys_metadata>0ceb2b1b1b08a01072bbfcc8cc4bcbb6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Select 2</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_scope_delete display_value="">2f9ab1287243421ea393ac200543b884</sys_scope_delete>
+        <sys_update_name>item_option_new_0ceb2b1b1b08a01072bbfcc8cc4bcbb6</sys_update_name>
+        <sys_update_version display_value="item_option_new_0ceb2b1b1b08a01072bbfcc8cc4bcbb6">e6e2c07f2f442010330ddcb6f699b681</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-30 19:10:45</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

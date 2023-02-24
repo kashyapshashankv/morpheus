@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Sync Payload" max_length="40" name="x_moda_morpheus_ca_sync_payload" sizeclass="1" type="collection">
+        <element label="Payload" max_length="2048" name="payload" type="string"/>
+        <element label="Domain" max_length="32" name="sys_domain" type="domain_id"/>
+        <element label="Domain Path" max_length="255" name="sys_domain_path" type="domain_path"/>
+        <element label="TenantScope" max_length="40" name="tenantscope" type="longint"/>
+        <index name="index">
+            <element name="sys_domain"/>
+        </index>
+        <index name="index2">
+            <element name="sys_domain_path"/>
+        </index>
+    </element>
+</database>

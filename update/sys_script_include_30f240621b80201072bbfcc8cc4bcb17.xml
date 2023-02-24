@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_moda_morpheus_ca.CatalogItemTypeUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>CatalogItemTypeUtils</name>
+        <script><![CDATA[var CatalogItemTypeUtils = Class.create();
+CatalogItemTypeUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    type: 'CatalogItemTypeUtils',
+    scopeId: '8d8b6bbf0ff07e009c84306be1050e67',
+    optionPrefix: 'ot_',
+    EXTERNAL_ID_NAME: 'external_id',
+    HIDDEN_VAR_QUESTION: 'Morph Cat Item Type',
+
+    catalogItemTypeProvisionWorkflowSysId: '',
+    getCatalogItemTypeProvisionWorkflowSysId: function() {
+        var utils = new x_moda_morpheus_ca.Utils();
+        if(this.catalogItemTypeProvisionWorkflowSysId == '') {
+            var gr = new GlideRecord('wf_workflow');
+            gr.addQuery('sys_scope',utils.getScopeId());
+            gr.addQuery('sys_name','Morpheus (Internal) Catalog Item Provision Instance');
+            gr.query();
+            gr.next();
+            this.catalogItemTypeProvisionWorkflowSysId = gr.sys_id.toString();
+        }
+        return this.catalogItemTypeProvisionWorkflowSysId;
+    },
+
+    deactivateOptions: function(variableSet, validOptionSysIds) {
+        var utils = new x_moda_morpheus_ca.Utils();
+        utils.log("info", "deactivateOptions: validOptionSysIds=" + validOptionSysIds);
+
+        // Disable any option types that are in the system but were not in this sync payload
+        var grRecord = new GlideRecord('item_option_new');
+        grRecord.addQuery('sys_scope', utils.getScopeId());
+        grRecord.addQuery('variable_set', variableSet.sys_id);
+        grRecord.addQuery('sys_id', 'NOT IN', validOptionSysIds.join(','));
+        grRecord.addEncodedQuery('nameSTARTSWITH' + this.optionPrefix);  // only want to bother with our own option types
+        grRecord.query();
+        while(grRecord.next()) {
+            if(grRecord.active == true) {
+                utils.log("info", "setting active to false for:" + grRecord.name + ", sys_id:" + grRecord.sys_id);
+                var tmpRecord = new sn_sc.CatalogItemVariable(grRecord.sys_id);
+                tmpRecord.update({active: false}, false);
+            }
+        }
+    },
+
+    allCatalogItemTypeSysIds: function(tenantId) {
+        // Fetches all the sys_ids for ALL catalog item types whether active or inactive
+        var dataUtils = new x_moda_morpheus_ca.DataUtils();
+
+        // The reference from the morphCatItem to the SNOW cat item is via a hidden variable on the SNOW cat item
+        var sysIds = [];
+        var itemOptionNewSysIds = dataUtils.getRecordsSysIds('item_option_new', {'name':this.EXTERNAL_ID_NAME, 'question_text':this.HIDDEN_VAR_QUESTION}, tenantId);
+        for(var i = 0; i < itemOptionNewSysIds.length; i++) {
+            var hiddenExternalVar = dataUtils.getRecord('item_option_new', {sys_id: itemOptionNewSysIds[i] }, tenantId);
+            if(hiddenExternalVar.sys_id && hiddenExternalVar.cat_item.sys_id) {
+                sysIds.push(hiddenExternalVar.cat_item.sys_id);
+            }
+        }
+        return sysIds;
+    },
+
+    getCatItemForExternalId: function(externalId, tenantId) {
+        var dataUtils = new x_moda_morpheus_ca.DataUtils();
+
+        // The reference from the morphCatItem to the SNOW cat item is via a hidden variable on the SNOW cat item
+        var hiddenExternalVar = dataUtils.getRecord('item_option_new', {name: this.EXTERNAL_ID_NAME, question_text: this.HIDDEN_VAR_QUESTION, default_value:parseInt(externalId).toString() }, tenantId);
+        if(hiddenExternalVar.sys_id && hiddenExternalVar.cat_item.sys_id) {
+            return dataUtils.getRecord('sc_cat_item', {sys_id: hiddenExternalVar.cat_item.sys_id}, tenantId, dataUtils.CATALOG_ITEM_TYPE);
+        }
+        return {};
+    },
+
+    getOrCreateCatItem: function(morphCatItem, tenantId) {
+        var utils = new x_moda_morpheus_ca.Utils();
+        utils.log("debug", "getOrCreateCatItem: " + morphCatItem.sys_id + ", tenantId: " + tenantId);
+
+        var dataUtils = new x_moda_morpheus_ca.DataUtils();
+        var scopeId = utils.getScopeId();
+
+        // The reference from the morphCatItem to the SNOW cat item is via a hidden variable on the SNOW cat item
+        // So.. first look for that.. if not found, create a new cat item
+        var externalId = morphCatItem.external_id;
+        var hiddenExternalVar = dataUtils.getRecord('item_option_new', {name: this.EXTERNAL_ID_NAME, question_text: this.HIDDEN_VAR_QUESTION, default_value:parseInt(externalId).toString() }, tenantId);
+        var catItemSysId;
+        if(hiddenExternalVar.sys_id && hiddenExternalVar.cat_item.sys_id) {
+            catItemSysId = hiddenExternalVar.cat_item.sys_id;
+        }
+
+        // Get or create the SNOW catalog item for the catalogItemTypeData
+        var catItemUpdateMap = {
+            name: morphCatItem.name,
+            category: utils.getMorpheusCategory(),
+            short_description: morphCatItem.description || morphCatItem.name,
+            sys_scope: scopeId,
+            sc_catalogs: utils.getServiceCatalog(),
+            active: true
+        };
+
+        var catItem;
+        if(catItemSysId) {
+            catItem = dataUtils.getOrCreateRecord('sc_cat_item', catItemUpdateMap.name, {sys_id: catItemSysId}, catItemUpdateMap, tenantId, dataUtils.CATALOG_ITEM_TYPE);
+        } else {
+            catItem = dataUtils.getOrCreateRecord('sc_cat_item', catItemUpdateMap.name, {sys_id: 'some_bogus_value'}, catItemUpdateMap, tenantId, dataUtils.CATALOG_ITEM_TYPE);
+        }
+
+        if(gs.getProperty('x_moda_morpheus_ca.overwrite_catalog_items_workflow') === "true" || catItem.getValue('workflow') === null) {
+            catItemSysId = catItem.sys_id;
+            updateWorkflowMap = {
+                name: morphCatItem.name,
+                workflow: this.getCatalogItemTypeProvisionWorkflowSysId(),
+            };
+            if(catItemSysId) {
+                catItem = dataUtils.getOrCreateRecord('sc_cat_item', updateWorkflowMap.name, {sys_id: catItemSysId}, updateWorkflowMap, tenantId, dataUtils.CATALOG_ITEM_TYPE);
+            } else {
+                catItem = dataUtils.getOrCreateRecord('sc_cat_item', updateWorkflowMap.name, {sys_id: 'some_bogus_value'}, updateWorkflowMap, tenantId, dataUtils.CATALOG_ITEM_TYPE);
+            }
+        }
+
+        // Hidden variable for external_id
+        var externalIdUpdateSet = {
+            name: this.EXTERNAL_ID_NAME,
+            cat_item: catItem.sys_id,
+            sys_scope: scopeId,
+            default_value: parseInt(externalId).toString(), // If not toString.. save 84 as 84.0!
+            question_text: this.HIDDEN_VAR_QUESTION,
+            order: 1000
+        };
+        var externalIdOption = dataUtils.getOrCreateRecord('item_option_new', this.EXTERNAL_ID_NAME, {name: this.EXTERNAL_ID_NAME, question_text: this.HIDDEN_VAR_QUESTION, cat_item: catItem.sys_id}, externalIdUpdateSet, tenantId);
+        var scriptName = 'morph_hide_' + externalId;
+        var scriptBody = "function onLoad() { g_form.setVisible('external_id', false);}";
+        var scriptUpdateSet = {
+            name: scriptName,
+            global: true,
+            cat_item: catItem.sys_id,
+            type: 'onLoad',
+            script: scriptBody,
+            applies_catalog: true,
+            applies_req_item: true,
+            applies_to: 'item',
+            active: true
+        };
+        dataUtils.getOrCreateRecord('catalog_script_client', scriptName, {name: scriptName, active: true}, scriptUpdateSet, tenantId);
+        return catItem;
+    },
+
+    getOptionTypeName: function(catalogItemTypeId, optionTypeId) {
+        return this.optionPrefix + catalogItemTypeId + '_' + optionTypeId;
+    },
+
+    isMorpheusOptionType: function(key) {
+        return key.indexOf(this.optionPrefix) == 0;
+    },
+
+    getFieldInfoForMorpheus: function(key, val, tenantId) {
+        var utils = new x_moda_morpheus_ca.Utils();
+        utils.log("debug", "getFieldInfoForMorpheus: key=" + key + ", val=" + val + ", tenantId=" + tenantId);
+        var dataUtils = new x_moda_morpheus_ca.DataUtils();
+
+        var rtn = {fieldName: null, fieldValue: null, optionSysIds: []};
+
+        // First.. the name
+        var gr = dataUtils.getRecord('x_moda_morpheus_ca_option_type', {snow_name: key}, tenantId);
+        rtn.fieldName = gr.field_name;
+
+        // Second.. the value
+        var tmpVal;
+        if(gr.type == 'select' || gr.type == 'typeahead') {
+            if(typeof(val) != 'undefined' && val != null && val.toString() != '') {
+                var sysIds = val.toString().split(',');
+                var morpheusValues = [];
+                for(var i=0; i < sysIds.length; i++) {
+                    var sysId = sysIds[i];
+                    rtn.optionSysIds.push(sysId);
+                    var grOption = new GlideRecord('x_moda_morpheus_ca_options');
+                    if(grOption.get(sysId)) {
+                        tmpVal = grOption.getValue('value');
+                        morpheusValues.push(isNaN(Number(tmpVal)) ? tmpVal : Number(tmpVal));
+                    }
+                }
+
+                if(morpheusValues.length > 1) {
+                    rtn.fieldValue = morpheusValues;
+                } else if(morpheusValues.length == 1) {
+                    rtn.fieldValue = morpheusValues[0];
+                }
+            }
+        } else if (gr.type == 'checkbox') {
+            rtn.fieldValue = tmpVal && (tmpVal.toString().toLowerCase() == 'true' || tmpVal.toString().toLowerCase() == 'on') ? 'on' : 'off';
+        } else {
+            tmpVal = val.toString();
+            rtn.fieldValue = isNaN(Number(tmpVal)) ? tmpVal : Number(tmpVal);
+        }
+
+        return rtn;
+    },
+
+    getLookupValues: function(catalogItemTypeId, optionTypeId, fieldName, tenantId){
+        var utils = new x_moda_morpheus_ca.Utils();
+        utils.log("debug", "getLookupValues: catalogItemTypeId=" + catalogItemTypeId + ", optionTypeId=" + optionTypeId + ", fieldName=" + fieldName + ", tenantId=" + tenantId);
+
+        var dataUtils = new x_moda_morpheus_ca.DataUtils();
+        var authConfig = new x_moda_morpheus_ca.LookUpUtils().fetchAuthConfig(tenantId);
+
+        var lookupValuesList = [];
+
+        var optionType = dataUtils.getRecord('x_moda_morpheus_ca_option_type', {external_id: optionTypeId}, tenantId);
+
+        var expiresDate = new GlideDateTime();
+        expiresDate.addSeconds(60*60); // 1 hour
+
+        // Build up the payload to send to Morpheus (basically each selection on the form)
+        var stringParams = {optionSource: optionType.option_source, optionTypeId: optionTypeId};
+        var configParams = {catalogItemTypeId: catalogItemTypeId};
+        for(var key in current.variables) {
+            var val = current.variables[key];
+
+            if(this.isMorpheusOptionType(key)) {
+                var fieldInfo = this.getFieldInfoForMorpheus(key, val, tenantId);
+                configParams["config." + fieldInfo.fieldName] = fieldInfo.fieldValue;
+            }
+        }
+
+        var optionsResult = utils.callMorpheus('x_moda_morpheus_ca.Morpheus Option Source', authConfig, stringParams, 'get', {}, configParams);
+        if (optionsResult.success == true) {
+
+            // Perform all of the updates
+            for (var j = 0; j < optionsResult.data.length; j++) {
+                var optionData = optionsResult.data[j];
+                var optionDataQuery = {
+                    name: optionData.name,
+                    value: ((optionData.value != '' && typeof(optionData.value) != 'undefined' && optionData.value != null) ? optionData.value.toString() : null),
+                    expires: expiresDate,
+                    display_order: j
+                };
+                var optionRecord = dataUtils.getOrCreateRecord('x_moda_morpheus_ca_options', optionDataQuery.name, optionDataQuery, optionDataQuery, tenantId);
+                lookupValuesList.push(optionRecord.sys_id.toString());
+            }
+        } else {
+            utils.log("warn", 'Error getting option source ' + optionTypeId + ', for: ' + stringParams + ', configParams: ' + configParams);
+        }
+
+        return 'sys_idIN' + lookupValuesList;
+    },
+
+    setupModelForOptionTypes: function(catItem, catalogItemTypeId, variableSet, optionArray, tenantId) {
+        var utils = new x_moda_morpheus_ca.Utils();
+        var dataUtils = new x_moda_morpheus_ca.DataUtils();
+        var scopeId = utils.getScopeId();
+
+        var currentDisplayOrder = 100;
+        var validOptionSysIds = [];
+
+        for (var i = 0; i < optionArray.length; i++) {
+            var data = optionArray[i];
+
+            var varTmpName = this.getOptionTypeName(catalogItemTypeId, data.id);
+
+            // Store off the OptionType domain
+            var optionTypeMap = {
+                name: data.name,
+                snow_name: varTmpName,
+                external_id: data.id,
+                depends_on_code: ((data.dependsOnCode != '' && typeof(data.dependsOnCode) != 'undefined' && data.dependsOnCode != null) ? data.dependsOnCode : null),
+                description: ((data.description != '' && typeof(data.description) != 'undefined' && data.description != null) ? data.description : null),
+                enabled: data.enabled,
+                field_context: ((data.fieldContext != '' && typeof(data.fieldContext) != 'undefined' && data.fieldContext != null) ? data.fieldContext : null),
+                field_name: data.fieldName,
+                option_source: ((data.optionSource != '' && typeof(data.optionSource) != 'undefined' && data.optionSource != null) ? data.optionSource : null),
+                type: data.type,
+                visible_on_code: ((data.visibleOnCode != '' && typeof(data.visibleOnCode) != 'undefined' && data.visibleOnCode != null) ? data.visibleOnCode : null)
+            };
+            dataUtils.getOrCreateRecord('x_moda_morpheus_ca_option_type', optionTypeMap.name, {snow_name: optionTypeMap.snow_name}, optionTypeMap, tenantId);
+
+            var order = currentDisplayOrder;
+            if(data.type == 'hidden') {
+                order = 1000;
+            }
+
+            var hasHelpText = (data.helpBlock != '' && typeof(data.helpBlock) != 'undefined' && data.helpBlock != null)
+            var varTmpUpdateSet = {
+                active: true,
+                sys_scope: scopeId,
+                variable_set: variableSet.sys_id,
+                order: order,
+                mandatory: data.required,
+                question_text: data.fieldLabel,
+                field: data.fieldContext,
+                default_value: ((data.defaultValue != '' && typeof(data.defaultValue) != 'undefined' && data.defaultValue != null) ? data.defaultValue : null),
+                help_tag: hasHelpText ? 'Help' : null,
+                show_help: hasHelpText ? true : false,
+                show_help_on_load: hasHelpText ? true : false,
+                help_text: hasHelpText ? data.helpBlock : null,
+                example_text: ((data.placeHolder != '' && typeof(data.placeHolder) != 'undefined' && data.placeHolder != null) ? data.placeHolder : null)
+            }
+
+            var catVariable;
+            switch (data.type) {
+                case 'select':
+                case 'typeahead':
+                    delete varTmpUpdateSet.default_value;
+                    varTmpUpdateSet.type = '8';
+                    varTmpUpdateSet.lookup_table = 'x_moda_morpheus_ca_options';
+                    varTmpUpdateSet.lookup_value = 'name';
+                    varTmpUpdateSet.choice_table = 'x_moda_morpheus_ca_options';
+                    varTmpUpdateSet.reference = 'x_moda_morpheus_ca_options';
+                    varTmpUpdateSet.use_reference_qualifier = 'advanced';
+                    varTmpUpdateSet.reference_qual = "javascript: new x_moda_morpheus_ca.CatalogItemTypeUtils().getLookupValues(" + catalogItemTypeId + ", " + data.id + ", '" + data.fieldName + "', " + tenantId + ");";
+                    varTmpUpdateSet.lookup_unique = false;
+                    if(data.config && data.config.multiSelect == 'on') {
+                        varTmpUpdateSet.type = '21';
+                        varTmpUpdateSet.list_table = 'x_moda_morpheus_ca_options';
+                    }
+                    catVariable = dataUtils.getOrCreateRecord('item_option_new', varTmpName, {name: varTmpName}, varTmpUpdateSet, tenantId);
+                    break;
+                case 'password':
+                    varTmpUpdateSet.type = '25';
+                    catVariable = dataUtils.getOrCreateRecord('item_option_new', varTmpName, {name: varTmpName}, varTmpUpdateSet, tenantId);
+                    break;
+                case 'checkbox':
+                    if(varTmpUpdateSet.default_value == 'on') {
+                        varTmpUpdateSet.default_value = true;
+                    }
+                    varTmpUpdateSet.type = '7';
+                    catVariable = dataUtils.getOrCreateRecord('item_option_new', varTmpName, {name: varTmpName}, varTmpUpdateSet, tenantId);
+                    break;
+                case 'number':
+                case 'text':
+                default:
+                    varTmpUpdateSet.type = '6';
+                    if(data.type == 'number') {
+                        var grRegex = new GlideRecord('question_regex');
+                        grRegex.addQuery('name','Number');
+                        grRegex.query();
+                        grRegex.next();
+                        varTmpUpdateSet.validate_regex = grRegex.sys_id;
+                    }
+                    catVariable = dataUtils.getOrCreateRecord('item_option_new', varTmpName, {name: varTmpName}, varTmpUpdateSet, tenantId);
+            }
+
+            validOptionSysIds.push(catVariable.sys_id.toString());
+
+            var scriptName = 'morph_' + varTmpName;
+            if(data.type == 'hidden') {
+                // Add a catalog client script to hide the hidden variable
+                // Add a script to hide the internal variables
+
+                var scriptBody = "function onLoad() { g_form.setVisible('" + varTmpName + "', false);}";
+                var scriptUpdateSet = {
+                    global: true,
+                    type: 'onLoad',
+                    variable_set: variableSet.sys_id,
+                    script: scriptBody,
+                    applies_catalog: true,
+                    applies_req_item: true,
+                    applies_to: 'set',
+                    active: true
+                };
+                dataUtils.getOrCreateRecord('catalog_script_client', scriptName, {name: scriptName, active: true}, scriptUpdateSet, tenantId);
+            } else {
+                this.deleteAllCatalogScriptClientsWithName(scriptName, tenantId);
+            }
+            currentDisplayOrder += 10;
+        }
+
+        this.deactivateOptions(variableSet, validOptionSysIds);
+    },
+
+    setupDependsOnForOptionTypes: function(catItem, catalogItemTypeId, variableSet, optionArray, tenantId) {
+        var utils = new x_moda_morpheus_ca.Utils();
+        var dataUtils = new x_moda_morpheus_ca.DataUtils();
+        var scopeId = utils.getScopeId();
+
+        // First loop.. build up the dependsOn relationships
+        var dependsOnRelationships = {};
+        for (var i = 0; i < optionArray.length; i++) {
+            var data = optionArray[i];
+
+            var dependsOnCode = ((data.dependsOnCode != '' && typeof(data.dependsOnCode) != 'undefined' && data.dependsOnCode != null) ? data.dependsOnCode : null);
+            if(dependsOnCode) {
+                // Assumption is that dependsOnCode == fieldName of the 'parent' (don't think that is always true)
+                // TODO : Handle multiple dependsOnCode (comma separated) as well as value specific (code:1)
+                // Look through the optionArray, looking for the option that his this dependOnCode in order to find it's fieldName
+                var parentExternalId;
+                for (var j = 0; j < optionArray.length; j++) {
+                    var tmpData = optionArray[j];
+                    if(tmpData.fieldName == dependsOnCode) {
+                        parentExternalId = tmpData.id
+                    }
+                }
+                if(parentExternalId && (parentExternalId != data.id)) {
+                    var varTmpName = this.getOptionTypeName(catalogItemTypeId, parentExternalId);
+                    if(!dependsOnRelationships[varTmpName]) {
+                        dependsOnRelationships[varTmpName] = []
+                    }
+                    dependsOnRelationships[varTmpName].push(this.getOptionTypeName(catalogItemTypeId, data.id));
+                }
+            }
+        }
+
+        utils.log("debug", 'depends on relationships' + JSON.stringify(dependsOnRelationships));
+
+        // Second loop.. set the client script (or delete if the relationship changed)
+        for (var i = 0; i < optionArray.length; i++) {
+            var data = optionArray[i];
+
+            var varTmpName = this.getOptionTypeName(catalogItemTypeId, data.id);
+            var dependants = dependsOnRelationships[varTmpName];
+            var scriptName = 'morph_depends_' + varTmpName;
+            if(typeof(dependants) != 'undefined' && dependants != null) {
+                var dependantsJSArray = "var dependants = [\"" + dependants.join("\",\"") + "\"];"
+                var scriptBody = "\
+function onChange(control, oldValue, newValue, isLoading) { \
+	if (isLoading) { return; }; \
+	console.log('working with dependantsJSArray " + dependantsJSArray + "');\
+	" + dependantsJSArray + "\
+	for (var i = 0; i < dependants.length; i++) {\
+		var dependant = dependants[i];\
+		g_form.setValue(dependant, '');\
+	}\
+}";
+                var catVariable = dataUtils.getRecord('item_option_new', {name: varTmpName}, tenantId);
+                var scriptUpdateSet = {
+                    name: scriptName,
+                    global: true,
+                    isolate: true,
+                    type: 'onChange',
+                    script: scriptBody,
+                    applies_catalog: true,
+                    applies_extended: false,
+                    applies_req_item: false,
+                    applies_sc_task: false,
+                    applies_to: 'item',
+                    cat_item: catItem.sys_id,
+                    cat_variable: "IO:"+ catVariable.sys_id.toString(),
+                    ui_type: 10,
+                    active: true
+                };
+                dataUtils.getOrCreateRecord('catalog_script_client', scriptName, {name: scriptName, active: true}, scriptUpdateSet, tenantId);
+            } else {
+                utils.log("debug", "trying to delete " + scriptName);
+                // Delete any existing client scripts
+                this.deleteAllCatalogScriptClientsWithName(scriptName, tenantId);
+            }
+        }
+    },
+
+    syncCatalogItemType: function(authConfig, tenantId, catalogItemTypeData){
+        var utils = new x_moda_morpheus_ca.Utils();
+        var dataUtils = new x_moda_morpheus_ca.DataUtils();
+
+        utils.log("info", 'Syncing catalog item type data' + JSON.stringify(catalogItemTypeData));
+
+        var catItem;
+        try {
+            var catalogItemTypeId = catalogItemTypeData.id;
+            var catalogItemTypeName = catalogItemTypeData.name;
+            var parser = new global.JSON();
+            var scopeId = utils.getScopeId();
+
+            // Fetch the detail view for the catalog item type (in order to obtain the full config)
+            var catalogItemTypeIdBody = utils.callMorpheus('x_moda_morpheus_ca.Morpheus Catalog Item Type', authConfig, {id: catalogItemTypeId}).catalogItemType;
+
+            // Create or Update x_moda_morpheus_ca_catalog_item_type
+            var morpheusCatItemTypeMap = {
+                name: catalogItemTypeName,
+                external_id: catalogItemTypeId,
+                description: catalogItemTypeData.description,
+                config: parser.encode(catalogItemTypeIdBody),
+                active: true,
+            };
+            var morphCatItem = dataUtils.getOrCreateRecord('x_moda_morpheus_ca_catalog_item_type', morpheusCatItemTypeMap.name, {external_id: catalogItemTypeId}, morpheusCatItemTypeMap, tenantId);
+
+            // Generate the Catalog Item
+            catItem = this.getOrCreateCatItem(morphCatItem, tenantId);
+
+            // Create a script to hide the parameters when viewing as a requested item
+            var scriptName = 'morph_hide_ritm_' + catalogItemTypeId;
+            var scriptBody = "\
+function onLoad() {\
+	for (var index = 0; index < g_form.nameMap.length; index++) {\
+		var name = g_form.nameMap[index].prettyName;\
+		if(name.indexOf('ot_') == 0) {\
+			g_form.setReadOnly(name, true);\
+		}\
+	}   \
+}";
+            var scriptUpdateSet = {
+                name: scriptName,
+                global: true,
+                cat_item: catItem.sys_id,
+                type: 'onLoad',
+                script: scriptBody,
+                applies_catalog: false,
+                applies_req_item: true,
+                applies_to: 'item',
+                isolate_script: true,
+                ui_type: 0,
+                active: true
+            };
+            dataUtils.getOrCreateRecord('catalog_script_client', scriptName, {name: scriptName, active: true}, scriptUpdateSet, tenantId);
+
+            // Need a variable set for the option types
+            var optionTypeVarSetName = 'opt-cat-item-type-' + catalogItemTypeId;
+            var varSetNameUpdateMap = {
+                description: 'Option Type - Option Types for ' + catalogItemTypeName,
+                sys_scope: scopeId,
+                order: 400
+            };
+            var optionTypeVarSet = dataUtils.getOrCreateRecord('item_option_new_set', optionTypeVarSetName, {name: optionTypeVarSetName}, varSetNameUpdateMap, tenantId);
+            // ... and make sure it is added to the catalog item
+            var varSetRelationshipMap = {sc_cat_item: catItem.sys_id, variable_set: optionTypeVarSet.sys_id, sys_scope: scopeId};
+            var varSetUpdatedRelationshipMap = {
+                sc_cat_item: catItem.sys_id,
+                variable_set: optionTypeVarSet.sys_id,
+                sys_scope: scopeId,
+                order: 410
+            };
+            var varSetRelationship = dataUtils.getOrCreateRecord('io_set_item', '', varSetRelationshipMap, varSetUpdatedRelationshipMap, tenantId);
+
+            this.setupModelForOptionTypes(catItem, catalogItemTypeId, optionTypeVarSet, catalogItemTypeIdBody.optionTypes, tenantId)
+            this.setupDependsOnForOptionTypes(catItem, catalogItemTypeId, optionTypeVarSet, catalogItemTypeIdBody.optionTypes, tenantId)
+            utils.createUserCriteria(catItem, tenantId);
+        } catch(err) {
+            utils.log("error", 'Error in syncCatalogItemType: ' + err.stack);
+        }
+        return catItem;
+    },
+
+    deleteAllCatalogScriptClientsWithName: function(name, tenantId) {
+        var dataUtils = new x_moda_morpheus_ca.DataUtils();
+        var sysIds = dataUtils.getRecordsSysIds('catalog_script_client', {name: name}, tenantId);
+        if(sysIds.length > 0) {
+            dataUtils.deleteRecord('catalog_script_client', tenantId, sysIds);
+        }
+    },
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-26 21:59:00</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>30f240621b80201072bbfcc8cc4bcb17</sys_id>
+        <sys_mod_count>125</sys_mod_count>
+        <sys_name>CatalogItemTypeUtils</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>sys_script_include_30f240621b80201072bbfcc8cc4bcb17</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-30 18:46:59</sys_updated_on>
+    </sys_script_include>
+</record_update>

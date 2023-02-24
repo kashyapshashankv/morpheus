@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="1c7fa3da2fd1301063b224c62799b658" sys_domain="global" table="sys_dictionary" version="3" view="unique_view">
+        <sys_ui_annotation action="INSERT_OR_UPDATE">
+            <is_plain_text>false</is_plain_text>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-07-14 20:02:58</sys_created_on>
+            <sys_id>e97fe3da2fd1301063b224c62799b6b2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-07-14 20:02:58</sys_updated_on>
+            <text>Dictionary Form Description</text>
+            <type display_value="Section Details">19756e5ec3313000bac1addbdfba8f18</type>
+        </sys_ui_annotation>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>e97fe3da2fd1301063b224c62799b6b2</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-07-14 20:02:58</sys_created_on>
+            <sys_id>a97fa7da2fd1301063b224c62799b6fc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sys_dictionary" sys_domain="global" view="333fe3da2fd1301063b224c62799b60b">1c7fa3da2fd1301063b224c62799b658</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-07-14 20:02:58</sys_updated_on>
+            <sys_user/>
+            <type>annotation</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-07-14 20:02:58</sys_created_on>
+            <sys_id>2d7fa7da2fd1301063b224c62799b6fc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sys_dictionary" sys_domain="global" view="333fe3da2fd1301063b224c62799b60b">1c7fa3da2fd1301063b224c62799b658</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-07-14 20:02:58</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>name</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-07-14 20:02:58</sys_created_on>
+            <sys_id>ad7fa7da2fd1301063b224c62799b6fc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sys_dictionary" sys_domain="global" view="333fe3da2fd1301063b224c62799b60b">1c7fa3da2fd1301063b224c62799b658</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-07-14 20:02:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>internal_type</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-07-14 20:02:58</sys_created_on>
+            <sys_id>217fa7da2fd1301063b224c62799b6fd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sys_dictionary" sys_domain="global" view="333fe3da2fd1301063b224c62799b60b">1c7fa3da2fd1301063b224c62799b658</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-07-14 20:02:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>column_label</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-07-14 20:02:58</sys_created_on>
+            <sys_id>a17fa7da2fd1301063b224c62799b6fd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sys_dictionary" sys_domain="global" view="333fe3da2fd1301063b224c62799b60b">1c7fa3da2fd1301063b224c62799b658</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-07-14 20:02:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>element</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-07-14 20:02:58</sys_created_on>
+            <sys_id>257fa7da2fd1301063b224c62799b6fd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sys_dictionary" sys_domain="global" view="333fe3da2fd1301063b224c62799b60b">1c7fa3da2fd1301063b224c62799b658</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-07-14 20:02:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>max_length</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-07-14 20:02:58</sys_created_on>
+            <sys_id>a57fa7da2fd1301063b224c62799b6fd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sys_dictionary" sys_domain="global" view="333fe3da2fd1301063b224c62799b60b">1c7fa3da2fd1301063b224c62799b658</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-07-14 20:02:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-07-14 20:02:58</sys_created_on>
+            <sys_id>297fa7da2fd1301063b224c62799b6fd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sys_dictionary" sys_domain="global" view="333fe3da2fd1301063b224c62799b60b">1c7fa3da2fd1301063b224c62799b658</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-07-14 20:02:58</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>sys_scope</element>
+            <position>8</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-07-14 20:02:58</sys_created_on>
+            <sys_id>a97fa7da2fd1301063b224c62799b6fd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sys_dictionary" sys_domain="global" view="333fe3da2fd1301063b224c62799b60b">1c7fa3da2fd1301063b224c62799b658</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-07-14 20:02:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>active</element>
+            <position>9</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-07-14 20:02:58</sys_created_on>
+            <sys_id>2d7fa7da2fd1301063b224c62799b6fd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sys_dictionary" sys_domain="global" view="333fe3da2fd1301063b224c62799b60b">1c7fa3da2fd1301063b224c62799b658</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-07-14 20:02:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>function_field</element>
+            <position>10</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-07-14 20:02:58</sys_created_on>
+            <sys_id>ad7fa7da2fd1301063b224c62799b6fd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sys_dictionary" sys_domain="global" view="333fe3da2fd1301063b224c62799b60b">1c7fa3da2fd1301063b224c62799b658</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-07-14 20:02:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>read_only</element>
+            <position>11</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-07-14 20:02:58</sys_created_on>
+            <sys_id>217fa7da2fd1301063b224c62799b6fe</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sys_dictionary" sys_domain="global" view="333fe3da2fd1301063b224c62799b60b">1c7fa3da2fd1301063b224c62799b658</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-07-14 20:02:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>mandatory</element>
+            <position>12</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-07-14 20:02:58</sys_created_on>
+            <sys_id>a17fa7da2fd1301063b224c62799b6fe</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sys_dictionary" sys_domain="global" view="333fe3da2fd1301063b224c62799b60b">1c7fa3da2fd1301063b224c62799b658</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-07-14 20:02:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>display</element>
+            <position>13</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-07-14 20:02:58</sys_created_on>
+            <sys_id>257fa7da2fd1301063b224c62799b6fe</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sys_dictionary" sys_domain="global" view="333fe3da2fd1301063b224c62799b60b">1c7fa3da2fd1301063b224c62799b658</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-07-14 20:02:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>text_index</element>
+            <position>14</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-07-14 20:02:58</sys_created_on>
+            <sys_id>a57fa7da2fd1301063b224c62799b6fe</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sys_dictionary" sys_domain="global" view="333fe3da2fd1301063b224c62799b60b">1c7fa3da2fd1301063b224c62799b658</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-07-14 20:02:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>audit</element>
+            <position>15</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-07-14 20:02:58</sys_created_on>
+            <sys_id>297fa7da2fd1301063b224c62799b6fe</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sys_dictionary" sys_domain="global" view="333fe3da2fd1301063b224c62799b60b">1c7fa3da2fd1301063b224c62799b658</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-07-14 20:02:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>unique</element>
+            <position>16</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-07-14 20:02:58</sys_created_on>
+            <sys_id>a97fa7da2fd1301063b224c62799b6fe</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sys_dictionary" sys_domain="global" view="333fe3da2fd1301063b224c62799b60b">1c7fa3da2fd1301063b224c62799b658</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-07-14 20:02:58</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>sys_dictionary</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-07-14 20:02:52</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1c7fa3da2fd1301063b224c62799b658</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>sys_dictionary</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+            <sys_update_name>sys_ui_section_1c7fa3da2fd1301063b224c62799b658</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-07-14 20:02:52</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="unique_view" name="unique_view">333fe3da2fd1301063b224c62799b60b</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

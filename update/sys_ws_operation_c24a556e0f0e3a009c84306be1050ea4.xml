@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>6e45cd1ddb733200b9047d9ebf9619c1</enforce_acl>
+        <http_method>POST</http_method>
+        <name>Deactivate</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+	var utils = new x_moda_morpheus_ca.Utils();
+	var catUtils = new x_moda_morpheus_ca.CatalogItemTypeUtils();
+	var dataUtils = new x_moda_morpheus_ca.DataUtils();
+	var multiTenantMode = utils.getIsMultiTenant();
+	var data = request.body.data;
+	var tenantId = data.tenantId;
+
+	utils.log("info", "Received deactivate request with payload: " + request.body.data);
+
+	// Handle the layouts
+	for(var i=0; i < data.layoutIds.length; i++) {
+		var layoutId = data.layoutIds[i];
+		utils.log("debug", "layout id " + layoutId);
+		var tmpLayoutIdVar = dataUtils.getRecord('item_option_new', {default_value: layoutId.toString()}, tenantId);
+		if (tmpLayoutIdVar.sys_id) {
+			var catItemSysId = tmpLayoutIdVar.cat_item.sys_id;
+			var catItem = dataUtils.getRecord('sc_cat_item', {sys_id: catItemSysId}, tenantId);
+			if(catItem.sys_id) {
+				catItem.active = false;
+				catItem.update();
+			}
+		} else {
+			utils.log("info", 'No layout found with id:' + layoutId + ', skipping deactivate');
+		}
+	}
+
+	// Handle the zones
+	for(var i=0; i < data.zoneIds.length; i++) {
+		var zoneId = data.zoneIds[i];
+		var grCloud = new GlideRecord('x_moda_morpheus_ca_clouds');
+		grCloud.addQuery('external_id', zoneId);
+		if(multiTenantMode) {
+			grCloud.addQuery('tenantscope', tenantId);
+		}
+		grCloud.setLimit(1);
+		grCloud.query();
+		if(grCloud.next()) {
+			// Look for any group-cloud relationships.  If the group has only 1 cloud, then delete
+			var relationShipRecords = new GlideRecord('x_moda_morpheus_ca_m2m_clouds_groups');
+			relationShipRecords.addQuery('clouds', grCloud.sys_id);
+			relationShipRecords.query();
+			while(relationShipRecords.next()) {
+				gs.debug("Checking group: " + relationShipRecords.group.sys_id);
+
+				var tmpCloudGroupRecord = new GlideAggregate('x_moda_morpheus_ca_m2m_clouds_groups');
+				tmpCloudGroupRecord.addAggregate('COUNT')
+				tmpCloudGroupRecord.addQuery('group', relationShipRecords.group.sys_id);
+				tmpCloudGroupRecord.query();
+				var count = 0;
+				if (tmpCloudGroupRecord.next())
+					count = tmpCloudGroupRecord.getAggregate('COUNT');
+				gs.debug("group-cloud row count: " + count);
+
+				if(count == 1) {
+					var groupRecord = new GlideRecord('x_moda_morpheus_ca_group');
+					if(groupRecord.get(relationShipRecords.group)){
+						groupRecord.deleteRecord();
+					}
+				}
+			}
+			grCloud.deleteRecord();
+		} else {
+			gs.debug('No cloud found with id:' + zoneId + ', skipping deactivate');
+		}
+	}
+
+	// Handle the blueprints
+	for(var i=0; i < data.blueprints.length; i++) {
+		var catalogName = data.blueprints[i];
+		var catItemName = "Blueprint: " + catalogName;
+		var catItem = dataUtils.getRecord('sc_cat_item', {name: catItemName}, tenantId, dataUtils.BLUEPRINT_TYPE);
+		if(catItem.sys_id) {
+			catItem.active = false;
+			catItem.update();
+		} else {
+			gs.debug('No blueprint found with name:' + catalogName + ', skipping deactivate');
+		}
+	}
+
+	// Handle the catalog item types
+	for(var i=0; i < data.catalogItemTypes.length; i++) {
+		var catalogItemTypeId = data.catalogItemTypes[i];
+		var catItem = catUtils.getCatItemForExternalId(catalogItemTypeId, tenantId);
+		if(catItem.sys_id) {
+			catItem.active = false;
+			catItem.update();
+		} else {
+			gs.debug('No cat item found with id:' + catalogItemTypeId + ', skipping deactivate');
+		}
+	}
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_moda_morpheus_ca/sync_catalog/deactivate</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/deactivate</relative_path>
+        <request_example>{&#13;
+	"layoutIds": [51,52],&#13;
+	"zoneIds": [3]&#13;
+}</request_example>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>false</requires_snc_internal_role>
+        <short_description>Deactivates the layouts specified and removes any clouds specified</short_description>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-04-13 17:16:10</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c24a556e0f0e3a009c84306be1050ea4</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_name>Deactivate</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>sys_ws_operation_c24a556e0f0e3a009c84306be1050ea4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-07-26 21:18:40</sys_updated_on>
+        <web_service_definition display_value="Sync Catalog">d6f827270fbdf2009c84306be1050ef4</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

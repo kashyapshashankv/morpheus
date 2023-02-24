@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item">
+    <io_set_item action="DELETE">
+        <order>410</order>
+        <sc_cat_item display_value="">460d70d21b933010176ccae0604bcbf1</sc_cat_item>
+        <sys_class_name>io_set_item</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 17:08:58</sys_created_on>
+        <sys_id>520db0d21b933010176ccae0604bcb49</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>opt-apache-google-2.4.Apache-Google Apache on Ubuntu 14.04-2.4</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>io_set_item_520db0d21b933010176ccae0604bcb49</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 17:08:58</sys_updated_on>
+        <variable_set display_value="opt-apache-google-2.4">d60db0d21b933010176ccae0604bcb47</variable_set>
+    </io_set_item>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</application>
+        <file_path/>
+        <instance_id>f5a6cd35db9b6450431011f8489619b8</instance_id>
+        <instance_name>dev110158</instance_name>
+        <name>io_set_item_520db0d21b933010176ccae0604bcb49</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item"><io_set_item action="INSERT_OR_UPDATE"><order>410</order><sc_cat_item display_value="">460d70d21b933010176ccae0604bcbf1</sc_cat_item><sys_class_name>io_set_item</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-10-21 17:08:58</sys_created_on><sys_id>520db0d21b933010176ccae0604bcb49</sys_id><sys_mod_count>0</sys_mod_count><sys_name>opt-apache-google-2.4.Apache-Google Apache on Ubuntu 14.04-2.4</sys_name><sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package><sys_policy/><sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope><sys_update_name>io_set_item_520db0d21b933010176ccae0604bcb49</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-10-21 17:08:58</sys_updated_on><variable_set display_value="opt-apache-google-2.4">d60db0d21b933010176ccae0604bcb47</variable_set></io_set_item></record_update>]]></payload>
+        <payload_hash>427476104</payload_hash>
+        <record_name>opt-apache-google-2.4.Apache-Google Apache on Ubuntu 14.04-2.4</record_name>
+        <reverted_from/>
+        <source>bb2e86211b133010176ccae0604bcb4b</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-19 15:08:05</sys_created_on>
+        <sys_id>cbedadd61b173010176ccae0604bcbc2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17c991864080000000</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-29 22:09:40</sys_updated_on>
+        <type>Catalog Variable Set</type>
+        <update_guid>8bedadd681173010bc7e49f85f262cc2</update_guid>
+        <update_guid_history>8bedadd681173010bc7e49f85f262cc2:427476104</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">47edadd61b173010176ccae0604bcbc4</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 20:42:34</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="io_set_item">io_set_item</sys_db_object>
+        <sys_id>651ede04a03144fc9e11a363a8e7d910</sys_id>
+        <sys_metadata>520db0d21b933010176ccae0604bcb49</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>opt-apache-google-2.4.Apache-Google Apache on Ubuntu 14.04-2.4</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_scope_delete display_value="">2f9ab1287243421ea393ac200543b884</sys_scope_delete>
+        <sys_update_name>io_set_item_520db0d21b933010176ccae0604bcb49</sys_update_name>
+        <sys_update_version display_value="io_set_item_520db0d21b933010176ccae0604bcb49">cbedadd61b173010176ccae0604bcbc2</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-21 20:42:34</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

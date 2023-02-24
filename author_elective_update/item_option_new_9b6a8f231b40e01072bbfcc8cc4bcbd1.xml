@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new">
+    <item_option_new action="DELETE">
+        <active>true</active>
+        <attributes/>
+        <cat_item/>
+        <category/>
+        <choice_direction>down</choice_direction>
+        <choice_field/>
+        <choice_table/>
+        <create_roles/>
+        <default_html_value/>
+        <default_value/>
+        <delete_roles/>
+        <delivery_plan/>
+        <description/>
+        <display_title>false</display_title>
+        <do_not_select_first>false</do_not_select_first>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <enable_also_request_for>false</enable_also_request_for>
+        <example_text/>
+        <field/>
+        <global>false</global>
+        <help_tag>More information</help_tag>
+        <help_text/>
+        <include_none>false</include_none>
+        <instructions/>
+        <layout>normal</layout>
+        <list_table/>
+        <lookup_label/>
+        <lookup_price/>
+        <lookup_table/>
+        <lookup_unique>false</lookup_unique>
+        <lookup_value/>
+        <macro/>
+        <mandatory>true</mandatory>
+        <map_to_field>false</map_to_field>
+        <mask_use_confirmation>false</mask_use_confirmation>
+        <mask_use_encryption>false</mask_use_encryption>
+        <name>resourcepool</name>
+        <order>300</order>
+        <price_if_checked>0</price_if_checked>
+        <pricing_implications>false</pricing_implications>
+        <question_text>Resource Pool</question_text>
+        <read_roles/>
+        <rec_lookup_price/>
+        <rec_price_if_checked>0</rec_price_if_checked>
+        <record/>
+        <record_producer_table/>
+        <reference>x_moda_morpheus_ca_resource_pool</reference>
+        <reference_qual>javascript: new x_moda_morpheus_ca.LookUpUtils().getResourcePoolsForCloud(current.variables.cloud);</reference_qual>
+        <reference_qual_condition/>
+        <rich_text/>
+        <roles_to_use_also_request_for/>
+        <scale_max>5</scale_max>
+        <scale_min>0</scale_min>
+        <show_help>false</show_help>
+        <show_help_on_load>false</show_help_on_load>
+        <sp_widget/>
+        <summary_macro/>
+        <sys_class_name>item_option_new</sys_class_name>
+        <sys_created_by>morpheus</sys_created_by>
+        <sys_created_on>2020-10-30 15:03:54</sys_created_on>
+        <sys_id>9b6a8f231b40e01072bbfcc8cc4bcbd1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Resource Pool</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>item_option_new_9b6a8f231b40e01072bbfcc8cc4bcbd1</sys_update_name>
+        <sys_updated_by>morpheus</sys_updated_by>
+        <sys_updated_on>2020-10-30 15:03:54</sys_updated_on>
+        <table/>
+        <tooltip/>
+        <type>8</type>
+        <ui_page/>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>advanced</use_reference_qualifier>
+        <validate_regex/>
+        <variable_name/>
+        <variable_set/>
+        <variable_width/>
+        <visibility>1</visibility>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <visible_summary>true</visible_summary>
+        <write_roles/>
+    </item_option_new>
+    <sys_translated_text action="DELETE" query="documentkey=9b6a8f231b40e01072bbfcc8cc4bcbd1"/>
+    <fx_price action="DELETE" query="id=9b6a8f231b40e01072bbfcc8cc4bcbd1"/>
+    <fx_price action="DELETE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>price_if_checked</field>
+        <id>9b6a8f231b40e01072bbfcc8cc4bcbd1</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>morpheus</sys_created_by>
+        <sys_created_on>2020-10-30 15:03:54</sys_created_on>
+        <sys_id>5b6a8f231b40e01072bbfcc8cc4bcbd3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>morpheus</sys_updated_by>
+        <sys_updated_on>2020-10-30 15:03:54</sys_updated_on>
+        <table>item_option_new</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="DELETE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>rec_price_if_checked</field>
+        <id>9b6a8f231b40e01072bbfcc8cc4bcbd1</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>morpheus</sys_created_by>
+        <sys_created_on>2020-10-30 15:03:54</sys_created_on>
+        <sys_id>136a8f231b40e01072bbfcc8cc4bcbd3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>morpheus</sys_updated_by>
+        <sys_updated_on>2020-10-30 15:03:54</sys_updated_on>
+        <table>item_option_new</table>
+        <type>calculated</type>
+    </fx_price>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</application>
+        <file_path/>
+        <instance_id>6258e385dbd5b30491232f17d496198e</instance_id>
+        <instance_name>dev85647</instance_name>
+        <name>item_option_new_9b6a8f231b40e01072bbfcc8cc4bcbd1</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new"><item_option_new action="INSERT_OR_UPDATE"><active>true</active><attributes/><cat_item/><category/><choice_direction>down</choice_direction><choice_field/><choice_table/><create_roles/><default_html_value/><default_value/><delete_roles/><delivery_plan/><description/><display_title>false</display_title><do_not_select_first>false</do_not_select_first><dynamic_default_value/><dynamic_ref_qual/><enable_also_request_for>false</enable_also_request_for><example_text/><field/><global>false</global><help_tag>More information</help_tag><help_text/><include_none>false</include_none><instructions/><layout>normal</layout><list_table/><lookup_label/><lookup_price/><lookup_table/><lookup_unique>false</lookup_unique><lookup_value/><macro/><mandatory>true</mandatory><map_to_field>false</map_to_field><mask_use_confirmation>false</mask_use_confirmation><mask_use_encryption>false</mask_use_encryption><name>resourcepool</name><order>300</order><price_if_checked>0</price_if_checked><pricing_implications>false</pricing_implications><question_text>Resource Pool</question_text><read_roles/><rec_lookup_price/><rec_price_if_checked>0</rec_price_if_checked><record/><record_producer_table/><reference>x_moda_morpheus_ca_resource_pool</reference><reference_qual>javascript: new x_moda_morpheus_ca.LookUpUtils().getResourcePoolsForCloud(current.variables.cloud);</reference_qual><reference_qual_condition/><rich_text/><roles_to_use_also_request_for/><scale_max>5</scale_max><scale_min>0</scale_min><show_help>false</show_help><show_help_on_load>false</show_help_on_load><sp_widget/><summary_macro/><sys_class_name>item_option_new</sys_class_name><sys_created_by>morpheus</sys_created_by><sys_created_on>2020-10-30 15:03:54</sys_created_on><sys_id>9b6a8f231b40e01072bbfcc8cc4bcbd1</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Resource Pool</sys_name><sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package><sys_policy/><sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope><sys_update_name>item_option_new_9b6a8f231b40e01072bbfcc8cc4bcbd1</sys_update_name><sys_updated_by>morpheus</sys_updated_by><sys_updated_on>2020-10-30 15:03:54</sys_updated_on><table/><tooltip/><type>8</type><ui_page/><use_dynamic_default>false</use_dynamic_default><use_reference_qualifier>advanced</use_reference_qualifier><validate_regex/><variable_name/><variable_set/><variable_width/><visibility>1</visibility><visible_bundle>true</visible_bundle><visible_guide>true</visible_guide><visible_standalone>true</visible_standalone><visible_summary>true</visible_summary><write_roles/></item_option_new><sys_translated_text action="delete_multiple" query="documentkey=9b6a8f231b40e01072bbfcc8cc4bcbd1"/><fx_price action="delete_multiple" query="id=9b6a8f231b40e01072bbfcc8cc4bcbd1"/><fx_price action="INSERT_OR_UPDATE"><amount>0</amount><currency display_value="USD">USD</currency><field>price_if_checked</field><id>9b6a8f231b40e01072bbfcc8cc4bcbd1</id><parent/><reference_amount>0</reference_amount><reference_currency display_value="USD">USD</reference_currency><sys_created_by>morpheus</sys_created_by><sys_created_on>2020-10-30 15:03:54</sys_created_on><sys_id>5b6a8f231b40e01072bbfcc8cc4bcbd3</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>morpheus</sys_updated_by><sys_updated_on>2020-10-30 15:03:54</sys_updated_on><table>item_option_new</table><type>calculated</type></fx_price><fx_price action="INSERT_OR_UPDATE"><amount>0</amount><currency display_value="USD">USD</currency><field>rec_price_if_checked</field><id>9b6a8f231b40e01072bbfcc8cc4bcbd1</id><parent/><reference_amount>0</reference_amount><reference_currency display_value="USD">USD</reference_currency><sys_created_by>morpheus</sys_created_by><sys_created_on>2020-10-30 15:03:54</sys_created_on><sys_id>136a8f231b40e01072bbfcc8cc4bcbd3</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>morpheus</sys_updated_by><sys_updated_on>2020-10-30 15:03:54</sys_updated_on><table>item_option_new</table><type>calculated</type></fx_price></record_update>]]></payload>
+        <payload_hash>-1909389180</payload_hash>
+        <record_name>Resource Pool</record_name>
+        <reverted_from/>
+        <source>e65feb632f042010330ddcb6f699b6f3</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-30 19:10:41</sys_created_on>
+        <sys_id>d6e2c07f2f442010330ddcb6f699b641</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1757aeb49d50000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-30 19:10:41</sys_updated_on>
+        <type>Variable</type>
+        <update_guid>56e2c07f474420106557c92561c88641</update_guid>
+        <update_guid_history>56e2c07f474420106557c92561c88641:0,0fa0c0bb4d442010a8f7b6eaa67cd53d:0,25f8f7638e442010bce85e0a6ddffdb6:-1147936855,72e83763c9442010441f6f5d386a7516:0,ff587fef5d0420109d4979331d368231:0,45f3f7eb390420100d0838ada13cafa4:1813233551,1ffeefa39e042010c4cd29cbb96855a4:1061965901</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">45f2847f2f442010330ddcb6f699b6cb</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-30 19:10:52</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="item_option_new">item_option_new</sys_db_object>
+        <sys_id>198434b425274d8680a20094c7b4c621</sys_id>
+        <sys_metadata>9b6a8f231b40e01072bbfcc8cc4bcbd1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Resource Pool</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_scope_delete display_value="">2f9ab1287243421ea393ac200543b884</sys_scope_delete>
+        <sys_update_name>item_option_new_9b6a8f231b40e01072bbfcc8cc4bcbd1</sys_update_name>
+        <sys_update_version display_value="item_option_new_9b6a8f231b40e01072bbfcc8cc4bcbd1">d6e2c07f2f442010330ddcb6f699b641</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-30 19:10:52</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

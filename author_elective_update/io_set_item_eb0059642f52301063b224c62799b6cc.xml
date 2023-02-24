@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item">
+    <io_set_item action="DELETE">
+        <order>410</order>
+        <sc_cat_item display_value="Ubuntu-Google Ubuntu 20.04-20.04">530059642f52301063b224c62799b63a</sc_cat_item>
+        <sys_class_name>io_set_item</sys_class_name>
+        <sys_created_by>morpheus</sys_created_by>
+        <sys_created_on>2021-08-27 14:59:56</sys_created_on>
+        <sys_id>eb0059642f52301063b224c62799b6cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>opt-ubuntu.Ubuntu-Google Ubuntu 20.04-20.04</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>io_set_item_eb0059642f52301063b224c62799b6cc</sys_update_name>
+        <sys_updated_by>morpheus</sys_updated_by>
+        <sys_updated_on>2021-08-27 14:59:56</sys_updated_on>
+        <variable_set display_value="opt-ubuntu">2b0059642f52301063b224c62799b6ca</variable_set>
+    </io_set_item>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</application>
+        <file_path/>
+        <instance_id>30217cffdbf353446578f22ebf961984</instance_id>
+        <instance_name>dev70494</instance_name>
+        <name>io_set_item_eb0059642f52301063b224c62799b6cc</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item">
+    <io_set_item action="INSERT_OR_UPDATE">
+        <order>410</order>
+        <sc_cat_item display_value="Ubuntu-Google Ubuntu 20.04-20.04">530059642f52301063b224c62799b63a</sc_cat_item>
+        <sys_class_name>io_set_item</sys_class_name>
+        <sys_created_by>morpheus</sys_created_by>
+        <sys_created_on>2021-08-27 14:59:56</sys_created_on>
+        <sys_id>eb0059642f52301063b224c62799b6cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>opt-ubuntu.Ubuntu-Google Ubuntu 20.04-20.04</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>io_set_item_eb0059642f52301063b224c62799b6cc</sys_update_name>
+        <sys_updated_by>morpheus</sys_updated_by>
+        <sys_updated_on>2021-08-27 14:59:56</sys_updated_on>
+        <variable_set display_value="opt-ubuntu">2b0059642f52301063b224c62799b6ca</variable_set>
+    </io_set_item>
+</record_update>]]></payload>
+        <payload_hash>-40334841</payload_hash>
+        <record_name>opt-ubuntu.Ubuntu-Google Ubuntu 20.04-20.04</record_name>
+        <reverted_from/>
+        <source>7802efc287527010d2f164280cbb35d7</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-01 17:29:03</sys_created_on>
+        <sys_id>7c22a34687527010d2f164280cbb357a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17ba26835480000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-01 17:29:03</sys_updated_on>
+        <type>Catalog Variable Set</type>
+        <update_guid>3c22a3469b52701051f50c1a35a1567a</update_guid>
+        <update_guid_history>3c22a3469b52701051f50c1a35a1567a:-40334841</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">8716e70e87527010d2f164280cbb35a4</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-09-01 17:46:24</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="io_set_item">io_set_item</sys_db_object>
+        <sys_id>1ea40ee284a447e891ed2a9a90dfc071</sys_id>
+        <sys_metadata>eb0059642f52301063b224c62799b6cc</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>opt-ubuntu.Ubuntu-Google Ubuntu 20.04-20.04</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_scope_delete display_value="">2f9ab1287243421ea393ac200543b884</sys_scope_delete>
+        <sys_update_name>io_set_item_eb0059642f52301063b224c62799b6cc</sys_update_name>
+        <sys_update_version display_value="io_set_item_eb0059642f52301063b224c62799b6cc">7c22a34687527010d2f164280cbb357a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-01 17:46:24</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

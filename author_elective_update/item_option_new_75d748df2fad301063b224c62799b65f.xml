@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new">
+    <item_option_new action="DELETE">
+        <active>true</active>
+        <attributes/>
+        <cat_item display_value="Blueprint: oceanic">f1d748df2fad301063b224c62799b646</cat_item>
+        <category/>
+        <choice_direction>down</choice_direction>
+        <choice_field/>
+        <choice_table/>
+        <create_roles/>
+        <default_html_value/>
+        <default_value>QA Azure</default_value>
+        <delete_roles/>
+        <delivery_plan/>
+        <description/>
+        <display_title>false</display_title>
+        <do_not_select_first>false</do_not_select_first>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <enable_also_request_for>false</enable_also_request_for>
+        <example_text/>
+        <field/>
+        <global>false</global>
+        <help_tag>More information</help_tag>
+        <help_text/>
+        <hidden>false</hidden>
+        <include_none>false</include_none>
+        <instructions/>
+        <layout>normal</layout>
+        <list_table/>
+        <lookup_label/>
+        <lookup_price/>
+        <lookup_table/>
+        <lookup_unique>false</lookup_unique>
+        <lookup_value/>
+        <macro/>
+        <macroponent/>
+        <mandatory>false</mandatory>
+        <map_to_field>false</map_to_field>
+        <mask_use_confirmation>false</mask_use_confirmation>
+        <mask_use_encryption>false</mask_use_encryption>
+        <name>group_name</name>
+        <order>1100</order>
+        <price_if_checked>0</price_if_checked>
+        <pricing_implications>false</pricing_implications>
+        <published_ref/>
+        <question_text>Group Name</question_text>
+        <read_only>false</read_only>
+        <read_roles/>
+        <read_script/>
+        <rec_lookup_price/>
+        <rec_price_if_checked>0</rec_price_if_checked>
+        <record/>
+        <record_producer_table/>
+        <reference/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <rich_text/>
+        <roles_to_use_also_request_for/>
+        <save_script/>
+        <scale_max>5</scale_max>
+        <scale_min>0</scale_min>
+        <show_help>false</show_help>
+        <show_help_on_load>false</show_help_on_load>
+        <sp_widget/>
+        <summary_macro/>
+        <sys_class_name>item_option_new</sys_class_name>
+        <sys_created_by>oceanic</sys_created_by>
+        <sys_created_on>2021-07-29 16:00:36</sys_created_on>
+        <sys_id>75d748df2fad301063b224c62799b65f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Group Name</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>item_option_new_75d748df2fad301063b224c62799b65f</sys_update_name>
+        <sys_updated_by>oceanic</sys_updated_by>
+        <sys_updated_on>2021-07-29 16:00:36</sys_updated_on>
+        <table/>
+        <tooltip/>
+        <type>6</type>
+        <ui_page/>
+        <unique>false</unique>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <validate_regex/>
+        <variable_name/>
+        <variable_set/>
+        <variable_width/>
+        <visibility>1</visibility>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <visible_summary>true</visible_summary>
+        <write_roles/>
+    </item_option_new>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</application>
+        <file_path/>
+        <instance_id>d87e47fbdb6b1fc8439ef70fbf961960</instance_id>
+        <instance_name>dev68565</instance_name>
+        <name>item_option_new_75d748df2fad301063b224c62799b65f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new"><item_option_new action="INSERT_OR_UPDATE"><active>true</active><attributes/><cat_item display_value="Blueprint: oceanic">f1d748df2fad301063b224c62799b646</cat_item><category/><choice_direction>down</choice_direction><choice_field/><choice_table/><create_roles/><default_html_value/><default_value>QA Azure</default_value><delete_roles/><delivery_plan/><description/><display_title>false</display_title><do_not_select_first>false</do_not_select_first><dynamic_default_value/><dynamic_ref_qual/><enable_also_request_for>false</enable_also_request_for><example_text/><field/><global>false</global><help_tag>More information</help_tag><help_text/><hidden>false</hidden><include_none>false</include_none><instructions/><layout>normal</layout><list_table/><lookup_label/><lookup_price/><lookup_table/><lookup_unique>false</lookup_unique><lookup_value/><macro/><macroponent/><mandatory>false</mandatory><map_to_field>false</map_to_field><mask_use_confirmation>false</mask_use_confirmation><mask_use_encryption>false</mask_use_encryption><name>group_name</name><order>1100</order><price_if_checked>0</price_if_checked><pricing_implications>false</pricing_implications><published_ref/><question_text>Group Name</question_text><read_only>false</read_only><read_roles/><read_script/><rec_lookup_price/><rec_price_if_checked>0</rec_price_if_checked><record/><record_producer_table/><reference/><reference_qual/><reference_qual_condition/><rich_text/><roles_to_use_also_request_for/><save_script/><scale_max>5</scale_max><scale_min>0</scale_min><show_help>false</show_help><show_help_on_load>false</show_help_on_load><sp_widget/><summary_macro/><sys_class_name>item_option_new</sys_class_name><sys_created_by>oceanic</sys_created_by><sys_created_on>2021-07-29 16:00:36</sys_created_on><sys_id>75d748df2fad301063b224c62799b65f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Group Name</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope><sys_update_name>item_option_new_75d748df2fad301063b224c62799b65f</sys_update_name><sys_updated_by>oceanic</sys_updated_by><sys_updated_on>2021-07-29 16:00:36</sys_updated_on><table/><tooltip/><type>6</type><ui_page/><unique>false</unique><use_dynamic_default>false</use_dynamic_default><use_reference_qualifier>simple</use_reference_qualifier><validate_regex/><variable_name/><variable_set/><variable_width/><visibility>1</visibility><visible_bundle>true</visible_bundle><visible_guide>true</visible_guide><visible_standalone>true</visible_standalone><visible_summary>true</visible_summary><write_roles/></item_option_new></record_update>]]></payload>
+        <payload_hash>-133500840</payload_hash>
+        <record_name>Group Name</record_name>
+        <reverted_from/>
+        <source>92a427932f01301063b224c62799b6a8</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-05 11:33:59</sys_created_on>
+        <sys_id>f25b064c2f02301063b224c62799b62a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17a767248580000000</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-01 17:29:59</sys_updated_on>
+        <type>Variable</type>
+        <update_guid>b25b064c710230107285de4f19ecbf2a</update_guid>
+        <update_guid_history>b25b064c710230107285de4f19ecbf2a:-133500840</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">725b064c2f02301063b224c62799b628</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-13 19:46:22</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="item_option_new">item_option_new</sys_db_object>
+        <sys_id>3a6fc867a95b45be909fff3eb2aada04</sys_id>
+        <sys_metadata>75d748df2fad301063b224c62799b65f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Group Name</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_parent display_value="">f1d748df2fad301063b224c62799b646</sys_parent>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_scope_delete display_value="">2f9ab1287243421ea393ac200543b884</sys_scope_delete>
+        <sys_update_name>item_option_new_75d748df2fad301063b224c62799b65f</sys_update_name>
+        <sys_update_version display_value="item_option_new_75d748df2fad301063b224c62799b65f">f25b064c2f02301063b224c62799b62a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-13 19:46:22</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

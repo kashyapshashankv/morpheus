@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_moda_morpheus_ca.SyncUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>SyncUtils</name>
+        <script><![CDATA[var SyncUtils = Class.create();
+SyncUtils.prototype = {
+    initialize: function () {},
+
+    type: 'SyncUtils',
+
+    sync: function (current) {
+        // Fetch the payload and parse it
+        var parser = new global.JSON();
+        var data = parser.decode(current.payload);
+        var tenantId = data.tenantId || -1;
+
+        var authConfig = new x_moda_morpheus_ca.LookUpUtils().fetchAuthConfig(tenantId);
+        var utils = new x_moda_morpheus_ca.Utils();
+        var dataUtils = new x_moda_morpheus_ca.DataUtils();
+
+        utils.log("info", "sync: BEGIN");
+
+        // Zones have been sync'd.. now create the common records
+        utils.createCommonRecords(tenantId);
+
+        this.deleteOldInstanceCatItems(tenantId);
+
+        this.deleteOldBlueprintCatItems(tenantId, data.blueprints);
+
+        this.syncCatalogItemCatItems(authConfig, tenantId, data.catalogItemTypes);
+
+        // If the integration is disabled, deactivate ALL the catalog items
+        if(typeof (data.integrationEnabled) !== 'undefined' && data.integrationEnabled == false) {
+            dataUtils.disableAllCatItems(tenantId);
+        }
+        utils.log("info", "sync: END");
+    },
+
+    deleteOldInstanceCatItems: function(tenantId) {
+        var utils = new x_moda_morpheus_ca.Utils();
+        var dataUtils = new x_moda_morpheus_ca.DataUtils();
+        utils.log("info", "syncInstanceCatItems: " + tenantId);
+
+
+        // Deactivate any catalog items which are not part of the sync payload
+        utils.log('info', "about to deactivate catalog items");
+        var itemOptionNewSysIds = dataUtils.getRecordsSysIds('item_option_new',
+            {'sys_scope':utils.getScopeId(),name:'layout_id'}, tenantId, undefined, undefined,undefined);
+        var uniqueSysIds = utils.uniqueArray(itemOptionNewSysIds);
+
+        var removeSysIds = [];
+        for(var i = 0; i < uniqueSysIds.length; i++) {
+            var hiddenExternalVar = dataUtils.getRecord('item_option_new', {sys_id: uniqueSysIds[i] }, tenantId);
+            if(hiddenExternalVar.sys_id && hiddenExternalVar.cat_item.sys_id) {
+                removeSysIds.push(hiddenExternalVar.cat_item.sys_id);
+            }
+        }
+
+        dataUtils.deleteRecord('sc_cat_item', tenantId, removeSysIds, dataUtils.INSTANCE_TYPE);
+    },
+
+    deleteOldBlueprintCatItems: function(tenantId, blueprints) {
+        var utils = new x_moda_morpheus_ca.Utils();
+        var dataUtils = new x_moda_morpheus_ca.DataUtils();
+        utils.log("info", "syncBlueprintCatItems: " + tenantId);
+
+        // Deactivate old blueprints
+        utils.log('info', "about to deactivate blueprints");
+        var sysIdsToCheck = dataUtils.getRecordsSysIds('sc_cat_item',
+            {'sys_scope':utils.getScopeId(), active: true}, tenantId, undefined, undefined,
+            [
+                {field: 'name', value: 'Blueprint: ', condition: 'STARTSWITH'}
+            ]);
+        var removeSysIds = utils.uniqueArray(sysIdsToCheck);
+        dataUtils.deleteRecord('sc_cat_item', tenantId, removeSysIds, dataUtils.BLUEPRINT_TYPE);
+    },
+
+    syncCatalogItemCatItems: function(authConfig, tenantId, catalogItemTypes) {
+        var utils = new x_moda_morpheus_ca.Utils();
+        var dataUtils = new x_moda_morpheus_ca.DataUtils();
+        var catalogItemTypeUtils = new x_moda_morpheus_ca.CatalogItemTypeUtils();
+        utils.log("info", "syncCatalogItemCatItems: " + tenantId + ", catalogItemTypes: " + catalogItemTypes);
+
+        // Sync the catalog item types
+        var masterItems = [];
+        if (typeof (catalogItemTypes) !== 'undefined') {
+            for (var i = 0; i < catalogItemTypes.length; i++) {
+                var catalogItemTypeData = catalogItemTypes[i];
+                var catItem = catalogItemTypeUtils.syncCatalogItemType(authConfig, tenantId, catalogItemTypeData);
+                if (typeof (catItem) !== 'undefined') {
+                    masterItems.push(catItem.sys_id.toString());
+                }
+            }
+        }
+        // Determine which ones are now inactive
+        var inactiveCatalogItemTypeSysIds = [];
+        var allCatalogItemTypeSysIds = catalogItemTypeUtils.allCatalogItemTypeSysIds(tenantId);
+        for(var i=0; i < allCatalogItemTypeSysIds.length; i++){
+            var testSysId = allCatalogItemTypeSysIds[i].toString();
+            if(masterItems.indexOf(testSysId) == -1){
+                inactiveCatalogItemTypeSysIds.push(testSysId);
+            }
+        }
+        // Deactivate old catalog item types
+        dataUtils.deleteRecord('sc_cat_item', tenantId, inactiveCatalogItemTypeSysIds, dataUtils.CATALOG_ITEM_TYPE);
+    },
+
+    type: 'SyncUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-04-28 22:03:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>988d23d30f1672409c84306be1050e6c</sys_id>
+        <sys_mod_count>66</sys_mod_count>
+        <sys_name>SyncUtils</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>sys_script_include_988d23d30f1672409c84306be1050e6c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-04 18:30:22</sys_updated_on>
+    </sys_script_include>
+</record_update>

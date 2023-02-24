@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item">
+    <io_set_item action="DELETE">
+        <order>10</order>
+        <sc_cat_item display_value="Apache-Azure Apache-2.4">3734652d1b13101072bbfcc8cc4bcb26</sc_cat_item>
+        <sys_class_name>io_set_item</sys_class_name>
+        <sys_created_by>morpheus</sys_created_by>
+        <sys_created_on>2020-09-16 19:42:32</sys_created_on>
+        <sys_id>7b34652d1b13101072bbfcc8cc4bcb3d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Morpheus Common.Apache-Azure Apache-2.4</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>io_set_item_7b34652d1b13101072bbfcc8cc4bcb3d</sys_update_name>
+        <sys_updated_by>morpheus</sys_updated_by>
+        <sys_updated_on>2020-09-16 19:42:32</sys_updated_on>
+        <variable_set display_value="Morpheus Common">af34252d1b13101072bbfcc8cc4bcbde</variable_set>
+    </io_set_item>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</application>
+        <file_path/>
+        <instance_id>bc766decdbbbb3800ae3ac44d4961921</instance_id>
+        <instance_name>dev93300</instance_name>
+        <name>io_set_item_7b34652d1b13101072bbfcc8cc4bcb3d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item">
+    <io_set_item action="INSERT_OR_UPDATE">
+        <order>10</order>
+        <sc_cat_item display_value="Apache-Azure Apache-2.4">3734652d1b13101072bbfcc8cc4bcb26</sc_cat_item>
+        <sys_class_name>io_set_item</sys_class_name>
+        <sys_created_by>morpheus</sys_created_by>
+        <sys_created_on>2020-09-16 19:42:32</sys_created_on>
+        <sys_id>7b34652d1b13101072bbfcc8cc4bcb3d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Morpheus Common.Apache-Azure Apache-2.4</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>io_set_item_7b34652d1b13101072bbfcc8cc4bcb3d</sys_update_name>
+        <sys_updated_by>morpheus</sys_updated_by>
+        <sys_updated_on>2020-09-16 19:42:32</sys_updated_on>
+        <variable_set display_value="Morpheus Common">af34252d1b13101072bbfcc8cc4bcbde</variable_set>
+    </io_set_item>
+</record_update>]]></payload>
+        <payload_hash>-2002863969</payload_hash>
+        <record_name>Morpheus Common.Apache-Azure Apache-2.4</record_name>
+        <reverted_from/>
+        <source>dfacc1b61b8c201072bbfcc8cc4bcbb0</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-27 22:01:22</sys_created_on>
+        <sys_id>c53d017a1b8c201072bbfcc8cc4bcbcc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1756c147a1e0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-27 22:01:22</sys_updated_on>
+        <type>Catalog Variable Set</type>
+        <update_guid>453d017a4f8c20109e7f966b3b969dcc</update_guid>
+        <update_guid_history>453d017a4f8c20109e7f966b3b969dcc:0,b6ec09f6578c201023af907a6796b23c:-136544069,36ec09f6f68c2010bee5fa98b1bb7b3a:-941228241</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">33aed5b61bcc201072bbfcc8cc4bcb92</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-27 23:17:45</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="io_set_item">io_set_item</sys_db_object>
+        <sys_id>67c46c36958343108ba475c63d003100</sys_id>
+        <sys_metadata>7b34652d1b13101072bbfcc8cc4bcb3d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Morpheus Common.Apache-Azure Apache-2.4</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_scope_delete display_value="">2f9ab1287243421ea393ac200543b884</sys_scope_delete>
+        <sys_update_name>io_set_item_7b34652d1b13101072bbfcc8cc4bcb3d</sys_update_name>
+        <sys_update_version display_value="io_set_item_7b34652d1b13101072bbfcc8cc4bcb3d">c53d017a1b8c201072bbfcc8cc4bcbcc</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-27 23:17:45</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

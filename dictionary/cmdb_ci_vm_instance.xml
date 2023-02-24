@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="cmdb_ci_vm_object" label="Virtual Machine Instance" max_length="40" name="cmdb_ci_vm_instance" sizeclass="50027" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Security Group" max_length="2000" name="x_moda_morpheus_ca_u_security_group" type="string"/>
+    </element>
+</database>

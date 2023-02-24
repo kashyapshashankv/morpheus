@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item">
+    <io_set_item action="DELETE">
+        <order>410</order>
+        <sc_cat_item display_value="CentOS-Azure VM-7.4">6711d55e873bb410d6b164283cbb358a</sc_cat_item>
+        <sys_class_name>io_set_item</sys_class_name>
+        <sys_created_by>acme</sys_created_by>
+        <sys_created_on>2021-11-15 15:08:07</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a311d55e873bb410d6b164283cbb35c2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>opt-centos.CentOS-Azure VM-7.4</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>io_set_item_a311d55e873bb410d6b164283cbb35c2</sys_update_name>
+        <sys_updated_by>acme</sys_updated_by>
+        <sys_updated_on>2021-11-15 15:08:07</sys_updated_on>
+        <variable_set display_value="">ef11d55e873bb410d6b164283cbb35bf</variable_set>
+    </io_set_item>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</application>
+        <file_path/>
+        <instance_id>9b5b3d876fa64640869e7b2f5d3ee407</instance_id>
+        <instance_name>ven01434</instance_name>
+        <name>io_set_item_a311d55e873bb410d6b164283cbb35c2</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item"><io_set_item action="INSERT_OR_UPDATE"><order>410</order><sc_cat_item display_value="CentOS-Azure VM-7.4">6711d55e873bb410d6b164283cbb358a</sc_cat_item><sys_class_name>io_set_item</sys_class_name><sys_created_by>acme</sys_created_by><sys_created_on>2021-11-15 15:08:07</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>a311d55e873bb410d6b164283cbb35c2</sys_id><sys_mod_count>0</sys_mod_count><sys_name>opt-centos.CentOS-Azure VM-7.4</sys_name><sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope><sys_update_name>io_set_item_a311d55e873bb410d6b164283cbb35c2</sys_update_name><sys_updated_by>acme</sys_updated_by><sys_updated_on>2021-11-15 15:08:07</sys_updated_on><variable_set display_value="">ef11d55e873bb410d6b164283cbb35bf</variable_set></io_set_item></record_update>]]></payload>
+        <payload_hash>1629777638</payload_hash>
+        <record_name>opt-centos.CentOS-Azure VM-7.4</record_name>
+        <reverted_from/>
+        <source>a89080321b100110f8ddb9de034bcbfd</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2021-12-11 19:04:33</sys_created_on>
+        <sys_id>9e331d3a8734c550d6b164283cbb350f</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>17daae1ede80000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>Catalog Variable Set</type>
+        <update_guid>5e331d3a8334c5501c9a7df38765fa0f</update_guid>
+        <update_guid_history>5e331d3a8334c5501c9a7df38765fa0f:1629777638</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 2022-01-05 13:37:04">16331d3a8734c550d6b164283cbb3512</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:37:04</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="io_set_item">io_set_item</sys_db_object>
+        <sys_id>6a32ed2372ed4db8834bc64997d0f1e4</sys_id>
+        <sys_metadata>a311d55e873bb410d6b164283cbb35c2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>opt-centos.CentOS-Azure VM-7.4</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_scope_delete display_value="">2f9ab1287243421ea393ac200543b884</sys_scope_delete>
+        <sys_update_name>io_set_item_a311d55e873bb410d6b164283cbb35c2</sys_update_name>
+        <sys_update_version display_value="io_set_item_a311d55e873bb410d6b164283cbb35c2">9e331d3a8734c550d6b164283cbb350f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:37:04</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

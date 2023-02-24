@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="DELETE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl/>
+        <http_method>POST</http_method>
+        <name>Morpheus CI Bulk Insert - POST</name>
+        <operation_script><![CDATA[
+(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) { 
+	var requestData = request.body.data; 
+	var insertedSysIds = []; 
+	for(var i = 0; i < requestData.cis.length; i++) { 
+		var ci = requestData.cis[i]; 
+		var cmdbClass = ci._cmdbClass;
+		var gr = new GlideRecord(cmdbClass); 
+		for(var k in ci) { 
+			if(k != '_cmdbClass') {
+				gr[k] = ci[k]; 
+			}
+		} 
+		insertedSysIds.push(gr.insert()); 
+	} 
+	response.setBody(insertedSysIds); 
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_moda_morpheus_ca/morpheus_ci_bulk_insert</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/</relative_path>
+        <request_example/>
+        <requires_acl_authorization>false</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:58:50</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>993815b28774c550d6b164283cbb3572</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Morpheus CI Bulk Insert - POST</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>sys_ws_operation_993815b28774c550d6b164283cbb3572</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:58:50</sys_updated_on>
+        <web_service_definition display_value="Morpheus CI Bulk Insert">b83895fe1b744950f8ddb9de034bcbdd</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</application>
+        <file_path/>
+        <instance_id>9b5b3d876fa64640869e7b2f5d3ee407</instance_id>
+        <instance_name>ven01434</instance_name>
+        <name>sys_ws_operation_993815b28774c550d6b164283cbb3572</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ws_operation"&gt;&lt;sys_ws_operation action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;consumes&gt;application/json,application/xml,text/xml&lt;/consumes&gt;&lt;consumes_customized&gt;false&lt;/consumes_customized&gt;&lt;default_operation_uri/&gt;&lt;enforce_acl/&gt;&lt;http_method&gt;POST&lt;/http_method&gt;&lt;name&gt;Morpheus CI Bulk Insert - POST&lt;/name&gt;&lt;operation_script&gt;&lt;![CDATA[
+(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) { 
+	var requestData = request.body.data; 
+	var insertedSysIds = []; 
+	for(var i = 0; i &lt; requestData.cis.length; i++) { 
+		var ci = requestData.cis[i]; 
+		var cmdbClass = ci._cmdbClass;
+		var gr = new GlideRecord(cmdbClass); 
+		for(var k in ci) { 
+			if(k != '_cmdbClass') {
+				gr[k] = ci[k]; 
+			}
+		} 
+		insertedSysIds.push(gr.insert()); 
+	} 
+	response.setBody(insertedSysIds); 
+})(request, response);]]&gt;&lt;/operation_script&gt;&lt;operation_uri&gt;/api/x_moda_morpheus_ca/morpheus_ci_bulk_insert&lt;/operation_uri&gt;&lt;produces&gt;application/json,application/xml,text/xml&lt;/produces&gt;&lt;produces_customized&gt;false&lt;/produces_customized&gt;&lt;relative_path&gt;/&lt;/relative_path&gt;&lt;request_example/&gt;&lt;requires_acl_authorization&gt;false&lt;/requires_acl_authorization&gt;&lt;requires_authentication&gt;true&lt;/requires_authentication&gt;&lt;requires_snc_internal_role&gt;true&lt;/requires_snc_internal_role&gt;&lt;short_description/&gt;&lt;sys_class_name&gt;sys_ws_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-01-05 21:58:50&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;993815b28774c550d6b164283cbb3572&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Morpheus CI Bulk Insert - POST&lt;/sys_name&gt;&lt;sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca"&gt;8d8b6bbf0ff07e009c84306be1050e67&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Morpheus Catalog"&gt;8d8b6bbf0ff07e009c84306be1050e67&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ws_operation_993815b28774c550d6b164283cbb3572&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-01-05 21:58:50&lt;/sys_updated_on&gt;&lt;web_service_definition display_value="Morpheus CI Bulk Insert"&gt;b83895fe1b744950f8ddb9de034bcbdd&lt;/web_service_definition&gt;&lt;web_service_version/&gt;&lt;/sys_ws_operation&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1070799388</payload_hash>
+        <record_name>Morpheus CI Bulk Insert - POST</record_name>
+        <reverted_from/>
+        <source>9ae295f68734c550d6b164283cbb35fd</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 21:58:50</sys_created_on>
+        <sys_id>dd3815b28774c550d6b164283cbb3574</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17e2c407ae90000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 21:58:50</sys_updated_on>
+        <type>Scripted REST Resource</type>
+        <update_guid>193815b2c074c55034a9875c59361e74</update_guid>
+        <update_guid_history>193815b2c074c55034a9875c59361e74:-1070799388</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 22:00:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_ws_operation">sys_ws_operation</sys_db_object>
+        <sys_id>286b5073a040432eb55bc5c31083b944</sys_id>
+        <sys_metadata>993815b28774c550d6b164283cbb3572</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Morpheus CI Bulk Insert - POST</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_scope_delete display_value="">2f9ab1287243421ea393ac200543b884</sys_scope_delete>
+        <sys_update_name>sys_ws_operation_993815b28774c550d6b164283cbb3572</sys_update_name>
+        <sys_update_version display_value="sys_ws_operation_993815b28774c550d6b164283cbb3572">dd3815b28774c550d6b164283cbb3574</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 22:00:58</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

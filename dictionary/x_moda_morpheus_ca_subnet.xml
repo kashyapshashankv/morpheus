@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Subnet" max_length="40" name="x_moda_morpheus_ca_subnet" sizeclass="0" type="collection">
+        <element label="Cloud" max_length="32" name="cloud" reference="x_moda_morpheus_ca_clouds" type="reference"/>
+        <element label="ExternalId" max_length="255" name="externalid" type="string"/>
+        <element label="Name" max_length="255" name="name" type="string"/>
+        <element label="Provision Type" max_length="32" name="provision_type" reference="x_moda_morpheus_ca_provision_type" type="reference"/>
+        <element label="Domain" max_length="32" name="sys_domain" type="domain_id"/>
+        <element label="Domain Path" max_length="255" name="sys_domain_path" type="domain_path"/>
+        <element label="TenantScope" max_length="255" name="tenantscope" type="longint"/>
+        <index name="index">
+            <element name="cloud"/>
+        </index>
+        <index name="index2">
+            <element name="provision_type"/>
+        </index>
+        <index name="index3">
+            <element name="sys_domain"/>
+        </index>
+        <index name="index4">
+            <element name="sys_domain_path"/>
+        </index>
+    </element>
+</database>

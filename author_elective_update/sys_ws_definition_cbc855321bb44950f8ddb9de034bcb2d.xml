@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_definition">
+    <sys_ws_definition action="DELETE">
+        <active>true</active>
+        <base_uri>/api/x_moda_morpheus_ca/morpheus_ci_bulk_insert</base_uri>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_version>No active default version</default_version>
+        <doc_link/>
+        <enforce_acl/>
+        <is_versioned>false</is_versioned>
+        <name>Morpheus CI Bulk Insert</name>
+        <namespace>x_moda_morpheus_ca</namespace>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <service_id>morpheus_ci_bulk_insert</service_id>
+        <short_description>Provides an endpoint to allow Morpheus to bulk import cmdb ci records</short_description>
+        <sys_class_name>sys_ws_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 22:01:25</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>cbc855321bb44950f8ddb9de034bcb2d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Morpheus CI Bulk Insert</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>sys_ws_definition_cbc855321bb44950f8ddb9de034bcb2d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 22:01:25</sys_updated_on>
+    </sys_ws_definition>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</application>
+        <file_path/>
+        <instance_id>9b5b3d876fa64640869e7b2f5d3ee407</instance_id>
+        <instance_name>ven01434</instance_name>
+        <name>sys_ws_definition_cbc855321bb44950f8ddb9de034bcb2d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_definition"><sys_ws_definition action="INSERT_OR_UPDATE"><active>true</active><base_uri>/api/x_moda_morpheus_ca/morpheus_ci_bulk_insert</base_uri><consumes>application/json,application/xml,text/xml</consumes><consumes_customized>false</consumes_customized><default_version>No active default version</default_version><doc_link/><enforce_acl/><is_versioned>false</is_versioned><name>Morpheus CI Bulk Insert</name><namespace>x_moda_morpheus_ca</namespace><produces>application/json,application/xml,text/xml</produces><produces_customized>false</produces_customized><service_id>morpheus_ci_bulk_insert</service_id><short_description>Provides an endpoint to allow Morpheus to bulk import cmdb ci records</short_description><sys_class_name>sys_ws_definition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-01-05 22:01:25</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>cbc855321bb44950f8ddb9de034bcb2d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Morpheus CI Bulk Insert</sys_name><sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope><sys_update_name>sys_ws_definition_cbc855321bb44950f8ddb9de034bcb2d</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-01-05 22:01:25</sys_updated_on></sys_ws_definition></record_update>]]></payload>
+        <payload_hash>1687542106</payload_hash>
+        <record_name>Morpheus CI Bulk Insert</record_name>
+        <reverted_from/>
+        <source>9ae295f68734c550d6b164283cbb35fd</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 22:01:25</sys_created_on>
+        <sys_id>0bc855321bb44950f8ddb9de034bcb2f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17e2c42d9590000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 22:01:25</sys_updated_on>
+        <type>Scripted REST API</type>
+        <update_guid>43c8553203b44950755b912c1d3d202f</update_guid>
+        <update_guid_history>43c8553203b44950755b912c1d3d202f:1687542106</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-05 22:02:47</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_ws_definition">sys_ws_definition</sys_db_object>
+        <sys_id>d2e7fe2c7e3b4798a8a254794c75da40</sys_id>
+        <sys_metadata>cbc855321bb44950f8ddb9de034bcb2d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Morpheus CI Bulk Insert</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_scope_delete display_value="">2f9ab1287243421ea393ac200543b884</sys_scope_delete>
+        <sys_update_name>sys_ws_definition_cbc855321bb44950f8ddb9de034bcb2d</sys_update_name>
+        <sys_update_version display_value="sys_ws_definition_cbc855321bb44950f8ddb9de034bcb2d">0bc855321bb44950f8ddb9de034bcb2f</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-05 22:02:47</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

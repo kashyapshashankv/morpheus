@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Morpheus Ca M2m Subnets Resource Pools" max_length="40" name="x_moda_morpheus_ca_m2m_subnets_resource_pools" sizeclass="0" type="collection">
+        <element attributes="encode_utf8=false" label="Resource Pool" max_length="32" name="resource_pool" reference="x_moda_morpheus_ca_resource_pool" type="reference"/>
+        <element attributes="encode_utf8=false" label="Subnet" max_length="32" name="subnet" reference="x_moda_morpheus_ca_subnet" type="reference"/>
+        <element label="Domain" max_length="32" name="sys_domain" type="domain_id"/>
+        <element label="Domain Path" max_length="255" name="sys_domain_path" type="domain_path"/>
+        <element label="TenantScope" max_length="255" name="tenantscope" type="longint"/>
+        <index name="index">
+            <element name="subnet"/>
+        </index>
+        <index name="index2">
+            <element name="sys_domain_path"/>
+        </index>
+        <index name="index3">
+            <element name="sys_domain"/>
+        </index>
+        <index name="index4">
+            <element name="resource_pool"/>
+        </index>
+    </element>
+</database>

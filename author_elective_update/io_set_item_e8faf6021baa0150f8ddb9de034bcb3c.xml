@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item">
+    <io_set_item action="DELETE">
+        <order>410</order>
+        <sc_cat_item display_value="MySQL with Version Option">90faf6021baa0150f8ddb9de034bcb2c</sc_cat_item>
+        <sys_class_name>io_set_item</sys_class_name>
+        <sys_created_by>acme</sys_created_by>
+        <sys_created_on>2022-03-31 21:04:40</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>e8faf6021baa0150f8ddb9de034bcb3c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>opt-cat-item-type-15.MySQL with Version Option</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>io_set_item_e8faf6021baa0150f8ddb9de034bcb3c</sys_update_name>
+        <sys_updated_by>acme</sys_updated_by>
+        <sys_updated_on>2022-03-31 21:04:40</sys_updated_on>
+        <variable_set display_value="">28faf6021baa0150f8ddb9de034bcb3a</variable_set>
+    </io_set_item>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</application>
+        <file_path/>
+        <instance_id>9b5b3d876fa64640869e7b2f5d3ee407</instance_id>
+        <instance_name>ven01434</instance_name>
+        <name>io_set_item_e8faf6021baa0150f8ddb9de034bcb3c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item"><io_set_item action="INSERT_OR_UPDATE"><order>410</order><sc_cat_item display_value="MySQL with Version Option">90faf6021baa0150f8ddb9de034bcb2c</sc_cat_item><sys_class_name>io_set_item</sys_class_name><sys_created_by>acme</sys_created_by><sys_created_on>2022-03-31 21:04:40</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>e8faf6021baa0150f8ddb9de034bcb3c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>opt-cat-item-type-15.MySQL with Version Option</sys_name><sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope><sys_update_name>io_set_item_e8faf6021baa0150f8ddb9de034bcb3c</sys_update_name><sys_updated_by>acme</sys_updated_by><sys_updated_on>2022-03-31 21:04:40</sys_updated_on><variable_set display_value="">28faf6021baa0150f8ddb9de034bcb3a</variable_set></io_set_item></record_update>]]></payload>
+        <payload_hash>-442797763</payload_hash>
+        <record_name>opt-cat-item-type-15.MySQL with Version Option</record_name>
+        <reverted_from/>
+        <source>e1aa93021b020110f8ddb9de034bcbcc</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2022-03-07 02:51:48</sys_created_on>
+        <sys_id>aaac66251bf6c950f8ddb9de034bcba6</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>17f624a41a00000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>Catalog Variable Set</type>
+        <update_guid>6aac662539f6c950be7e4bdbe4ef4ea6</update_guid>
+        <update_guid_history>6aac662539f6c950be7e4bdbe4ef4ea6:-442797763</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 2022-04-11 10:01:00">62ac66251bf6c950f8ddb9de034bcba5</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-04-11 17:01:00</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="io_set_item">io_set_item</sys_db_object>
+        <sys_id>037cbf93fd8946208456bec177e4ce64</sys_id>
+        <sys_metadata>e8faf6021baa0150f8ddb9de034bcb3c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>opt-cat-item-type-15.MySQL with Version Option</sys_name>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_scope_delete display_value="">2f9ab1287243421ea393ac200543b884</sys_scope_delete>
+        <sys_update_name>io_set_item_e8faf6021baa0150f8ddb9de034bcb3c</sys_update_name>
+        <sys_update_version display_value="io_set_item_e8faf6021baa0150f8ddb9de034bcb3c">aaac66251bf6c950f8ddb9de034bcba6</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-04-11 17:01:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

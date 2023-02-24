@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item">
+    <io_set_item action="DELETE">
+        <order>410</order>
+        <sc_cat_item display_value="oceanic">4ed748df2fad301063b224c62799b67d</sc_cat_item>
+        <sys_class_name>io_set_item</sys_class_name>
+        <sys_created_by>oceanic</sys_created_by>
+        <sys_created_on>2021-07-29 16:00:37</sys_created_on>
+        <sys_id>86d748df2fad301063b224c62799b68a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>opt-cat-item-type-20.oceanic</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>io_set_item_86d748df2fad301063b224c62799b68a</sys_update_name>
+        <sys_updated_by>oceanic</sys_updated_by>
+        <sys_updated_on>2021-07-29 16:00:37</sys_updated_on>
+        <variable_set display_value="">c2d748df2fad301063b224c62799b688</variable_set>
+    </io_set_item>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</application>
+        <file_path/>
+        <instance_id>d87e47fbdb6b1fc8439ef70fbf961960</instance_id>
+        <instance_name>dev68565</instance_name>
+        <name>io_set_item_86d748df2fad301063b224c62799b68a</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item"><io_set_item action="INSERT_OR_UPDATE"><order>410</order><sc_cat_item display_value="oceanic">4ed748df2fad301063b224c62799b67d</sc_cat_item><sys_class_name>io_set_item</sys_class_name><sys_created_by>oceanic</sys_created_by><sys_created_on>2021-07-29 16:00:37</sys_created_on><sys_id>86d748df2fad301063b224c62799b68a</sys_id><sys_mod_count>0</sys_mod_count><sys_name>opt-cat-item-type-20.oceanic</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope><sys_update_name>io_set_item_86d748df2fad301063b224c62799b68a</sys_update_name><sys_updated_by>oceanic</sys_updated_by><sys_updated_on>2021-07-29 16:00:37</sys_updated_on><variable_set display_value="">c2d748df2fad301063b224c62799b688</variable_set></io_set_item></record_update>]]></payload>
+        <payload_hash>2102944056</payload_hash>
+        <record_name>opt-cat-item-type-20.oceanic</record_name>
+        <reverted_from/>
+        <source>92a427932f01301063b224c62799b6a8</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-07-05 11:33:59</sys_created_on>
+        <sys_id>755b824c2f02301063b224c62799b6ed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17a767248580000000</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-09-01 17:29:40</sys_updated_on>
+        <type>Catalog Variable Set</type>
+        <update_guid>355b824c22023010e48f6ee69a644ded</update_guid>
+        <update_guid_history>355b824c22023010e48f6ee69a644ded:2102944056</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">b15b824c2f02301063b224c62799b6ec</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-13 19:46:17</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="io_set_item">io_set_item</sys_db_object>
+        <sys_id>0c9eea19cb33486f966b16893b31cfd9</sys_id>
+        <sys_metadata>86d748df2fad301063b224c62799b68a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>opt-cat-item-type-20.oceanic</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_scope_delete display_value="">2f9ab1287243421ea393ac200543b884</sys_scope_delete>
+        <sys_update_name>io_set_item_86d748df2fad301063b224c62799b68a</sys_update_name>
+        <sys_update_version display_value="io_set_item_86d748df2fad301063b224c62799b68a">755b824c2f02301063b224c62799b6ed</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-13 19:46:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

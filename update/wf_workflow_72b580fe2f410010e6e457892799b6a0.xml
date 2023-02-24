@@ -1,0 +1,1569 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="wf_workflow_version">
+    <wf_workflow_version action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <activity_stages>{"stages":{},"ends":["e8205e392f92301063b224c62799b627"],"subflows":[],"activities":{}}</activity_stages>
+        <after_business_rules>false</after_business_rules>
+        <checked_out/>
+        <checked_out_by/>
+        <column_renderer display_value="Workflow-driven">a56213111b030100adca1e094f0713ac</column_renderer>
+        <condition/>
+        <condition_type/>
+        <description/>
+        <expected_sequences>282052792f92301063b224c62799b6c0,e4205e392f92301063b224c62799b628,e82052792f92301063b224c62799b6be,e02052792f92301063b224c62799b6c1,e8205e392f92301063b224c62799b627</expected_sequences>
+        <expected_time>1970-01-01 14:00:00</expected_time>
+        <expected_time_type/>
+        <full_sequences>282052792f92301063b224c62799b6c0,e4205e392f92301063b224c62799b628,e82052792f92301063b224c62799b6be,e8205e392f92301063b224c62799b627,e02052792f92301063b224c62799b6c1,e82052792f92301063b224c62799b6bf</full_sequences>
+        <journal/>
+        <max_activity_count>100</max_activity_count>
+        <name>Morpheus (Internal) App Provision Instance</name>
+        <not_cacheable>false</not_cacheable>
+        <on_cancel><![CDATA[// This script executes if the workflow is cancelled.// The global variable context_sys_id contains the sys_id of the cancelled workflow context.]]></on_cancel>
+        <order>100</order>
+        <pin_type>set_by_activity</pin_type>
+        <published>true</published>
+        <relative_duration display_value="2 business days by 4pm">3bf802c20a0a0b52008e2859cd8abcf2</relative_duration>
+        <requires_ert>true</requires_ert>
+        <run_multiple>false</run_multiple>
+        <schedule/>
+        <stage_field>stage</stage_field>
+        <stage_order>computed</stage_order>
+        <start display_value="Begin">282052792f92301063b224c62799b6c0</start>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>e4205e392f92301063b224c62799b625</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:31</sys_updated_on>
+        <table>sc_req_item</table>
+        <timezone/>
+        <validated>false</validated>
+        <workflow display_value="Morpheus (Internal) App Provision Instance">72b580fe2f410010e6e457892799b6a0</workflow>
+    </wf_workflow_version>
+    <wf_workflow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <description/>
+        <name>Morpheus (Internal) App Provision Instance</name>
+        <preview/>
+        <sys_class_name>wf_workflow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-11-14 17:29:34</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>72b580fe2f410010e6e457892799b6a0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Morpheus (Internal) App Provision Instance</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Morpheus Catalog" source="x_moda_morpheus_ca">8d8b6bbf0ff07e009c84306be1050e67</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Morpheus Catalog">8d8b6bbf0ff07e009c84306be1050e67</sys_scope>
+        <sys_update_name>wf_workflow_72b580fe2f410010e6e457892799b6a0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-11-14 17:29:34</sys_updated_on>
+        <table>sc_req_item</table>
+        <template>false</template>
+        <vars/>
+    </wf_workflow>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Completed</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>1100</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>ec205e392f92301063b224c62799b626</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value>complete</value>
+        <workflow_version display_value="Morpheus (Internal) App Provision Instance">e4205e392f92301063b224c62799b625</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Delivery</name>
+        <ola>1970-01-03 00:00:00</ola>
+        <order>140</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>64205e392f92301063b224c62799b627</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value>delivery</value>
+        <workflow_version display_value="Morpheus (Internal) App Provision Instance">e4205e392f92301063b224c62799b625</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Fulfillment</name>
+        <ola>1970-01-02 00:00:00</ola>
+        <order>120</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>6c205e392f92301063b224c62799b626</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value>fulfillment</value>
+        <workflow_version display_value="Morpheus (Internal) App Provision Instance">e4205e392f92301063b224c62799b625</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Request Cancelled</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>1000</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>60205e392f92301063b224c62799b627</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value>Request Cancelled</value>
+        <workflow_version display_value="Morpheus (Internal) App Provision Instance">e4205e392f92301063b224c62799b625</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Request Approved</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>90</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>e0205e392f92301063b224c62799b627</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value>request_approved</value>
+        <workflow_version display_value="Morpheus (Internal) App Provision Instance">e4205e392f92301063b224c62799b625</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Waiting for Approval</name>
+        <ola>1970-01-02 00:00:00</ola>
+        <order>100</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>a8205e392f92301063b224c62799b626</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value>waiting_for_approval</value>
+        <workflow_version display_value="Morpheus (Internal) App Provision Instance">e4205e392f92301063b224c62799b625</workflow_version>
+    </wf_stage>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Approval - User">35433da80a0a029a0028c639a1e51eb4</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>9</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Approval</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>e4205e392f92301063b224c62799b628</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Morpheus (Internal) App Provision Instance">e4205e392f92301063b224c62799b625</workflow_version>
+        <x>321</x>
+        <y>30</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=e4205e392f92301063b224c62799b628"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>120</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>202052792f92301063b224c62799b6bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value/>
+        <variable display_value="Time zone based on">a77903a7c0a8006641af7c9b1d34444e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>900</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>242052792f92301063b224c62799b6bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value/>
+        <variable display_value="Schedule field">a774138dc0a80066000be7af20961c7d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>1150</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>282052792f92301063b224c62799b6bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value/>
+        <variable display_value="Due date field">a76b8c6ec0a800664bb14d5d8b9cd7c4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>101</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>28205e392f92301063b224c62799b629</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value>approval</value>
+        <variable display_value="Approval Column">e846198f0a0004f91fba434a514ba8b8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>310</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>2c2052792f92301063b224c62799b6bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value>reject</value>
+        <variable display_value="When anyone rejects">502163410a6a803f0356332b24dc7945</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>2000</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>2c205e392f92301063b224c62799b628</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Advanced">02ca01820a0a0b261cf923fb95f5e1d0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>602052792f92301063b224c62799b6bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value>any</value>
+        <variable display_value="Wait for">c35e5bdd0a0a0ba96248a709f495c9ae</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>1120</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>642052792f92301063b224c62799b6bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value>3bf802c20a0a0b52008e2859cd8abcf2</value>
+        <variable display_value="Relative duration">a76c6257c0a8006645cff43883470e64</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>1330</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>64205e392f92301063b224c62799b629</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value/>
+        <variable display_value="Groups">02c618170a0a0b26436f5c2c9f7a3901</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>330</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>682052792f92301063b224c62799b6bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value>approval_history</value>
+        <variable display_value="Approval Journal Column">e863e3b80a0004f911d67787e77e0f16</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>110</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>68205e392f92301063b224c62799b628</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value/>
+        <variable display_value="Schedule based on">a77191a4c0a800662b403f7dff5f1bbd</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>1200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>6c2052792f92301063b224c62799b6bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value/>
+        <variable display_value="Time zone field">a7781cb6c0a80066147dc7a5244d5d16</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>a02052792f92301063b224c62799b6bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value/>
+        <variable display_value="Condition">4485eef70a6a803f6bc4bafa9e999640</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>1200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>a0205e392f92301063b224c62799b629</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value/>
+        <variable display_value="Time zone">a775f59ac0a8006665d72362ae687035</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>a42052792f92301063b224c62799b6bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value/>
+        <variable display_value="Users">c35e4cc40a0a0ba96248a7098ec9cb06</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>115</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>a82052792f92301063b224c62799b6bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value/>
+        <variable display_value="Due date based on">a76680b9c0a8006661b107d0f21fae67</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>104</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>ac2052792f92301063b224c62799b6bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value/>
+        <variable display_value="Document Table">e37a96e80a0004f978b47d2d6c5e0b22</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>1360</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>e02052792f92301063b224c62799b6bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value>// Set 'answer' to the number of seconds this timer should wait&#13;
+answer = 0;</value>
+        <variable display_value="Due date script">a782cde9c0a8006608f39abdd85c8395</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>2050</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>e42052792f92301063b224c62799b6bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value>// Set the variable 'answer' to a comma-separated list of user ids and/or group ids or an array of user/group ids to add as approvers.&#13;
+//&#13;
+// For example:&#13;
+//       answer = [];&#13;
+//       answer.push('id1');&#13;
+//       answer.push('id2');&#13;
+</value>
+        <variable display_value="Additional approvers script">c35e582f0a0a0ba96248a70985207e63</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>900</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>e82052792f92301063b224c62799b6bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value>08fcd0830a0a0b2600079f56b1adb9ae</value>
+        <variable display_value="Schedule">a7754e91c0a800664938d0ef6d2664d7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>103</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>e8205e392f92301063b224c62799b629</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value/>
+        <variable display_value="Document ID">e37b77ac0a0004f973283ad13b341c5b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>1110</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>ec2052792f92301063b224c62799b6bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value/>
+        <variable display_value="Duration">a769a182c0a8006629db7fa3fc2a863d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>1370</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>ec205e392f92301063b224c62799b628</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value>// Set the variable 'answer' to '', 'approved' or 'rejected' to indicate the approval status for this approval.  When called, the following information is available:&#13;
+//&#13;
+//    counts.total = total number of users that are part of this approval&#13;
+//    counts.approved = # of users that approved so far&#13;
+//    counts.rejected = # of users that rejected so far&#13;
+//    counts.requested = # of users that are pending approval&#13;
+//    counts.not_requested = # of users that are not pending approval&#13;
+//    counts.not_required = # of users that approval is not required&#13;
+//&#13;
+</value>
+        <variable display_value="Approval Script">02c86d780a0a0b261e6a356bc893d348</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>a02052792f92301063b224c62799b6bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value/>
+        <variable display_value="Condition">4485eef70a6a803f6bc4bafa9e999640</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>602052792f92301063b224c62799b6bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value>any</value>
+        <variable display_value="Wait for">c35e5bdd0a0a0ba96248a709f495c9ae</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>101</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>28205e392f92301063b224c62799b629</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value>approval</value>
+        <variable display_value="Approval Column">e846198f0a0004f91fba434a514ba8b8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>103</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>e8205e392f92301063b224c62799b629</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value/>
+        <variable display_value="Document ID">e37b77ac0a0004f973283ad13b341c5b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>104</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>ac2052792f92301063b224c62799b6bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value/>
+        <variable display_value="Document Table">e37a96e80a0004f978b47d2d6c5e0b22</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>110</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>68205e392f92301063b224c62799b628</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value/>
+        <variable display_value="Schedule based on">a77191a4c0a800662b403f7dff5f1bbd</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>115</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>a82052792f92301063b224c62799b6bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value/>
+        <variable display_value="Due date based on">a76680b9c0a8006661b107d0f21fae67</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>120</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>202052792f92301063b224c62799b6bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value/>
+        <variable display_value="Time zone based on">a77903a7c0a8006641af7c9b1d34444e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>a42052792f92301063b224c62799b6bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value/>
+        <variable display_value="Users">c35e4cc40a0a0ba96248a7098ec9cb06</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>310</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>2c2052792f92301063b224c62799b6bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value>reject</value>
+        <variable display_value="When anyone rejects">502163410a6a803f0356332b24dc7945</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>330</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>682052792f92301063b224c62799b6bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value>approval_history</value>
+        <variable display_value="Approval Journal Column">e863e3b80a0004f911d67787e77e0f16</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>900</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>e82052792f92301063b224c62799b6bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value>08fcd0830a0a0b2600079f56b1adb9ae</value>
+        <variable display_value="Schedule">a7754e91c0a800664938d0ef6d2664d7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>900</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>242052792f92301063b224c62799b6bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value/>
+        <variable display_value="Schedule field">a774138dc0a80066000be7af20961c7d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>1110</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>ec2052792f92301063b224c62799b6bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value/>
+        <variable display_value="Duration">a769a182c0a8006629db7fa3fc2a863d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>1120</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>642052792f92301063b224c62799b6bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value>3bf802c20a0a0b52008e2859cd8abcf2</value>
+        <variable display_value="Relative duration">a76c6257c0a8006645cff43883470e64</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>1150</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>282052792f92301063b224c62799b6bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value/>
+        <variable display_value="Due date field">a76b8c6ec0a800664bb14d5d8b9cd7c4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>1200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>a0205e392f92301063b224c62799b629</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value/>
+        <variable display_value="Time zone">a775f59ac0a8006665d72362ae687035</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>1200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>6c2052792f92301063b224c62799b6bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value/>
+        <variable display_value="Time zone field">a7781cb6c0a80066147dc7a5244d5d16</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>1330</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>64205e392f92301063b224c62799b629</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value/>
+        <variable display_value="Groups">02c618170a0a0b26436f5c2c9f7a3901</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>1360</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>e02052792f92301063b224c62799b6bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value>// Set 'answer' to the number of seconds this timer should wait&#13;
+answer = 0;</value>
+        <variable display_value="Due date script">a782cde9c0a8006608f39abdd85c8395</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>1370</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>ec205e392f92301063b224c62799b628</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value>// Set the variable 'answer' to '', 'approved' or 'rejected' to indicate the approval status for this approval.  When called, the following information is available:&#13;
+//&#13;
+//    counts.total = total number of users that are part of this approval&#13;
+//    counts.approved = # of users that approved so far&#13;
+//    counts.rejected = # of users that rejected so far&#13;
+//    counts.requested = # of users that are pending approval&#13;
+//    counts.not_requested = # of users that are not pending approval&#13;
+//    counts.not_required = # of users that approval is not required&#13;
+//&#13;
+</value>
+        <variable display_value="Approval Script">02c86d780a0a0b261e6a356bc893d348</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>2000</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>2c205e392f92301063b224c62799b628</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Advanced">02ca01820a0a0b261cf923fb95f5e1d0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e4205e392f92301063b224c62799b628</document_key>
+        <order>2050</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>e42052792f92301063b224c62799b6bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value>// Set the variable 'answer' to a comma-separated list of user ids and/or group ids or an array of user/group ids to add as approvers.&#13;
+//&#13;
+// For example:&#13;
+//       answer = [];&#13;
+//       answer.push('id1');&#13;
+//       answer.push('id2');&#13;
+</value>
+        <variable display_value="Additional approvers script">c35e582f0a0a0ba96248a70985207e63</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Approval">e4205e392f92301063b224c62799b628</activity>
+        <condition>activity.result == 'approved' || activity.result == 'skipped'</condition>
+        <condition_default display_value="Approved">586e1fa60a0a0b5c008121ab894f2b06</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Approved</name>
+        <order>1</order>
+        <short_description>Approval request was approved</short_description>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>242052792f92301063b224c62799b6be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+    </wf_condition>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Approval">e4205e392f92301063b224c62799b628</activity>
+        <condition>activity.result == 'rejected'</condition>
+        <condition_default display_value="Rejected">586e4ef60a0a0b5c00440b56c014c8a5</condition_default>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>Rejected</name>
+        <order>2</order>
+        <short_description>Approval request was rejected</short_description>
+        <skip_during_generate>true</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>602052792f92301063b224c62799b6be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Begin">c7a5e32c0a0a0b3a002377c24ed8ea76</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>1</databus_lookup_id>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>Begin</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>282052792f92301063b224c62799b6c0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Morpheus (Internal) App Provision Instance">e4205e392f92301063b224c62799b625</workflow_version>
+        <x>31</x>
+        <y>19</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=282052792f92301063b224c62799b6c0"/>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Begin">282052792f92301063b224c62799b6c0</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>e82052792f92301063b224c62799b6c0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="End">c7a66f7d0a0a0b3a004544a6d2f14076</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>2</databus_lookup_id>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>End</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>e8205e392f92301063b224c62799b627</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Morpheus (Internal) App Provision Instance">e4205e392f92301063b224c62799b625</workflow_version>
+        <x>684</x>
+        <y>533</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=e8205e392f92301063b224c62799b627"/>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Log Message">396807940a0a0b5c00afd9f67d9fd7a2</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>10</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Morpheus - Error in creating App</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>e82052792f92301063b224c62799b6bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Morpheus (Internal) App Provision Instance">e4205e392f92301063b224c62799b625</workflow_version>
+        <x>772</x>
+        <y>373</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=e82052792f92301063b224c62799b6bf"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e82052792f92301063b224c62799b6bf</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>6c2052792f92301063b224c62799b6bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value>An error occurred while trying to communicate with the Morpheus appliance or when creating the App</value>
+        <variable display_value="Message">c35dbd1a0a0a0ba96248a7092864142d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e82052792f92301063b224c62799b6bf</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>6c2052792f92301063b224c62799b6bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value>An error occurred while trying to communicate with the Morpheus appliance or when creating the App</value>
+        <variable display_value="Message">c35dbd1a0a0a0ba96248a7092864142d</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Morpheus - Error in creating App">e82052792f92301063b224c62799b6bf</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>602052792f92301063b224c62799b6c0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>4</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Morpheus - Provision App Instance</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>e82052792f92301063b224c62799b6be</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:28</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Morpheus (Internal) App Provision Instance">e4205e392f92301063b224c62799b625</workflow_version>
+        <x>750</x>
+        <y>22</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=e82052792f92301063b224c62799b6be"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e82052792f92301063b224c62799b6be</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>6c2052792f92301063b224c62799b6be</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:28</sys_updated_on>
+        <value>workflow.info('Logging INFO from inside a script - begin');&#13;
+&#13;
+provisionAppInstance();&#13;
+&#13;
+function provisionAppInstance() {&#13;
+	var utils = new x_moda_morpheus_ca.Utils();&#13;
+&#13;
+	activity.result = 'success';&#13;
+&#13;
+	var grItem = new GlideRecord('sc_req_item');&#13;
+	if(grItem.get(current.sys_id)) {&#13;
+&#13;
+		var quantity = grItem.quantity;&#13;
+&#13;
+		var cnt = 0;&#13;
+		for(cnt = 0; cnt &lt; quantity; cnt++) {&#13;
+&#13;
+			var scratchpad = {};&#13;
+&#13;
+			for (var item in workflow.inputs) {&#13;
+				scratchpad[item] = workflow.inputs[item];&#13;
+			}&#13;
+&#13;
+			scratchpad.u_req_item_id = current.sys_id;&#13;
+&#13;
+			workflow.info('u_req_item_id' + scratchpad.u_req_item_id);&#13;
+&#13;
+			var lookupUtils = new x_moda_morpheus_ca.LookUpUtils();&#13;
+			var user = new GlideRecord('sys_user');&#13;
+			user.get(gs.getUserID());&#13;
+			var domainSysId = user.sys_domain;&#13;
+			var companySysId = user.company.sys_id;&#13;
+&#13;
+			var authConfig = lookupUtils.fetchAuthConfig(undefined, companySysId, domainSysId);&#13;
+			scratchpad.authConfig = authConfig;&#13;
+			scratchpad.access_token = authConfig.access_token;&#13;
+			var tenantId = authConfig.tenantId;&#13;
+&#13;
+&#13;
+			if(scratchpad.access_token == '' || typeof(scratchpad.access_token) == 'undefined') {&#13;
+				_handleError('Error connecting to Morpheus.  Please verify connection information.');&#13;
+			} else {&#13;
+				utils.log("info", 'in provisionAppInstance with scratchpad: ' + scratchpad);&#13;
+&#13;
+				var grItem = new GlideRecord('sc_req_item');&#13;
+				if(grItem.get(scratchpad.u_req_item_id)){&#13;
+&#13;
+					var grCatItem = new GlideRecord('sc_cat_item');&#13;
+					if(grCatItem.get(grItem.cat_item)){&#13;
+&#13;
+						gs.debug('here:' + scratchpad.appName);&#13;
+&#13;
+						var appName = scratchpad.appName;&#13;
+						if(cnt &gt; 0) {&#13;
+							appName = scratchpad.appName + "-" + cnt;&#13;
+						}&#13;
+&#13;
+						// Call morpheus to fetch the current blueprint definition&#13;
+						var createResultBody = utils.callMorpheus('x_moda_morpheus_ca.Morpheus Blueprint', scratchpad.authConfig, {id: parseInt(scratchpad.external_id)});&#13;
+						if(createResultBody.success == false) {&#13;
+							var errorString = 'Error occurred with call to Morpheus: ';&#13;
+							for (var err in createResultBody.errors) {&#13;
+								errorString += err + '=' + createResultBody.errors[err] + ' ';&#13;
+							}&#13;
+							_handleError(errorString);&#13;
+						} else {&#13;
+							utils.log("info", "createResultBody: " + JSON.stringify(createResultBody));&#13;
+							var blueprintConfig = createResultBody.blueprint.config;&#13;
+&#13;
+							// Build up the request to Morpheus&#13;
+							var payload = blueprintConfig;&#13;
+							payload.name = appName.toString();&#13;
+							payload.id = parseInt(scratchpad.external_id);&#13;
+							payload.templateName = scratchpad.external_name.toString();&#13;
+							payload.defaultCloud = { id: parseInt(scratchpad.cloud_id), name: scratchpad.cloud_name.toString() };&#13;
+							payload.group = { id: parseInt(scratchpad.group_id), name: scratchpad.group_name.toString() };&#13;
+							if(scratchpad.environment &amp;&amp; scratchpad.environment.toString() != '') {&#13;
+								payload.environment = scratchpad.environment.toString();&#13;
+							}&#13;
+&#13;
+							// for(j = 0; j &lt; payload.tiers.App.instances.length; j++) {&#13;
+							// 	var currentInstance = payload.tiers.App.instances[j];&#13;
+							// 	delete currentInstance['groups']&#13;
+							// }&#13;
+&#13;
+							var parser = new global.JSON();&#13;
+							var encodedPayload = parser.encode(payload);&#13;
+&#13;
+							utils.log("info", 'calling Morpheus to validate app with payload:'+ encodedPayload);&#13;
+							var validateResultBody = utils.callMorpheus('x_moda_morpheus_ca.Morpheus App Validate', scratchpad.authConfig, {}, 'post', encodedPayload);&#13;
+							if(validateResultBody.success == false) {&#13;
+								var errorString = 'The desired app is not valid: ' + JSON.stringify(validateResultBody);&#13;
+								_handleError(errorString);&#13;
+							} else {&#13;
+								utils.log("info", 'calling Morpheus to create app with payload:'+ encodedPayload);&#13;
+								var createResultBody = utils.callMorpheus('x_moda_morpheus_ca.Morpheus App', scratchpad.authConfig, {}, 'post', encodedPayload);&#13;
+								utils.log("info", 'results calling Morpheus ' + JSON.stringify(createResultBody));&#13;
+&#13;
+								if(createResultBody.success == false) {&#13;
+									var errorString = 'Error occurred with call to Morpheus: ';&#13;
+									for (var err in createResultBody.errors) {&#13;
+										errorString += err + '=' + createResultBody.errors[err] + ' ';&#13;
+									}&#13;
+									_handleError(errorString);&#13;
+								} else {&#13;
+									utils.log("info", "Successfully created app in Morpheus with id " + createResultBody.app.id);&#13;
+									grItem.comments = "Successfully created app: " + gs.getProperty('x_moda_morpheus_ca.morpheus_url') + "/provisioning/apps/" + createResultBody.app.id;&#13;
+									grItem.update();&#13;
+								}&#13;
+							}&#13;
+						}&#13;
+					}&#13;
+				}&#13;
+			}&#13;
+		}&#13;
+	}&#13;
+}&#13;
+&#13;
+function _handleError(msg){&#13;
+	activity.result = 'error';&#13;
+	activity.fault_description = msg;&#13;
+	gs.info("handlerror " + msg);&#13;
+&#13;
+	workflow.error('Morpheus - Provision App: ' + msg);&#13;
+}&#13;
+</value>
+        <variable display_value="Script">c35ddef20a0a0ba96248a7090eccd518</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e82052792f92301063b224c62799b6be</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>6c2052792f92301063b224c62799b6be</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:28</sys_updated_on>
+        <value>workflow.info('Logging INFO from inside a script - begin');&#13;
+&#13;
+provisionAppInstance();&#13;
+&#13;
+function provisionAppInstance() {&#13;
+	var utils = new x_moda_morpheus_ca.Utils();&#13;
+&#13;
+	activity.result = 'success';&#13;
+&#13;
+	var grItem = new GlideRecord('sc_req_item');&#13;
+	if(grItem.get(current.sys_id)) {&#13;
+&#13;
+		var quantity = grItem.quantity;&#13;
+&#13;
+		var cnt = 0;&#13;
+		for(cnt = 0; cnt &lt; quantity; cnt++) {&#13;
+&#13;
+			var scratchpad = {};&#13;
+&#13;
+			for (var item in workflow.inputs) {&#13;
+				scratchpad[item] = workflow.inputs[item];&#13;
+			}&#13;
+&#13;
+			scratchpad.u_req_item_id = current.sys_id;&#13;
+&#13;
+			workflow.info('u_req_item_id' + scratchpad.u_req_item_id);&#13;
+&#13;
+			var lookupUtils = new x_moda_morpheus_ca.LookUpUtils();&#13;
+			var user = new GlideRecord('sys_user');&#13;
+			user.get(gs.getUserID());&#13;
+			var domainSysId = user.sys_domain;&#13;
+			var companySysId = user.company.sys_id;&#13;
+&#13;
+			var authConfig = lookupUtils.fetchAuthConfig(undefined, companySysId, domainSysId);&#13;
+			scratchpad.authConfig = authConfig;&#13;
+			scratchpad.access_token = authConfig.access_token;&#13;
+			var tenantId = authConfig.tenantId;&#13;
+&#13;
+&#13;
+			if(scratchpad.access_token == '' || typeof(scratchpad.access_token) == 'undefined') {&#13;
+				_handleError('Error connecting to Morpheus.  Please verify connection information.');&#13;
+			} else {&#13;
+				utils.log("info", 'in provisionAppInstance with scratchpad: ' + scratchpad);&#13;
+&#13;
+				var grItem = new GlideRecord('sc_req_item');&#13;
+				if(grItem.get(scratchpad.u_req_item_id)){&#13;
+&#13;
+					var grCatItem = new GlideRecord('sc_cat_item');&#13;
+					if(grCatItem.get(grItem.cat_item)){&#13;
+&#13;
+						gs.debug('here:' + scratchpad.appName);&#13;
+&#13;
+						var appName = scratchpad.appName;&#13;
+						if(cnt &gt; 0) {&#13;
+							appName = scratchpad.appName + "-" + cnt;&#13;
+						}&#13;
+&#13;
+						// Call morpheus to fetch the current blueprint definition&#13;
+						var createResultBody = utils.callMorpheus('x_moda_morpheus_ca.Morpheus Blueprint', scratchpad.authConfig, {id: parseInt(scratchpad.external_id)});&#13;
+						if(createResultBody.success == false) {&#13;
+							var errorString = 'Error occurred with call to Morpheus: ';&#13;
+							for (var err in createResultBody.errors) {&#13;
+								errorString += err + '=' + createResultBody.errors[err] + ' ';&#13;
+							}&#13;
+							_handleError(errorString);&#13;
+						} else {&#13;
+							utils.log("info", "createResultBody: " + JSON.stringify(createResultBody));&#13;
+							var blueprintConfig = createResultBody.blueprint.config;&#13;
+&#13;
+							// Build up the request to Morpheus&#13;
+							var payload = blueprintConfig;&#13;
+							payload.name = appName.toString();&#13;
+							payload.id = parseInt(scratchpad.external_id);&#13;
+							payload.templateName = scratchpad.external_name.toString();&#13;
+							payload.defaultCloud = { id: parseInt(scratchpad.cloud_id), name: scratchpad.cloud_name.toString() };&#13;
+							payload.group = { id: parseInt(scratchpad.group_id), name: scratchpad.group_name.toString() };&#13;
+							if(scratchpad.environment &amp;&amp; scratchpad.environment.toString() != '') {&#13;
+								payload.environment = scratchpad.environment.toString();&#13;
+							}&#13;
+&#13;
+							// for(j = 0; j &lt; payload.tiers.App.instances.length; j++) {&#13;
+							// 	var currentInstance = payload.tiers.App.instances[j];&#13;
+							// 	delete currentInstance['groups']&#13;
+							// }&#13;
+&#13;
+							var parser = new global.JSON();&#13;
+							var encodedPayload = parser.encode(payload);&#13;
+&#13;
+							utils.log("info", 'calling Morpheus to validate app with payload:'+ encodedPayload);&#13;
+							var validateResultBody = utils.callMorpheus('x_moda_morpheus_ca.Morpheus App Validate', scratchpad.authConfig, {}, 'post', encodedPayload);&#13;
+							if(validateResultBody.success == false) {&#13;
+								var errorString = 'The desired app is not valid: ' + JSON.stringify(validateResultBody);&#13;
+								_handleError(errorString);&#13;
+							} else {&#13;
+								utils.log("info", 'calling Morpheus to create app with payload:'+ encodedPayload);&#13;
+								var createResultBody = utils.callMorpheus('x_moda_morpheus_ca.Morpheus App', scratchpad.authConfig, {}, 'post', encodedPayload);&#13;
+								utils.log("info", 'results calling Morpheus ' + JSON.stringify(createResultBody));&#13;
+&#13;
+								if(createResultBody.success == false) {&#13;
+									var errorString = 'Error occurred with call to Morpheus: ';&#13;
+									for (var err in createResultBody.errors) {&#13;
+										errorString += err + '=' + createResultBody.errors[err] + ' ';&#13;
+									}&#13;
+									_handleError(errorString);&#13;
+								} else {&#13;
+									utils.log("info", "Successfully created app in Morpheus with id " + createResultBody.app.id);&#13;
+									grItem.comments = "Successfully created app: " + gs.getProperty('x_moda_morpheus_ca.morpheus_url') + "/provisioning/apps/" + createResultBody.app.id;&#13;
+									grItem.update();&#13;
+								}&#13;
+							}&#13;
+						}&#13;
+					}&#13;
+				}&#13;
+			}&#13;
+		}&#13;
+	}&#13;
+}&#13;
+&#13;
+function _handleError(msg){&#13;
+	activity.result = 'error';&#13;
+	activity.fault_description = msg;&#13;
+	gs.info("handlerror " + msg);&#13;
+&#13;
+	workflow.error('Morpheus - Provision App: ' + msg);&#13;
+}&#13;
+</value>
+        <variable display_value="Script">c35ddef20a0a0ba96248a7090eccd518</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Morpheus - Provision App Instance">e82052792f92301063b224c62799b6be</activity>
+        <condition>activity.result == 'error'</condition>
+        <condition_default/>
+        <condition_type>error</condition_type>
+        <else_flag>false</else_flag>
+        <error>true</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>Error</name>
+        <order>2</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>602052792f92301063b224c62799b6bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+    </wf_condition>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Morpheus - Provision App Instance">e82052792f92301063b224c62799b6be</activity>
+        <condition>activity.result == 'success'</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>false</is_positive>
+        <name>Success</name>
+        <order>1</order>
+        <short_description>Successfully provisioned a Morpheus Instance</short_description>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>242052792f92301063b224c62799b6bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Log Message">396807940a0a0b5c00afd9f67d9fd7a2</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>6</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Provision Successful</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>e02052792f92301063b224c62799b6c1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Morpheus (Internal) App Provision Instance">e4205e392f92301063b224c62799b625</workflow_version>
+        <x>1084</x>
+        <y>75</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=e02052792f92301063b224c62799b6c1"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e02052792f92301063b224c62799b6c1</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>642052792f92301063b224c62799b6c1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value>Morpheus instance was successfully created</value>
+        <variable display_value="Message">c35dbd1a0a0a0ba96248a7092864142d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>e02052792f92301063b224c62799b6c1</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>642052792f92301063b224c62799b6c1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <value>Morpheus instance was successfully created</value>
+        <variable display_value="Message">c35dbd1a0a0a0ba96248a7092864142d</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Provision Successful">e02052792f92301063b224c62799b6c1</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>682052792f92301063b224c62799b6c1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+    </wf_condition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">e82052792f92301063b224c62799b6c0</condition>
+        <from display_value="Begin">282052792f92301063b224c62799b6c0</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>202052792f92301063b224c62799b6c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <to display_value="Approval">e4205e392f92301063b224c62799b628</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Success">242052792f92301063b224c62799b6bf</condition>
+        <from display_value="Morpheus - Provision App Instance">e82052792f92301063b224c62799b6be</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>202052792f92301063b224c62799b6c4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <to display_value="Provision Successful">e02052792f92301063b224c62799b6c1</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Rejected">602052792f92301063b224c62799b6be</condition>
+        <from display_value="Approval">e4205e392f92301063b224c62799b628</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>242052792f92301063b224c62799b6c4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <to display_value="End">e8205e392f92301063b224c62799b627</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Approved">242052792f92301063b224c62799b6be</condition>
+        <from display_value="Approval">e4205e392f92301063b224c62799b628</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>282052792f92301063b224c62799b6c4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <to display_value="Morpheus - Provision App Instance">e82052792f92301063b224c62799b6be</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Error">602052792f92301063b224c62799b6bf</condition>
+        <from display_value="Morpheus - Provision App Instance">e82052792f92301063b224c62799b6be</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>2c2052792f92301063b224c62799b6c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <to display_value="Morpheus - Error in creating App">e82052792f92301063b224c62799b6bf</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">602052792f92301063b224c62799b6c0</condition>
+        <from display_value="Morpheus - Error in creating App">e82052792f92301063b224c62799b6bf</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>2c2052792f92301063b224c62799b6c4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <to display_value="End">e8205e392f92301063b224c62799b627</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">682052792f92301063b224c62799b6c1</condition>
+        <from display_value="Provision Successful">e02052792f92301063b224c62799b6c1</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>e42052792f92301063b224c62799b6c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <to display_value="End">e8205e392f92301063b224c62799b627</to>
+    </wf_transition>
+    <wf_estimated_runtime_config action="INSERT_OR_UPDATE">
+        <estimated_run_time/>
+        <no_of_data_points>1</no_of_data_points>
+        <percentage_threshold_ert>20</percentage_threshold_ert>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-08-31 16:52:17</sys_created_on>
+        <sys_id>68205e392f92301063b224c62799b625</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-08-31 16:52:17</sys_updated_on>
+        <workflow_version display_value="Morpheus (Internal) App Provision Instance">e4205e392f92301063b224c62799b625</workflow_version>
+    </wf_estimated_runtime_config>
+    <wf_workflow_version action="update_multiple" query="workflow=72b580fe2f410010e6e457892799b6a0^sys_id!=e4205e392f92301063b224c62799b625">
+        <published>false</published>
+    </wf_workflow_version>
+</record_update>

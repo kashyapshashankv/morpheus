@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="MorpheusServiceNowMapping" max_length="40" name="x_moda_morpheus_ca_morpheusservicenowmapping" sizeclass="117" type="collection">
+        <element label="MorpheusCode" max_length="255" name="morpheuscode" type="string"/>
+        <element label="MorpheusType" max_length="255" name="morpheustype" type="string"/>
+        <element label="ServiceNowSysID" max_length="255" name="servicenowsysid" type="string"/>
+        <element label="ServiceNowType" max_length="255" name="servicenowtype" type="string"/>
+        <element label="Domain" max_length="32" name="sys_domain" type="domain_id"/>
+        <element label="Domain Path" max_length="255" name="sys_domain_path" type="domain_path"/>
+        <element label="TenantScope" mandatory="true" max_length="40" name="tenantscope" type="longint"/>
+        <index name="index">
+            <element name="sys_domain"/>
+        </index>
+        <index name="index2">
+            <element name="sys_domain_path"/>
+        </index>
+    </element>
+</database>
